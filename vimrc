@@ -19,6 +19,19 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
+" Git fugitive
+Plugin 'tpope/vim-fugitive'
+Plugin 'airblade/vim-gitgutter'
+
+" Tmux
+Plugin 'christoomey/vim-tmux-navigator'
+
+" Editor improvements
+Plugin 'ctrlpvim/ctrlp.vim'
+
+" Colors
+Plugin 'nanotech/jellybeans.vim' 
+
 " Vim airline theme
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
@@ -30,16 +43,6 @@ let g:airline#extensions#tabline#left_sep = '>'
 let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline#extensions#tmuxline#enabled = 0
 let g:tmuxline_theme = 'airline'
-
-" Git fugitive
-Plugin 'tpope/vim-fugitive'
-Plugin 'airblade/vim-gitgutter'
-
-" Tmux
-Plugin 'christoomey/vim-tmux-navigator'
-
-" Editor improvements
-Plugin 'ctrlpvim/ctrlp.vim'
 
 call vundle#end()            " required
 " Run this after adding to the lines above
@@ -93,6 +96,8 @@ nnoremap <Leader>qq :q!
 
 " reload vimrc
 nnoremap <Leader>r :so $MYVIMRC<CR>
+noremap <leader>ev :execute 'e ' . resolve(expand($MYVIMRC))<CR>
+
 " CTRL-U in insert mode deletes a lot.  Use CTRL-G u to first break undo,
 " so that you can undo CTRL-U after inserting a line break.
 inoremap <C-U> <C-G>u<C-U>
