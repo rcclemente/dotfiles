@@ -1,6 +1,46 @@
 syntax on
+" manually download this 
+" mkdir ~/.vim/colors
+" wget https://raw.githubusercontent.com/nanotech/jellybeans.vim/master/colors/jellybeans.vim ~/.vim/colors/
+colorscheme jellybeans
 
-set nocompatible
+""""""""""""""""""""
+" Plugins
+""""""""""""""""""""
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+" Vim airline
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Bundle 'edkolev/tmuxline.vim'
+let g:airline_theme='luna'
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = '>'
+let g:airline#extensions#tabline#left_alt_sep = '|'
+let g:airline#extensions#tmuxline#enabled = 0
+let g:tmuxline_theme = 'airline'
+
+" Git fugitive
+Plugin 'tpope/vim-fugitive'
+
+call vundle#end()            " required
+" Run this after adding to the lines above
+" vim +PluginInstall +qall
+filetype plugin indent on    " required
+
+""""""""""""""""""""
+
 set backspace=indent,eol,start
 set nobackup		                " do not keep a backup file, use versions instead
 set history=1000		            " keep 50 lines of command line history
@@ -20,7 +60,7 @@ set smarttab
 set expandtab
 set hlsearch
 set clipboard=unnamed
-set cmdheight=2
+set cmdheight=1
 set laststatus=2
 
 " Split settings
@@ -45,8 +85,7 @@ nnoremap <Leader>wq :wq<SPACE>
 nnoremap <Leader>qq :q!
 
 " reload vimrc
-nnoremap <Leader>r :so $MYVIMRC<CR>:nohlsearch<CR>
-
+nnoremap <Leader>r :so $MYVIMRC<CR>
 " CTRL-U in insert mode deletes a lot.  Use CTRL-G u to first break undo,
 " so that you can undo CTRL-U after inserting a line break.
 inoremap <C-U> <C-G>u<C-U>
@@ -55,6 +94,7 @@ inoremap <C-U> <C-G>u<C-U>
 nnoremap <Leader>bn :bnext<CR>
 nnoremap <Leader>bb :buffers<CR>
 nnoremap <Leader>ba :e<SPACE>
+nnoremap <Leader>bd :bd!<CR>
 
 " Splits
 nnoremap vv :vsplit<SPACE>
@@ -62,10 +102,10 @@ nnoremap vh :split<SPACE>
 
 " Tabs
 nnoremap tn :tabnew<SPACE>
-nnoremap tk :tabnext<SPACE>
-nnoremap tj :tabprev<SPACE>
-nnoremap th :tabnew<SPACE>
-nnoremap tl :tablast<SPACE>
+nnoremap tk :tabnext<CR>
+nnoremap tj :tabprev<CR>
+nnoremap th :tabfirst<CR>
+nnoremap tl :tablast<CR>
 
 " Navigation
 nnoremap <C-h> <C-w>h
@@ -73,8 +113,4 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
-" manually download this 
-" mkdir ~/.vim/colors
-" wget https://raw.githubusercontent.com/nanotech/jellybeans.vim/master/colors/jellybeans.vim ~/.vim/colors/
-colorscheme jellybeans
 
