@@ -19,7 +19,7 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
-" Vim airline
+" Vim airline theme
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Bundle 'edkolev/tmuxline.vim'
@@ -33,6 +33,13 @@ let g:tmuxline_theme = 'airline'
 
 " Git fugitive
 Plugin 'tpope/vim-fugitive'
+Plugin 'airblade/vim-gitgutter'
+
+" Tmux
+Plugin 'christoomey/vim-tmux-navigator'
+
+" Editor improvements
+Plugin 'ctrlpvim/ctrlp.vim'
 
 call vundle#end()            " required
 " Run this after adding to the lines above
@@ -91,7 +98,9 @@ nnoremap <Leader>r :so $MYVIMRC<CR>
 inoremap <C-U> <C-G>u<C-U>
 
 " Buffers
-nnoremap <Leader>bn :bnext<CR>
+nnoremap gk :bn<cr>
+nnoremap gj :bp<cr>
+nnoremap gd :bd<cr>
 nnoremap <Leader>bb :buffers<CR>
 nnoremap <Leader>ba :e<SPACE>
 nnoremap <Leader>bd :bd!<CR>
