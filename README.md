@@ -2,7 +2,7 @@
 
     git clone git@github.com:rcclemente/dotfiles.git dotfiles
     
-## The parts
+## Installation
 
 #### Install jellybean for vim
     
