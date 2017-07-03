@@ -2,7 +2,12 @@
 
     git clone git@github.com:rcclemente/dotfiles.git dotfiles
     
-## References
+## The parts
+
+#### Install jellybean for vim
+    
+    mkdir ~/.vim/colors                                                                                                
+    wget https://raw.githubusercontent.com/nanotech/jellybeans.vim/master/colors/jellybeans.vim ~/.vim/colors/
 
 #### Fonts and Macvim
 http://powerline.readthedocs.io/en/master/installation/osx.html    
