@@ -1,9 +1,18 @@
 # Dotfiles
 
-    git clone git@github.com:rcclemente/dotfiles.git dotfiles
-    
+
 ## Installation
 
+    git clone git@github.com:rcclemente/dotfiles.git dotfiles
+    cd dotfiles
+    ln -s vimrc ~/.vimrc
+    ln -s tmux.conf ~/.tmux.conf
+    cd ..
+
+#### Install Vundle
+    
+    git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+    
 #### Install jellybean for vim
     
     mkdir ~/.vim/colors                                                                                                
