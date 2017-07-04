@@ -2,7 +2,7 @@
 
 Collection of my vim and tmux configurations
 Some features:
-- Git integration 
+- Git vim integration 
 - vim and tmux navigation using h/j/k/l
 
 
