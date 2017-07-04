@@ -61,6 +61,7 @@ set showmode
 set incsearch		                " do incremental searching
 set ruler
 set relativenumber
+set number
 set mouse=a
 set autoindent		              " always set autoindenting on
 set tabstop=2
@@ -103,16 +104,15 @@ noremap <leader>ev :execute 'e ' . resolve(expand($MYVIMRC))<CR>
 inoremap <C-U> <C-G>u<C-U>
 
 " Buffers
-nnoremap gk :bn<cr>
-nnoremap gj :bp<cr>
-nnoremap gd :bd<cr>
+nnoremap <Leader>bk :bnext<cr>
+nnoremap <Leader>bj :bp<cr>
 nnoremap <Leader>bb :buffers<CR>
 nnoremap <Leader>ba :e<SPACE>
 nnoremap <Leader>bd :bd!<CR>
 
 " Splits
 nnoremap vv :vsplit<SPACE>
-nnoremap vh :split<SPACE>
+nnoremap vs :split<SPACE>
 
 " Tabs
 nnoremap tn :tabnew<SPACE>
