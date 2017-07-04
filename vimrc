@@ -31,6 +31,8 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'vim-syntastic/syntastic'
+Plugin 'tpope/vim-rails'
+Plugin 'mileszs/ack.vim'
 
 " Colors
 Plugin 'nanotech/jellybeans.vim' 
@@ -142,3 +144,7 @@ augroup mySyntastic
   au!
   au FileType tex let b:syntastic_mode = "passive"
 augroup END
+
+" Ack config
+cnoreabbrev Ack Ack!
+nnoremap <Leader>a :Ack!<Space>
