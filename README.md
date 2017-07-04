@@ -1,5 +1,6 @@
 # Dotfiles
 
+Collection of my vim and tmux configurations
 
 ## Installation
 
