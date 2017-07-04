@@ -28,6 +28,8 @@ Plugin 'christoomey/vim-tmux-navigator'
 
 " Editor improvements
 Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'jistr/vim-nerdtree-tabs'
 
 " Colors
 Plugin 'nanotech/jellybeans.vim' 
@@ -127,4 +129,7 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
-
+" NerdTree
+nmap <silent> <leader>t :NERDTreeTabsToggle<CR>
+" To have NERDTree always open on startup
+let g:nerdtree_tabs_open_on_console_startup = 0
