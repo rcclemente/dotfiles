@@ -49,4 +49,9 @@ Some features:
 
 ## More Fun stuff
 
+#### Ack searcher
+
+    brew install ack
+    
+- In your .vimrc
 
