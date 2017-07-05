@@ -148,3 +148,7 @@ augroup END
 " Ack config
 cnoreabbrev Ack Ack!
 nnoremap <Leader>a :Ack!<Space>
+
+" Git
+nnoremap <Leader>hu :GitGutterUndoHunk<CR>
+nnoremap <Leader>hr :GitGutterRevertHunk<CR>
