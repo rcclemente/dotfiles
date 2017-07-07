@@ -27,12 +27,14 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'christoomey/vim-tmux-navigator'
 
 " Editor improvements
-Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'tpope/vim-rails'
 Plugin 'mileszs/ack.vim'
+
+Plugin 'ctrlpvim/ctrlp.vim'
+let g:ctrlp_working_path_mode = 'ra'
 
 " Colors
 Plugin 'nanotech/jellybeans.vim' 
