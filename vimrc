@@ -34,8 +34,8 @@ Plugin 'tpope/vim-rails'
 Plugin 'mileszs/ack.vim'
 
 Plugin 'ctrlpvim/ctrlp.vim'
-let g:ctrlp_working_path_mode = 'ra'
-
+let g:ctrlp_working_path_mode = 'r'
+let g:ctrlp_max_depth=40
 " Colors
 Plugin 'nanotech/jellybeans.vim' 
 
