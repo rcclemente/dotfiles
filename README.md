@@ -38,9 +38,10 @@ Some features:
     cd ..
     rm -rf fonts
     
-#### Update Iterm font
+#### Update Iterm 
 
 ![Iterm Font Config](https://github.com/rcclemente/dotfiles/blob/master/images/tmux_powerline_font.png "Inconsolata")
+![Iterm Allow terminal apps to clipboard](https://github.com/rcclemente/dotfiles/blob/master/images/iterm_allow_tmux_vim_to_copy_clipboard.png)
 
 
 #### Update Vim
