@@ -16,6 +16,15 @@ Some features:
     ln -s dotfiles/vimrc ~/.vimrc
     ln -s dotfiles/tmux.conf ~/.tmux.conf
     
+#### MacVim (optional)
+    
+    brew install macvim --env-std --with-override-system-vim
+
+#### Update Iterm 
+
+![Iterm Font Config](https://github.com/rcclemente/dotfiles/blob/master/images/tmux_powerline_font.png "Inconsolata")
+![Iterm Allow terminal apps to clipboard](https://github.com/rcclemente/dotfiles/blob/master/images/iterm_allow_tmux_vim_to_copy_clipboard.png)
+
 #### Install Vundle
     
     git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
@@ -26,10 +35,6 @@ Some features:
     wget https://raw.githubusercontent.com/nanotech/jellybeans.vim/master/colors/jellybeans.vim 
     mv jellybeans.vim ~/.vim/colors/
 
-#### MacVim
-    
-    brew install macvim --env-std --with-override-system-vim
-
 #### Fonts
     
     git clone https://github.com/powerline/fonts.git
@@ -38,17 +43,12 @@ Some features:
     cd ..
     rm -rf fonts
     
-#### Update Iterm 
+## Vim plugins
 
-![Iterm Font Config](https://github.com/rcclemente/dotfiles/blob/master/images/tmux_powerline_font.png "Inconsolata")
-![Iterm Allow terminal apps to clipboard](https://github.com/rcclemente/dotfiles/blob/master/images/iterm_allow_tmux_vim_to_copy_clipboard.png)
-
-
-#### Update Vim
+#### Installing/Updating Vim
     
     vim +PluginInstall +qall
 
-## More Fun stuff
 
 #### Ack searcher
 
