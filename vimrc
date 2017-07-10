@@ -33,9 +33,11 @@ Plugin 'vim-syntastic/syntastic'
 Plugin 'tpope/vim-rails'
 Plugin 'mileszs/ack.vim'
 
-Plugin 'ctrlpvim/ctrlp.vim'
-let g:ctrlp_working_path_mode = 'r'
-let g:ctrlp_max_depth=40
+" Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'kien/ctrlp.vim'
+set rtp=~/.vim/bundle/ctrlp.vim
+let g:ctrlp_working_path_mode = 'ra'
+
 " Colors
 Plugin 'nanotech/jellybeans.vim' 
 
