@@ -2,7 +2,7 @@ syntax on
 " manually download this 
 " mkdir ~/.vim/colors
 " wget https://raw.githubusercontent.com/nanotech/jellybeans.vim/master/colors/jellybeans.vim ~/.vim/colors/
-colorscheme jellybeans
+colorscheme dracula
 
 """"""""""""""""""""
 " Plugins
