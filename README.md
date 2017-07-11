@@ -70,7 +70,7 @@ Some features:
   
     ctags --exclude=log --exclude=.git --recurse . `bundle show --paths`
 
-  - In vim to search for a definition of a tag press <C-]>
+  - In vim to search for a definition of a tag press `<C-]>`
 
 ## Vim plugins
 
