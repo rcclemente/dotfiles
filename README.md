@@ -5,7 +5,7 @@ Some features:
 - Iterm configuration
 - Git vim integration 
 - vim and tmux navigation using h/j/k/l
-
+- Code searching with ctags including yung gems
 
 ## Installation
 
@@ -54,7 +54,7 @@ Some features:
     
     git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
     
-#### Install jellybean for vim
+#### Install Dracula for vim
     
     mkdir -p ~/.vim/colors
     wget https://raw.githubusercontent.com/dracula/vim/master/colors/dracula.vim
@@ -74,14 +74,13 @@ Some features:
 
 ## Vim plugins
 
+#### Search for text in file
+
+    brew install ack
+    brew install the_silver_searcher
+
 #### Installing/Updating Vim
     
     vim +PluginInstall +qall
 
-
-#### Ack searcher
-
-    brew install ack
-    
-- In your .vimrc
 
