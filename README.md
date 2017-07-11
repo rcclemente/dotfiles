@@ -60,6 +60,18 @@ Some features:
     wget https://raw.githubusercontent.com/dracula/vim/master/colors/dracula.vim
     mv dracula.vim ~/.vim/colors/
 
+#### Ctags
+
+  - Install
+
+    brew install ctags
+
+  - Create the tags for your local ruby/rails project
+  
+    ctags --exclude=log --exclude=.git --recurse . `bundle show --paths`
+
+  - In vim to search for a definition of a tag press <C-]>
+
 ## Vim plugins
 
 #### Installing/Updating Vim
