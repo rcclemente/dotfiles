@@ -1,11 +1,12 @@
 # Dotfiles
 
-Collection of my vim and tmux configurations
+Collection my configurations
+
 Some features:
 - Iterm configuration
 - Git vim integration 
 - vim and tmux navigation using h/j/k/l
-- Code searching with ctags including yung gems
+- Code searching with ctags including your rails project's gems
 
 ## Installation
 
