@@ -64,11 +64,11 @@ Some features:
 
   - Install
 
-    brew install ctags
+    `brew install ctags`
 
   - Create the tags for your local ruby/rails project
   
-    ctags --exclude=log --exclude=.git --recurse . `bundle show --paths`
+    ``ctags --exclude=log --exclude=.git --recurse . `bundle show --paths` ``
 
   - In vim to search for a definition of a tag press `<C-]>`
 
