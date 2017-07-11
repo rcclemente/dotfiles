@@ -39,8 +39,8 @@ Some features:
 
   - Install the theme
 
-    cd ~
-    $ git clone https://github.com/dracula/iterm.git
+        cd ~
+        $ git clone https://github.com/dracula/iterm.git
 
   - Activating theme
 
