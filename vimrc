@@ -145,3 +145,5 @@ nnoremap <Leader>a :Ack!<Space>
 " Git
 nnoremap <Leader>hu :GitGutterUndoHunk<CR>
 nnoremap <Leader>hr :GitGutterRevertHunk<CR>
+nnoremap <Leader>hj :GitGutterNextHunk<CR>
+nnoremap <Leader>hk :GitGutterPrevHunk<CR>
