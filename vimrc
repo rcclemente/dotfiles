@@ -84,6 +84,7 @@ set hlsearch
 set clipboard=unnamed
 set cmdheight=1
 set laststatus=2
+set cursorline
 
 " Split settings
 set splitbelow
