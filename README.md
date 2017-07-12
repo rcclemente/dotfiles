@@ -1,11 +1,12 @@
 # Dotfiles
 
-Collection of my vim and tmux configurations
+Collection my configurations
+
 Some features:
 - Iterm configuration
 - Git vim integration 
 - vim and tmux navigation using h/j/k/l
-
+- Code searching with ctags including your rails project's gems
 
 ## Installation
 
@@ -39,8 +40,8 @@ Some features:
 
   - Install the theme
 
-    cd ~
-    $ git clone https://github.com/dracula/iterm.git
+        cd ~
+        $ git clone https://github.com/dracula/iterm.git
 
   - Activating theme
 
@@ -54,7 +55,7 @@ Some features:
     
     git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
     
-#### Install jellybean for vim
+#### Install Dracula for vim
     
     mkdir -p ~/.vim/colors
     wget https://raw.githubusercontent.com/dracula/vim/master/colors/dracula.vim
@@ -64,24 +65,23 @@ Some features:
 
   - Install
 
-    brew install ctags
+    `brew install ctags`
 
   - Create the tags for your local ruby/rails project
   
-    ctags --exclude=log --exclude=.git --recurse . `bundle show --paths`
+    ``ctags --exclude=log --exclude=.git --recurse . `bundle show --paths` ``
 
   - In vim to search for a definition of a tag press `<C-]>`
 
 ## Vim plugins
 
+#### Search for text in file
+
+    brew install ack
+    brew install the_silver_searcher
+
 #### Installing/Updating Vim
     
     vim +PluginInstall +qall
 
-
-#### Ack searcher
-
-    brew install ack
-    
-- In your .vimrc
 
