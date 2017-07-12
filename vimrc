@@ -107,7 +107,7 @@ nnoremap <Leader>wq :wq<SPACE>
 nnoremap <Leader>qq :q!
 
 " reload vimrc
-nnoremap <Leader>r :so $MYVIMRC<CR>
+nnoremap <Leader>r :so $MYVIMRC<CR>:nohlsearch<CR>
 noremap <leader>ev :execute 'e ' . resolve(expand($MYVIMRC))<CR>
 
 " CTRL-U in insert mode deletes a lot.  Use CTRL-G u to first break undo,
