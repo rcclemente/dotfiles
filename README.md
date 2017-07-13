@@ -83,5 +83,9 @@ Some features:
 #### Installing/Updating Vim
     
     vim +PluginInstall +qall
+    
+## Raw links
+
+https://raw.githubusercontent.com/rcclemente/dotfiles/master/tmux.conf
 
 
