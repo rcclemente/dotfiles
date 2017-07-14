@@ -1,8 +1,4 @@
 syntax on
-" manually download this 
-" mkdir ~/.vim/colors
-" wget https://raw.githubusercontent.com/nanotech/jellybeans.vim/master/colors/jellybeans.vim ~/.vim/colors/
-colorscheme dracula
 
 """"""""""""""""""""
 " Plugins
@@ -18,6 +14,11 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
+
+" Coloscheme First!!
+" Manually download these and add to ~/.vim/colors/
+" colorscheme dracula
+colorscheme petrel
 
 " Vim airline theme
 Plugin 'vim-airline/vim-airline'
@@ -82,7 +83,7 @@ set smarttab
 set expandtab
 set hlsearch
 set clipboard=unnamed
-set cmdheight=1
+set cmdheight=2
 set laststatus=2
 set cursorline
 
