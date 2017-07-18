@@ -46,7 +46,6 @@ nnoremap <silent> <C-h> :TmuxNavigateLeft<cr>
 nnoremap <silent> <C-j> :TmuxNavigateDown<cr>
 nnoremap <silent> <C-k> :TmuxNavigateUp<cr>
 nnoremap <silent> <C-l> :TmuxNavigateRight<cr>
-nnoremap <silent> <C-/> :TmuxNavigatePrevious<cr>
 
 " Editor improvements
 Plugin 'scrooloose/nerdtree'
