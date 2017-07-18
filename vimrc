@@ -75,6 +75,7 @@ endif
 " Ack config
 cnoreabbrev Ack Ack!
 nnoremap <Leader>a :Ack!<Space>
+nnoremap K :Ack! "\b<C-R><C-W>\b"<CR>:cw<CR>
 
 call vundle#end()            " required
 " Run this after adding to the lines above
