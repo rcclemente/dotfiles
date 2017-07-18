@@ -110,6 +110,13 @@ nnoremap <Leader>w :w<SPACE>
 nnoremap <Leader>wq :wq<SPACE> 
 nnoremap <Leader>qq :q!
 
+" Copy relative filename to clipboard
+nmap <Leader>fr :let @*=expand("%")<CR>
+" Copy full path filename with path to clipboard
+nmap <Leader>fp :let @*=expand("%:p")<CR>
+" Copy filename with path to clipboard
+nmap <Leader>ff :let @*=expand("%:t")<CR>
+
 " reload vimrc
 nnoremap <Leader>r :so $MYVIMRC<CR>:nohlsearch<CR>
 noremap <leader>ev :execute 'e ' . resolve(expand($MYVIMRC))<CR>
