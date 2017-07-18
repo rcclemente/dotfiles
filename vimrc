@@ -17,8 +17,10 @@ Plugin 'VundleVim/Vundle.vim'
 
 " Coloscheme First!!
 " Manually download these and add to ~/.vim/colors/
-" colorscheme dracula
-colorscheme petrel
+" colorscheme petrel
+let g:space_vim_dark_background = 235 
+" 233(darkets) -> 238(lightest)
+colorscheme space-vim-dark
 
 " Vim airline theme
 Plugin 'vim-airline/vim-airline'
