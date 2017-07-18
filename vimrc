@@ -47,21 +47,34 @@ nnoremap <silent> <C-j> :TmuxNavigateDown<cr>
 nnoremap <silent> <C-k> :TmuxNavigateUp<cr>
 nnoremap <silent> <C-l> :TmuxNavigateRight<cr>
 
-" Editor improvements
+" NerdTree
 Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
-" NerdTree
 nmap <silent> <leader>t :NERDTreeTabsToggle<CR>
-" To have NERDTree always open on startup
 let g:nerdtree_tabs_open_on_console_startup = 0
 
-" File search
+" String and File search
 Plugin 'ctrlpvim/ctrlp.vim'
 let g:ctrlp_working_path_mode = 'r'
 
 " Find text in file
 Plugin 'mileszs/ack.vim'
-let g:ackprg = 'ag --nogroup --nocolor --column'
+" this requires the silver surfer for speed
+if executable('ag')
+  " Use Ag over Grep
+  " set grepprg=ag\ --nogroup\ --nocolor
+  " Use Ag of Ack
+  let g:ackprg = 'ag --nogroup --nocolor --column'
+
+  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+
+  " ag is fast enough that CtrlP doesn't need to cache
+  let g:ctrlp_use_caching = 0
+endif
+" Ack config
+cnoreabbrev Ack Ack!
+nnoremap <Leader>a :Ack!<Space>
 
 call vundle#end()            " required
 " Run this after adding to the lines above
@@ -155,10 +168,6 @@ nnoremap tk :bprev!<CR>
 nnoremap th :bfirst!<CR>
 nnoremap tl :blast!<CR>
 nnoremap td :bd!<CR>
-
-" Ack config
-cnoreabbrev Ack Ack!
-nnoremap <Leader>a :Ack!<Space>
 
 " Git
 nnoremap <Leader>hu :GitGutterUndoHunk<CR>
