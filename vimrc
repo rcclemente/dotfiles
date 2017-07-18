@@ -18,7 +18,7 @@ Plugin 'VundleVim/Vundle.vim'
 " Coloscheme First!!
 " Manually download these and add to ~/.vim/colors/
 " colorscheme petrel
-let g:space_vim_dark_background = 235 
+let g:space_vim_dark_background = 234 
 " 233(darkets) -> 238(lightest)
 colorscheme space-vim-dark
 
@@ -85,7 +85,7 @@ set smarttab
 set expandtab
 set hlsearch
 set clipboard=unnamed
-set cmdheight=2
+set cmdheight=1
 set laststatus=2
 set cursorline
 
