@@ -18,7 +18,7 @@ Plugin 'VundleVim/Vundle.vim'
 " Coloscheme First!!
 " Manually download these and add to ~/.vim/colors/
 " colorscheme petrel
-let g:space_vim_dark_background = 234 
+let g:space_vim_dark_background = 235 
 " 233(darkets) -> 238(lightest)
 colorscheme space-vim-dark
 
@@ -118,23 +118,31 @@ noremap <leader>ev :execute 'e ' . resolve(expand($MYVIMRC))<CR>
 " so that you can undo CTRL-U after inserting a line break.
 inoremap <C-U> <C-G>u<C-U>
 
-" Buffers
-nnoremap <Leader>bk :bnext<cr>
-nnoremap <Leader>bj :bp<cr>
-nnoremap <Leader>bb :buffers<CR>
-nnoremap <Leader>ba :e<SPACE>
-nnoremap <Leader>bd :bd!<CR>
-
 " Splits
 nnoremap vv :vsplit<SPACE>
 nnoremap vs :split<SPACE>
 
+" Buffers
+nnoremap <Leader>bj :bnext<cr>
+nnoremap <Leader>bk :bp<cr>
+nnoremap <Leader>bb :buffers<CR>
+nnoremap <Leader>ba :e<SPACE>
+nnoremap <Leader>bd :bd!<CR>
+
 " Tabs
-nnoremap tn :tabnew<SPACE>
-nnoremap tk :tabnext<CR>
-nnoremap tj :tabprev<CR>
-nnoremap th :tabfirst<CR>
-nnoremap tl :tablast<CR>
+" nnoremap tn :tabnew<SPACE>
+" nnoremap tk :tabnext<CR>
+" nnoremap tj :tabprev<CR>
+" nnoremap th :tabfirst<CR>
+" nnoremap tl :tablast<CR>
+
+" Use buffers instead of tabs
+nnoremap tn :e<SPACE>
+nnoremap tj :bnext!<CR>
+nnoremap tk :bprev!<CR>
+nnoremap th :bfirst!<CR>
+nnoremap tl :blast!<CR>
+nnoremap td :bd!<CR>
 
 " Navigation
 nnoremap <C-h> <C-w>h
