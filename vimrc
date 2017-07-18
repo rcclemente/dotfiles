@@ -41,6 +41,12 @@ Plugin 'airblade/vim-gitgutter'
 
 " Tmux
 Plugin 'christoomey/vim-tmux-navigator'
+let g:tmux_navigator_no_mappings = 1
+nnoremap <silent> <C-h> :TmuxNavigateLeft<cr>
+nnoremap <silent> <C-j> :TmuxNavigateDown<cr>
+nnoremap <silent> <C-k> :TmuxNavigateUp<cr>
+nnoremap <silent> <C-l> :TmuxNavigateRight<cr>
+nnoremap <silent> <C-/> :TmuxNavigatePrevious<cr>
 
 " Editor improvements
 Plugin 'scrooloose/nerdtree'
@@ -52,7 +58,7 @@ let g:nerdtree_tabs_open_on_console_startup = 0
 
 " File search
 Plugin 'ctrlpvim/ctrlp.vim'
-let g:ctrlp_working_path_mode = 'ra'
+let g:ctrlp_working_path_mode = 'r'
 
 " Find text in file
 Plugin 'mileszs/ack.vim'
@@ -150,12 +156,6 @@ nnoremap tk :bprev!<CR>
 nnoremap th :bfirst!<CR>
 nnoremap tl :blast!<CR>
 nnoremap td :bd!<CR>
-
-" Navigation
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
 
 " Ack config
 cnoreabbrev Ack Ack!
