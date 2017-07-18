@@ -64,7 +64,7 @@ if executable('ag')
   " Use Ag over Grep
   " set grepprg=ag\ --nogroup\ --nocolor
   " Use Ag of Ack
-  let g:ackprg = 'ag --nogroup --nocolor --column'
+  let g:ackprg = 'ag --nogroup --nocolor '
 
   " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
   let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
@@ -126,7 +126,8 @@ vnoremap <leader>jk <ESC>
 nnoremap noh :nohlsearch<CR>
 nnoremap <Leader>w :w<SPACE> 
 nnoremap <Leader>wq :wq<SPACE> 
-nnoremap <Leader>qq :q!
+nnoremap <Leader>qq :q!<CR>
+nnoremap <Leader>o :o!<CR>
 
 " Copy relative filename to clipboard
 nmap <Leader>fr :let @*=expand("%")<CR>
