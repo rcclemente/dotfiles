@@ -117,6 +117,9 @@ set splitbelow
 set splitright
 set pastetoggle=<F3>
 
+set swapfile
+set dir=~/tmp
+
 """"""""""""""""""""
 " KEYBOARD MAPPINGS
 """"""""""""""""""""
