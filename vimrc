@@ -18,7 +18,7 @@ Plugin 'VundleVim/Vundle.vim'
 " Coloscheme First!!
 " Manually download these and add to ~/.vim/colors/
 " colorscheme petrel
-let g:space_vim_dark_background = 235 
+let g:space_vim_dark_background = 235
 " 233(darkets) -> 238(lightest)
 colorscheme space-vim-dark
 
@@ -149,6 +149,9 @@ inoremap <C-U> <C-G>u<C-U>
 nnoremap vv :vsplit<SPACE>
 nnoremap vs :split<SPACE>
 
+" Close current split 
+nmap <leader>c :ene<CR>:bw #<CR>
+
 " Buffers
 nnoremap <Leader>bj :bnext<cr>
 nnoremap <Leader>bk :bp<cr>
@@ -170,6 +173,7 @@ nnoremap tk :bprev!<CR>
 nnoremap th :bfirst!<CR>
 nnoremap tl :blast!<CR>
 nnoremap td :bd!<CR>
+nnoremap tq <C-w>c
 
 " Git
 nnoremap <Leader>hu :GitGutterUndoHunk<CR>
