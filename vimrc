@@ -60,6 +60,7 @@ let g:nerdtree_tabs_open_on_console_startup = 0
 " String and File search
 Plugin 'ctrlpvim/ctrlp.vim'
 let g:ctrlp_working_path_mode = 'r'
+nnoremap <silent> <Leader>o :CtrlPBuffer<cr>
 
 " Find text in file
 Plugin 'mileszs/ack.vim'
@@ -135,7 +136,6 @@ nnoremap noh :nohlsearch<CR>
 nnoremap <Leader>w :w<SPACE> 
 nnoremap <Leader>wq :wq<SPACE> 
 nnoremap <Leader>qq :q!<CR>
-nnoremap <Leader>o :o!<CR>
 
 " Copy relative filename to clipboard
 nmap <Leader>fr :let @*=expand("%")<CR>
