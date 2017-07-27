@@ -18,9 +18,10 @@ Plugin 'VundleVim/Vundle.vim'
 " Coloscheme First!!
 " Manually download these and add to ~/.vim/colors/
 " colorscheme petrel
-let g:space_vim_dark_background = 235
+" let g:space_vim_dark_background = 235
 " 233(darkets) -> 238(lightest)
-colorscheme space-vim-dark
+" colorscheme space-vim-dark
+colorscheme Tomorrow-Night-Eighties
 
 " Vim airline theme
 Plugin 'vim-airline/vim-airline'
@@ -60,6 +61,7 @@ let g:nerdtree_tabs_open_on_console_startup = 0
 " String and File search
 Plugin 'ctrlpvim/ctrlp.vim'
 let g:ctrlp_working_path_mode = 'r'
+nmap <silent> <leader>o :CtrlPBuffer<CR>
 
 " Find text in file
 Plugin 'mileszs/ack.vim'
@@ -68,7 +70,7 @@ if executable('ag')
   " Use Ag over Grep
   " set grepprg=ag\ --nogroup\ --nocolor
   " Use Ag of Ack
-  let g:ackprg = 'ag --nogroup --nocolor '
+  " let g:ackprg = 'ag --nogroup --nocolor '
 
   " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
   let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
@@ -77,9 +79,34 @@ if executable('ag')
   let g:ctrlp_use_caching = 0
 endif
 " Ack config
-cnoreabbrev Ack Ack!
-nnoremap <Leader>a :Ack!<Space>
-nnoremap K :Ack! "\b<C-R><C-W>\b"<CR>:cw<CR>
+" cnoreabbrev Ack Ack!
+" nnoremap <Leader>a :Ack!<Space>
+" nnoremap K :Ack! "\b<C-R><C-W>\b"<CR>:cw<CR>
+
+" FZF
+Plugin 'junegunn/fzf'
+Plugin 'junegunn/fzf.vim'
+
+" Mapping selecting mappings
+nmap <leader><tab> <plug>(fzf-maps-n)
+xmap <leader><tab> <plug>(fzf-maps-x)
+omap <leader><tab> <plug>(fzf-maps-o)
+
+" Insert mode completion
+imap <c-x><c-k> <plug>(fzf-complete-word)
+imap <c-x><c-f> <plug>(fzf-complete-path)
+imap <c-x><c-j> <plug>(fzf-complete-file-ag)
+imap <c-x><c-l> <plug>(fzf-complete-line)
+
+" Advanced customization using autoload functions
+inoremap <expr> <c-x><c-k> fzf#vim#complete#word({'left': '15%'})
+
+" Custom fzf mappings 
+nnoremap <Leader>b :Buffers<CR>
+nnoremap <Leader>f :Files<CR>
+nnoremap <Leader>g :GFiles<CR>
+nnoremap K :Ag <C-R><C-W><CR>
+nnoremap <Leader>a :Ag<CR>
 
 call vundle#end()            " required
 " Run this after adding to the lines above
@@ -119,7 +146,7 @@ set pastetoggle=<F3>
 
 set swapfile
 set dir=~/tmp
-
+set hidden
 """"""""""""""""""""
 " KEYBOARD MAPPINGS
 """"""""""""""""""""
@@ -127,15 +154,14 @@ set dir=~/tmp
 " remap ESC
 imap jk <ESC>
 vmap jk <ESC>
-nnoremap <leader>jk <ESC>
-vnoremap <leader>jk <ESC>
+" nnoremap <leader>jk <ESC>
+" vnoremap <leader>jk <ESC>
 
 " MISC
 nnoremap noh :nohlsearch<CR>
 nnoremap <Leader>w :w<SPACE> 
 nnoremap <Leader>wq :wq<SPACE> 
 nnoremap <Leader>qq :q!<CR>
-nnoremap <Leader>o :o!<CR>
 
 " Copy relative filename to clipboard
 nmap <Leader>fr :let @*=expand("%")<CR>
@@ -162,8 +188,8 @@ nmap <leader>c :ene<CR>:bw #<CR>
 " Buffers
 nnoremap <Leader>bj :bnext<cr>
 nnoremap <Leader>bk :bp<cr>
-nnoremap <Leader>bb :buffers<CR>
-nnoremap <Leader>ba :e<SPACE>
+" nnoremap <Leader>bb :buffers<CR>
+" nnoremap <Leader>ba :e<SPACE>
 nnoremap <Leader>bd :bd!<CR>
 
 " Tabs
