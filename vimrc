@@ -106,7 +106,7 @@ nnoremap <Leader>b :Buffers<CR>
 nnoremap <Leader>f :Files<CR>
 nnoremap <Leader>g :GFiles<CR>
 nnoremap K :Ag <C-R><C-W><CR>
-nnoremap <Leader>a :Ag<CR>
+nnoremap <Leader>a :Ag<space>
 
 call vundle#end()            " required
 " Run this after adding to the lines above
@@ -147,6 +147,9 @@ set pastetoggle=<F3>
 set swapfile
 set dir=~/tmp
 set hidden
+set showmatch
+set matchtime=3
+
 """"""""""""""""""""
 " KEYBOARD MAPPINGS
 """"""""""""""""""""
