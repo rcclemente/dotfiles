@@ -17,6 +17,7 @@ Plugin 'VundleVim/Vundle.vim'
 
 " Coloscheme First!!
 " Manually download these and add to ~/.vim/colors/
+Plugin 'flazz/vim-colorschemes'
 " colorscheme petrel
 " let g:space_vim_dark_background = 235
 " 233(darkets) -> 238(lightest)
@@ -86,6 +87,7 @@ endif
 " FZF
 Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
+let g:fzf_layout = { 'down': '~25%' }
 
 " Mapping selecting mappings
 nmap <leader><tab> <plug>(fzf-maps-n)
