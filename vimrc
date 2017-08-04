@@ -39,6 +39,7 @@ let g:tmuxline_theme = 'airline'
 let g:airline#extensions#tabline#enabled = 1
 " Show just the filename
 let g:airline#extensions#tabline#fnamemod = ':t'
+highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=Black gui=NONE guifg=DarkGrey guibg=NONE
 
 " Git fugitive
 Plugin 'tpope/vim-fugitive'
@@ -87,7 +88,7 @@ endif
 " FZF
 Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
-let g:fzf_layout = { 'down': '~25%' }
+let g:fzf_layout = { 'down': '~30%' }
 
 " Mapping selecting mappings
 nmap <leader><tab> <plug>(fzf-maps-n)
@@ -151,7 +152,7 @@ set dir=~/tmp
 set hidden
 set showmatch
 set matchtime=3
-
+set scrolloff=3
 """"""""""""""""""""
 " KEYBOARD MAPPINGS
 """"""""""""""""""""
@@ -161,6 +162,9 @@ imap jk <ESC>
 vmap jk <ESC>
 " nnoremap <leader>jk <ESC>
 " vnoremap <leader>jk <ESC>
+
+" Toggle wrapping 
+nnoremap <F4> :set wrap!<CR>
 
 " MISC
 nnoremap noh :nohlsearch<CR>
