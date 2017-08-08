@@ -131,7 +131,6 @@ nnoremap <Leader>a :Ag<space>
 " Scalpel
 Plugin 'wincent/scalpel'
 nmap <Leader>s <Plug>(Scalpel)
-
 call vundle#end()            " required
 " Run this after adding to the lines above
 " vim +PluginInstall +qall
