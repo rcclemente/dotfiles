@@ -1,5 +1,12 @@
 syntax on
 
+" remap ESC
+imap jk <ESC>
+vmap jk <ESC>
+
+" remap leader key
+let mapleader=" "
+
 """"""""""""""""""""
 " Plugins
 """"""""""""""""""""
@@ -41,10 +48,20 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
 highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=Black gui=NONE guifg=DarkGrey guibg=NONE
 
+" Git
+Plugin 'airblade/vim-gitgutter'
+nnoremap <Leader>hu :GitGutterUndoHunk<CR>
+nnoremap <Leader>hr :GitGutterRevertHunk<CR>
+nnoremap <Leader>hj :GitGutterNextHunk<CR>
+nnoremap <Leader>hk :GitGutterPrevHunk<CR>
+
 " Git fugitive
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-rails'
-Plugin 'airblade/vim-gitgutter'
+Bundle 'vim-ruby/vim-ruby'
+autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
+autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
+autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
 
 " Tmux
 Plugin 'christoomey/vim-tmux-navigator'
@@ -104,12 +121,16 @@ imap <c-x><c-l> <plug>(fzf-complete-line)
 " Advanced customization using autoload functions
 inoremap <expr> <c-x><c-k> fzf#vim#complete#word({'left': '15%'})
 
-" Custom fzf mappings 
+" Custom fzf mappings
 nnoremap <Leader>b :Buffers<CR>
 nnoremap <Leader>f :Files<CR>
 nnoremap <Leader>g :GFiles<CR>
 nnoremap K :Ag <C-R><C-W><CR>
 nnoremap <Leader>a :Ag<space>
+
+" Scalpel
+Plugin 'wincent/scalpel'
+nmap <Leader>s <Plug>(Scalpel)
 
 call vundle#end()            " required
 " Run this after adding to the lines above
@@ -153,23 +174,24 @@ set hidden
 set showmatch
 set matchtime=3
 set scrolloff=3
+" strip spaces when saving
+autocmd BufWritePre * %s/\s\+$//e
+
 """"""""""""""""""""
 " KEYBOARD MAPPINGS
 """"""""""""""""""""
 
-" remap ESC
-imap jk <ESC>
-vmap jk <ESC>
-" nnoremap <leader>jk <ESC>
-" vnoremap <leader>jk <ESC>
-
-" Toggle wrapping 
+" Toggle wrapping
 nnoremap <F4> :set wrap!<CR>
+" Enter key to move line down
+nnoremap <Enter> O<ESC>j
+" Space to move a character
+nnoremap <space> i<space><esc>l
 
 " MISC
 nnoremap noh :nohlsearch<CR>
-nnoremap <Leader>w :w<SPACE> 
-nnoremap <Leader>wq :wq<SPACE> 
+nnoremap <Leader>w :w<space>
+nnoremap <Leader>wq :wq<space>
 nnoremap <Leader>qq :q!<CR>
 
 " Copy relative filename to clipboard
@@ -188,28 +210,25 @@ noremap <leader>ev :execute 'e ' . resolve(expand($MYVIMRC))<CR>
 inoremap <C-U> <C-G>u<C-U>
 
 " Splits
-nnoremap vv :vsplit<SPACE>
-nnoremap vs :split<SPACE>
-
-" Close current split 
-nmap <leader>c :ene<CR>:bw #<CR>
+nnoremap vv :vsplit<space>
+nnoremap vs :split<space>
 
 " Buffers
 nnoremap <Leader>bj :bnext<cr>
 nnoremap <Leader>bk :bp<cr>
 " nnoremap <Leader>bb :buffers<CR>
-" nnoremap <Leader>ba :e<SPACE>
+" nnoremap <Leader>ba :e<space>
 nnoremap <Leader>bd :bd!<CR>
 
 " Tabs
-" nnoremap tn :tabnew<SPACE>
+" nnoremap tn :tabnew<space>
 " nnoremap tk :tabnext<CR>
 " nnoremap tj :tabprev<CR>
 " nnoremap th :tabfirst<CR>
 " nnoremap tl :tablast<CR>
 
 " Use buffers instead of tabs
-nnoremap tn :e<SPACE>
+nnoremap tn :e<space>
 nnoremap tj :bnext!<CR>
 nnoremap tk :bprev!<CR>
 nnoremap th :bfirst!<CR>
@@ -217,8 +236,19 @@ nnoremap tl :blast!<CR>
 nnoremap td :bd!<CR>
 nnoremap tq <C-w>c
 
-" Git
-nnoremap <Leader>hu :GitGutterUndoHunk<CR>
-nnoremap <Leader>hr :GitGutterRevertHunk<CR>
-nnoremap <Leader>hj :GitGutterNextHunk<CR>
-nnoremap <Leader>hk :GitGutterPrevHunk<CR>
+" Change Branches
+fun! s:change_branch(e)
+  let res = system("git checkout " . a:e)
+  :e!
+  :AirlineRefresh
+  echom "Change branch to" . a:e
+endfun
+
+command! Gbranch call fzf#run(
+  \ {
+  \ 'source': 'git branch',
+  \ 'sink': function('<sid>change_branch'),
+  \ 'options': '-m',
+  \ 'down': '30%'
+  \ })
+
