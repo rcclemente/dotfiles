@@ -235,6 +235,33 @@ nnoremap tl :blast!<CR>
 nnoremap td :bd!<CR>
 nnoremap tq <C-w>c
 
+""""""""""""""""""""
+" Special functions
+""""""""""""""""""""
+
+" Ruby auto complete
+" https://github.com/vim-ruby/vim-ruby/wiki/VimRubySupport
+function! CloseRubyEndToken()
+  let current_line = getline( '.' )
+  let braces_at_end = '{\s*\(|\(,\|\s\|\w\)*|\s*\)\?$'
+  let stuff_without_do = '^\s*\(class\|if\|unless\|begin\|case\|for\|module\|while\|until\|def\)'
+  let stuff_without_do_too = '\s*\(if\|unless\|begin\|case\)'
+  let with_do = 'do\s*\(|\(,\|\s\|\w\)*|\s*\)\?$'
+
+  if match(current_line, braces_at_end) <= virtcol('.') &&  match(current_line, braces_at_end) > 0
+    return "\<CR>}\<C-O>O"
+  elseif match(current_line, stuff_without_do_too) >= 0
+    return "\<CR>end\<C-O>O"
+  elseif match(current_line, stuff_without_do) >= 0
+    return "\<CR>end\<C-O>O"
+  elseif match(current_line, with_do) >= 0
+    return "\<CR>end\<C-O>O"
+  else
+    return "\<CR>"
+  endif
+endfunction
+autocmd FileType ruby imap <buffer> <CR> <C-R>=CloseRubyEndToken()<CR>
+
 " Change Branches
 fun! s:change_branch(e)
   let res = system("git checkout " . a:e)
