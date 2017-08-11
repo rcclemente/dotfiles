@@ -129,8 +129,8 @@ nnoremap K :Ag <C-R><C-W><CR>
 nnoremap <Leader>a :Ag<space>
 
 " Scalpel
-" Plugin 'wincent/scalpel'
-" nmap <Leader>s <Plug>(Scalpel)
+Plugin 'wincent/scalpel'
+nmap <Leader>s <Plug>(Scalpel)
 call vundle#end()            " required
 " Run this after adding to the lines above
 " vim +PluginInstall +qall
@@ -184,8 +184,10 @@ autocmd BufWritePre * %s/\s\+$//e
 nnoremap <F4> :set wrap!<CR>
 " Enter key to move line down
 nnoremap <Enter> O<ESC>j
-" Space to move a character
-nnoremap <space> i<space><esc>l
+" select all copy
+nnoremap <Leader>sa ggvG$
+" run selection in commandline
+xnoremap <leader>c <esc>:'<,'>:!bash<CR>
 
 " MISC
 nnoremap noh :nohlsearch<CR>
