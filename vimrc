@@ -7,12 +7,12 @@ vmap jk <ESC>
 " remap leader key
 let mapleader=" "
 
-""""""""""""""""""""
-" Plugins
-""""""""""""""""""""
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
+""""""""""""""""""""
+" Plugins
+""""""""""""""""""""
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -125,6 +125,7 @@ inoremap <expr> <c-x><c-k> fzf#vim#complete#word({'left': '15%'})
 nnoremap <Leader>b :Buffers<CR>
 nnoremap <Leader>f :Files<CR>
 nnoremap <Leader>g :GFiles<CR>
+nnoremap <Leader>i :History<CR>
 nnoremap K :Ag <C-R><C-W><CR>
 nnoremap <Leader>a :Ag<space>
 
@@ -134,10 +135,9 @@ nmap <Leader>s <Plug>(Scalpel)
 call vundle#end()            " required
 " Run this after adding to the lines above
 " vim +PluginInstall +qall
-filetype plugin indent on    " required
-
 """"""""""""""""""""
 
+filetype plugin indent on    " required
 set backspace=indent,eol,start
 set nobackup		                " do not keep a backup file, use versions instead
 set history=1000		            " keep 50 lines of command line history
@@ -191,7 +191,7 @@ xnoremap <leader>c <esc>:'<,'>:!bash<CR>
 
 " MISC
 nnoremap noh :nohlsearch<CR>
-nnoremap <Leader>w :w<space>
+nnoremap <Leader>w :w<CR>
 nnoremap <Leader>wq :wq<space>
 nnoremap <Leader>qq :q!<CR>
 
