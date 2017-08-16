@@ -1,2 +1,4 @@
 *.sqp
 .*.swp
+nvim/bundle
+nvim/colors

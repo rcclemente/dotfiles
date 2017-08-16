@@ -58,6 +58,7 @@ nnoremap <Leader>hk :GitGutterPrevHunk<CR>
 " Git fugitive
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-endwise'
 Bundle 'vim-ruby/vim-ruby'
 autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
 autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
@@ -66,10 +67,10 @@ autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
 " Tmux
 Plugin 'christoomey/vim-tmux-navigator'
 let g:tmux_navigator_no_mappings = 1
-nnoremap <silent> <C-h> :TmuxNavigateLeft<cr>
-nnoremap <silent> <C-j> :TmuxNavigateDown<cr>
-nnoremap <silent> <C-k> :TmuxNavigateUp<cr>
-nnoremap <silent> <C-l> :TmuxNavigateRight<cr>
+nnoremap <silent> <C-h> :TmuxNavigateLeft<CR>
+nnoremap <silent> <C-j> :TmuxNavigateDown<CR>
+nnoremap <silent> <C-k> :TmuxNavigateUp<CR>
+nnoremap <silent> <C-l> :TmuxNavigateRight<CR>
 
 " NerdTree
 Plugin 'scrooloose/nerdtree'
@@ -80,7 +81,7 @@ let g:nerdtree_tabs_open_on_console_startup = 0
 " String and File search
 Plugin 'ctrlpvim/ctrlp.vim'
 let g:ctrlp_working_path_mode = 'r'
-nnoremap <silent> <Leader>o :CtrlPBuffer<cr>
+nnoremap <silent> <Leader>o :CtrlPBuffer<CR>
 
 " Find text in file
 Plugin 'mileszs/ack.vim'
@@ -175,7 +176,6 @@ set matchtime=3
 set scrolloff=3
 " strip spaces when saving
 autocmd BufWritePre * %s/\s\+$//e
-
 """"""""""""""""""""
 " KEYBOARD MAPPINGS
 """"""""""""""""""""
@@ -215,8 +215,8 @@ nnoremap vv :vsplit<space>
 nnoremap vs :split<space>
 
 " Buffers
-nnoremap <Leader>bj :bnext<cr>
-nnoremap <Leader>bk :bp<cr>
+nnoremap <Leader>bj :bnext<CR>
+nnoremap <Leader>bk :bp<CR>
 " nnoremap <Leader>bb :buffers<CR>
 " nnoremap <Leader>ba :e<space>
 nnoremap <Leader>bd :bd!<CR>
