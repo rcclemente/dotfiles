@@ -35,7 +35,7 @@ colorscheme Tomorrow-Night-Eighties
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Bundle 'edkolev/tmuxline.vim'
-let g:airline_theme='luna'
+let g:airline_theme='base16_eighties'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ' '
@@ -47,6 +47,8 @@ let g:airline#extensions#tabline#enabled = 1
 " Show just the filename
 let g:airline#extensions#tabline#fnamemod = ':t'
 highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=Black gui=NONE guifg=DarkGrey guibg=NONE
+highlight CursorLineNR term=NONE cterm=NONE ctermfg=Yellow ctermbg=NONE gui=NONE guifg=Yellow guibg=NONE
+highlight Sneak ctermfg=235 ctermbg=222
 
 " Git
 Plugin 'airblade/vim-gitgutter'
@@ -222,14 +224,14 @@ nnoremap <Leader>bk :bp<CR>
 nnoremap <Leader>bd :bd!<CR>
 
 " Tabs
-" nnoremap tn :tabnew<space>
+nnoremap tn :tabnew<space>
 " nnoremap tk :tabnext<CR>
 " nnoremap tj :tabprev<CR>
 " nnoremap th :tabfirst<CR>
 " nnoremap tl :tablast<CR>
 
 " Use buffers instead of tabs
-nnoremap tn :e<space>
+" nnoremap tn :e<space>
 nnoremap tj :bnext!<CR>
 nnoremap tk :bprev!<CR>
 nnoremap th :bfirst!<CR>
