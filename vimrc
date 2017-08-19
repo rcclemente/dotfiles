@@ -25,10 +25,6 @@ Plugin 'VundleVim/Vundle.vim'
 " Coloscheme First!!
 " Manually download these and add to ~/.vim/colors/
 Plugin 'flazz/vim-colorschemes'
-" colorscheme petrel
-" let g:space_vim_dark_background = 235
-" 233(darkets) -> 238(lightest)
-" colorscheme space-vim-dark
 colorscheme Tomorrow-Night-Eighties
 
 " Vim airline theme
@@ -66,7 +62,7 @@ autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
 
 " Tmux
 Plugin 'christoomey/vim-tmux-navigator'
-let g:tmux_navigator_no_mappings = 1
+" let g:tmux_navigator_no_mappings = 1
 nnoremap <silent> <C-h> :TmuxNavigateLeft<CR>
 nnoremap <silent> <C-j> :TmuxNavigateDown<CR>
 nnoremap <silent> <C-k> :TmuxNavigateUp<CR>
@@ -192,8 +188,9 @@ xnoremap <leader>c <esc>:'<,'>:!bash<CR>
 " MISC
 nnoremap noh :nohlsearch<CR>
 nnoremap <Leader>w :w<CR>
+nnoremap <c-s> :w<CR>
+nnoremap <Leader>wa :wa<CR>
 nnoremap <Leader>wq :wq<space>
-nnoremap <Leader>qq :q!<CR>
 
 " Copy relative filename to clipboard
 nmap <Leader>fr :let @*=expand("%")<CR>
@@ -204,7 +201,6 @@ nmap <Leader>ff :let @*=expand("%:t")<CR>
 
 " reload vimrc
 nnoremap <Leader>r :so $MYVIMRC<CR>:nohlsearch<CR>
-noremap <leader>ev :execute 'e ' . resolve(expand($MYVIMRC))<CR>
 
 " CTRL-U in insert mode deletes a lot.  Use CTRL-G u to first break undo,
 " so that you can undo CTRL-U after inserting a line break.
@@ -236,6 +232,14 @@ nnoremap th :bfirst!<CR>
 nnoremap tl :blast!<CR>
 nnoremap td :bd!<CR>
 nnoremap tq <C-w>c
+
+" Visual block tabbing
+vmap > >gv
+vmap < <gv
+
+" Delete into limbo
+vnoremap <Leader>d "_d
+nnoremap <Leader>d "_d
 
 """"""""""""""""""""
 " Special functions
