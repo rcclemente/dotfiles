@@ -129,6 +129,10 @@ nnoremap <Leader>a :Ag<space>
 " Scalpel
 Plugin 'wincent/scalpel'
 nmap <Leader>s <Plug>(Scalpel)
+
+" Commenter
+Plugin 'tomtom/tcomment_vim'
+
 call vundle#end()            " required
 " Run this after adding to the lines above
 " vim +PluginInstall +qall
@@ -172,6 +176,7 @@ set matchtime=3
 set scrolloff=3
 " strip spaces when saving
 autocmd BufWritePre * %s/\s\+$//e
+
 """"""""""""""""""""
 " KEYBOARD MAPPINGS
 """"""""""""""""""""
@@ -240,6 +245,9 @@ vmap < <gv
 " Delete into limbo
 vnoremap <Leader>d "_d
 nnoremap <Leader>d "_d
+
+" Search visually selected text
+vnoremap <expr> // 'y/\V'.escape(@",'\').'<CR>'
 
 """"""""""""""""""""
 " Special functions
