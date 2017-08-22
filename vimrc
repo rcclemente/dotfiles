@@ -56,9 +56,6 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-endwise'
 Bundle 'vim-ruby/vim-ruby'
-autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
-autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
-autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
 
 " Tmux
 Plugin 'christoomey/vim-tmux-navigator'
@@ -177,6 +174,15 @@ set scrolloff=3
 " strip spaces when saving
 autocmd BufWritePre * %s/\s\+$//e
 
+set ignorecase
+set smartcase
+
+" Ruby
+autocmd FileType ruby compiler ruby
+autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
+autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
+autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
+
 """"""""""""""""""""
 " KEYBOARD MAPPINGS
 """"""""""""""""""""
@@ -223,7 +229,7 @@ nnoremap <Leader>bk :bp<CR>
 nnoremap <Leader>bd :bd!<CR>
 
 " Tabs
-nnoremap tn :tabnew<space>
+" nnoremap tn :tabnew<space>
 " nnoremap tk :tabnext<CR>
 " nnoremap tj :tabprev<CR>
 " nnoremap th :tabfirst<CR>
@@ -247,6 +253,7 @@ vnoremap <Leader>d "_d
 nnoremap <Leader>d "_d
 
 " Search visually selected text
+" vnoremap // y/\V<C-R>"<CR>
 vnoremap <expr> // 'y/\V'.escape(@",'\').'<CR>'
 
 """"""""""""""""""""
