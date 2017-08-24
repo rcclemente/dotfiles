@@ -46,10 +46,6 @@ highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=Black gui=NONE gu
 
 " Git
 Plugin 'airblade/vim-gitgutter'
-nnoremap <Leader>hu :GitGutterUndoHunk<CR>
-nnoremap <Leader>hr :GitGutterRevertHunk<CR>
-nnoremap <Leader>hj :GitGutterNextHunk<CR>
-nnoremap <Leader>hk :GitGutterPrevHunk<CR>
 
 " Git fugitive
 Plugin 'tpope/vim-fugitive'
@@ -59,11 +55,6 @@ Bundle 'vim-ruby/vim-ruby'
 
 " Tmux
 Plugin 'christoomey/vim-tmux-navigator'
-" let g:tmux_navigator_no_mappings = 1
-nnoremap <silent> <C-h> :TmuxNavigateLeft<CR>
-nnoremap <silent> <C-j> :TmuxNavigateDown<CR>
-nnoremap <silent> <C-k> :TmuxNavigateUp<CR>
-nnoremap <silent> <C-l> :TmuxNavigateRight<CR>
 
 " NerdTree
 Plugin 'scrooloose/nerdtree'
@@ -256,6 +247,17 @@ nnoremap <Leader>d "_d
 " vnoremap // y/\V<C-R>"<CR>
 vnoremap <expr> // 'y/\V'.escape(@",'\').'<CR>'
 
+# plugin mappings
+let g:tmux_navigator_no_mappings = 1
+nnoremap <silent> <C-h> :TmuxNavigateLeft<CR>
+nnoremap <silent> <C-j> :TmuxNavigateDown<CR>
+nnoremap <silent> <C-k> :TmuxNavigateUp<CR>
+nnoremap <silent> <C-l> :TmuxNavigateRight<CR>
+
+nnoremap <Leader>hu :GitGutterUndoHunk<CR>
+nnoremap <Leader>hr :GitGutterRevertHunk<CR>
+nnoremap <Leader>hj :GitGutterNextHunk<CR>
+nnoremap <Leader>hk :GitGutterPrevHunk<CR>
 """"""""""""""""""""
 " Special functions
 """"""""""""""""""""
