@@ -6,8 +6,8 @@ vmap jk <ESC>
 
 " remap leader key
 let mapleader=" "
-
 set nocompatible              " be iMproved, required
+
 """"""""""""""""""""
 " Plugins
 """"""""""""""""""""
@@ -29,34 +29,18 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-endwise'
 Bundle 'vim-ruby/vim-ruby'
-autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
-autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
-autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
 
 " Vim airline theme
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Bundle 'edkolev/tmuxline.vim'
-let g:airline_theme='base16_eighties'
-let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#left_sep = ' '
-let g:airline#extensions#tabline#left_alt_sep = '|'
-let g:airline#extensions#tmuxline#enabled = 0
-let g:tmuxline_theme = 'airline'
-" Enable the list of buffers
-let g:airline#extensions#tabline#enabled = 1
-" Show just the filename
-let g:airline#extensions#tabline#fnamemod = ':t'
+Plugin 'christoomey/vim-tmux-navigator'
 
 " NerdTree
 Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
-nmap <silent> <leader>t :NERDTreeTabsToggle<CR>
-let g:nerdtree_tabs_open_on_console_startup = 0
 
 Plugin 'wincent/scalpel'
-nmap <Leader>s <Plug>(Scalpel)
 call vundle#end()            " required
 " Run this after adding to the lines above
 " vim +PluginInstall +qall
@@ -132,11 +116,10 @@ nmap <Leader>ff :let @*=expand("%:t")<CR>
 nnoremap <Leader>r :so ~/.config/nvim/init.vim<CR>:nohlsearch<CR>
 
 " Splits
-nnoremap vv :vsplit<space>
-nnoremap vs :split<space>
+nnoremap vv :vsplit \| b
+nnoremap vs :split \| b
 
 " Use buffers instead of tabs
-nnoremap tn :e<space>
 nnoremap tj :bnext!<CR>
 nnoremap tk :bprev!<CR>
 nnoremap th :bfirst!<CR>
@@ -144,4 +127,27 @@ nnoremap tl :blast!<CR>
 nnoremap td :bd!<CR>
 nnoremap tq <C-w>c
 
+""""""""""""""""
+" Plugins
+""""""""""""""""
+autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
+autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
+autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
 
+" Airline
+let g:airline_theme='base16_eighties'
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
+let g:airline#extensions#tmuxline#enabled = 0
+let g:tmuxline_theme = 'airline'
+" Enable the list of buffers
+let g:airline#extensions#tabline#enabled = 1
+" Show just the filename
+let g:airline#extensions#tabline#fnamemod = ':t'
+
+nmap <silent> <leader>t :NERDTreeTabsToggle<CR>
+let g:nerdtree_tabs_open_on_console_startup = 0
+
+nmap <Leader>s <Plug>(Scalpel)

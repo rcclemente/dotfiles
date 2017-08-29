@@ -247,7 +247,7 @@ nnoremap <Leader>d "_d
 " vnoremap // y/\V<C-R>"<CR>
 vnoremap <expr> // 'y/\V'.escape(@",'\').'<CR>'
 
-# plugin mappings
+" plugin mappings
 let g:tmux_navigator_no_mappings = 1
 nnoremap <silent> <C-h> :TmuxNavigateLeft<CR>
 nnoremap <silent> <C-j> :TmuxNavigateDown<CR>
