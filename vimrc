@@ -60,6 +60,7 @@ Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
 nmap <silent> <leader>t :NERDTreeTabsToggle<CR>
+nmap <silent> <leader>c :NERDTreeFind<CR>
 let g:nerdtree_tabs_open_on_console_startup = 0
 
 " String and File search
