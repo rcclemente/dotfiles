@@ -122,6 +122,9 @@ nmap <Leader>s <Plug>(Scalpel)
 " Commenter
 Plugin 'tomtom/tcomment_vim'
 
+" Ctags
+Plugin 'ludovicchabant/vim-gutentags'
+
 call vundle#end()            " required
 " Run this after adding to the lines above
 " vim +PluginInstall +qall
@@ -303,3 +306,13 @@ command! Gbranch call fzf#run(
   \ 'down': '30%'
   \ })
 
+""""""""""""""""""""
+" Auto complete
+""""""""""""""""""""
+set completeopt=longest,menuone
+inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+inoremap <expr> <C-n> pumvisible() ? '<C-n>' :
+  \ '<C-n><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
+
+inoremap <expr> <M-,> pumvisible() ? '<C-n>' :
+  \ '<C-x><C-o><C-n><C-p><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
