@@ -31,18 +31,6 @@ colorscheme Tomorrow-Night-Eighties
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Bundle 'edkolev/tmuxline.vim'
-let g:airline_theme='base16_eighties'
-let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#left_sep = ' '
-let g:airline#extensions#tabline#left_alt_sep = '|'
-let g:airline#extensions#tmuxline#enabled = 0
-let g:tmuxline_theme = 'airline'
-" Enable the list of buffers
-let g:airline#extensions#tabline#enabled = 1
-" Show just the filename
-let g:airline#extensions#tabline#fnamemod = ':t'
-highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=Black gui=NONE guifg=DarkGrey guibg=NONE
 
 " Git
 Plugin 'airblade/vim-gitgutter'
@@ -59,9 +47,6 @@ Plugin 'christoomey/vim-tmux-navigator'
 " NerdTree
 Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
-nmap <silent> <leader>t :NERDTreeTabsToggle<CR>
-nmap <silent> <leader>c :NERDTreeFind<CR>
-let g:nerdtree_tabs_open_on_console_startup = 0
 
 " String and File search
 Plugin 'ctrlpvim/ctrlp.vim'
@@ -91,33 +76,9 @@ endif
 " FZF
 Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
-let g:fzf_layout = { 'down': '~30%' }
-
-" Mapping selecting mappings
-nmap <leader><tab> <plug>(fzf-maps-n)
-xmap <leader><tab> <plug>(fzf-maps-x)
-omap <leader><tab> <plug>(fzf-maps-o)
-
-" Insert mode completion
-imap <c-x><c-k> <plug>(fzf-complete-word)
-imap <c-x><c-f> <plug>(fzf-complete-path)
-imap <c-x><c-j> <plug>(fzf-complete-file-ag)
-imap <c-x><c-l> <plug>(fzf-complete-line)
-
-" Advanced customization using autoload functions
-inoremap <expr> <c-x><c-k> fzf#vim#complete#word({'left': '15%'})
-
-" Custom fzf mappings
-nnoremap <Leader>b :Buffers<CR>
-nnoremap <Leader>f :Files<CR>
-nnoremap <Leader>g :GFiles<CR>
-nnoremap <Leader>i :History<CR>
-nnoremap K :Ag <C-R><C-W><CR>
-nnoremap <Leader>a :Ag<space>
 
 " Scalpel
 Plugin 'wincent/scalpel'
-nmap <Leader>s <Plug>(Scalpel)
 
 " Commenter
 Plugin 'tomtom/tcomment_vim'
@@ -263,6 +224,59 @@ nnoremap <Leader>hu :GitGutterUndoHunk<CR>
 nnoremap <Leader>hr :GitGutterRevertHunk<CR>
 nnoremap <Leader>hj :GitGutterNextHunk<CR>
 nnoremap <Leader>hk :GitGutterPrevHunk<CR>
+
+""""""""""""""""""""
+" Plugin config
+""""""""""""""""""""
+
+" Airline
+let g:airline_theme='base16_eighties'
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
+let g:airline#extensions#tmuxline#enabled = 0
+let g:tmuxline_theme = 'airline'
+" Enable the list of buffers
+let g:airline#extensions#tabline#enabled = 1
+" Show just the filename
+let g:airline#extensions#tabline#fnamemod = ':t'
+highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=Black gui=NONE guifg=DarkGrey guibg=NONE
+
+" Nerdtree
+nmap <silent> <leader>t :NERDTreeTabsToggle<CR>
+nmap <silent> <leader>c :NERDTreeFind<CR>
+let g:nerdtree_tabs_open_on_console_startup = 0
+
+" Scalper - find and replace
+nmap <Leader>s <Plug>(Scalpel)
+
+" FZF
+let g:fzf_layout = { 'down': '~30%' }
+
+" Mapping selecting mappings
+nmap <leader><tab> <plug>(fzf-maps-n)
+xmap <leader><tab> <plug>(fzf-maps-x)
+omap <leader><tab> <plug>(fzf-maps-o)
+
+" Insert mode completion
+imap <c-x><c-k> <plug>(fzf-complete-word)
+imap <c-x><c-f> <plug>(fzf-complete-path)
+imap <c-x><c-j> <plug>(fzf-complete-file-ag)
+imap <c-x><c-l> <plug>(fzf-complete-line)
+
+" Advanced customization using autoload functions
+inoremap <expr> <c-x><c-k> fzf#vim#complete#word({'left': '15%'})
+
+" Custom fzf mappings
+nnoremap <Leader>b :Buffers<CR>
+nnoremap <Leader>f :Files<CR>
+nnoremap <Leader>g :GFiles<CR>
+nnoremap <Leader>i :History<CR>
+nnoremap K :Ag <C-R><C-W><CR>
+nnoremap <Leader>a :Ag<space>
+
+
 """"""""""""""""""""
 " Special functions
 """"""""""""""""""""
