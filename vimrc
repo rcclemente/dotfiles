@@ -253,6 +253,7 @@ let g:tmux_navigator_no_mappings = 1
 nnoremap <C-h> :TmuxNavigateLeft<CR>
 nnoremap <C-j> :TmuxNavigateDown<CR>
 nnoremap <C-k> :TmuxNavigateUp<CR>
+nnoremap <Leader>k :TmuxNavigateUp<CR>
 nnoremap <C-l> :TmuxNavigateRight<CR>
 
 nnoremap <Leader>hu :GitGutterUndoHunk<CR>
