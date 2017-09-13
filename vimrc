@@ -212,18 +212,6 @@ nnoremap <Leader>d "_d
 " vnoremap // y/\V<C-R>"<CR>
 vnoremap <expr> // 'y/\V'.escape(@",'\').'<CR>'
 
-" plugin mappings
-let g:tmux_navigator_no_mappings = 1
-nnoremap <C-h> :TmuxNavigateLeft<CR>
-nnoremap <C-j> :TmuxNavigateDown<CR>
-nnoremap <C-k> :TmuxNavigateUp<CR>
-nnoremap <Leader>k :TmuxNavigateUp<CR>
-nnoremap <C-l> :TmuxNavigateRight<CR>
-
-nnoremap <Leader>hu :GitGutterUndoHunk<CR>
-nnoremap <Leader>hr :GitGutterRevertHunk<CR>
-nnoremap <Leader>hj :GitGutterNextHunk<CR>
-nnoremap <Leader>hk :GitGutterPrevHunk<CR>
 
 """"""""""""""""""""
 " Plugin config
@@ -276,6 +264,20 @@ nnoremap <Leader>i :History<CR>
 nnoremap K :Ag <C-R><C-W><CR>
 nnoremap <Leader>a :Ag<space>
 
+" plugin mappings
+let g:tmux_navigator_no_mappings = 1
+let g:C_Ctrl_k = 'off'
+let g:C_Ctrl_j = 'off'
+nnoremap <C-h> :TmuxNavigateLeft<CR>
+nnoremap <C-j> :TmuxNavigateDown<CR>
+nnoremap <C-k> :TmuxNavigateUp<CR>
+nnoremap <Leader>k :TmuxNavigateUp<CR>
+nnoremap <C-l> :TmuxNavigateRight<CR>
+
+nnoremap <Leader>hu :GitGutterUndoHunk<CR>
+nnoremap <Leader>hr :GitGutterRevertHunk<CR>
+nnoremap <Leader>hj :GitGutterNextHunk<CR>
+nnoremap <Leader>hk :GitGutterPrevHunk<CR>
 
 """"""""""""""""""""
 " Special functions
