@@ -37,9 +37,13 @@ Plugin 'airblade/vim-gitgutter'
 
 " Git fugitive
 Plugin 'tpope/vim-fugitive'
+
+" Language plugins
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-endwise'
 Bundle 'vim-ruby/vim-ruby'
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
 
 " Tmux
 Plugin 'christoomey/vim-tmux-navigator'
@@ -47,11 +51,6 @@ Plugin 'christoomey/vim-tmux-navigator'
 " NerdTree
 Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
-
-" String and File search
-Plugin 'ctrlpvim/ctrlp.vim'
-let g:ctrlp_working_path_mode = 'r'
-nnoremap <silent> <Leader>o :CtrlPBuffer<CR>
 
 " Find text in file
 Plugin 'mileszs/ack.vim'
@@ -68,10 +67,6 @@ if executable('ag')
   " ag is fast enough that CtrlP doesn't need to cache
   let g:ctrlp_use_caching = 0
 endif
-" Ack config
-" cnoreabbrev Ack Ack!
-" nnoremap <Leader>a :Ack!<Space>
-" nnoremap K :Ack! "\b<C-R><C-W>\b"<CR>:cw<CR>
 
 " FZF
 Plugin 'junegunn/fzf'
@@ -279,6 +274,10 @@ nnoremap <Leader>hr :GitGutterRevertHunk<CR>
 nnoremap <Leader>hj :GitGutterNextHunk<CR>
 nnoremap <Leader>hk :GitGutterPrevHunk<CR>
 
+" Javascript plugins
+let g:javascript_plugin_jsdoc = 1
+let g:javascript_plugin_flow = 1
+let g:jsx_ext_required = 0
 """"""""""""""""""""
 " Special functions
 """"""""""""""""""""
@@ -327,8 +326,8 @@ command! Gbranch call fzf#run(
 """"""""""""""""""""
 set completeopt=longest,menuone
 inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
-inoremap <expr> <C-n> pumvisible() ? '<C-n>' :
-  \ '<C-n><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
-
-inoremap <expr> <M-,> pumvisible() ? '<C-n>' :
-  \ '<C-x><C-o><C-n><C-p><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
+inoremap <expr> <TAB> pumvisible() ? "\<C-y>" : "\<CR>"
+inoremap <expr> <Esc> pumvisible() ? "\<C-e>" : "\<Esc>"
+inoremap <expr> <C-j> pumvisible() ? "\<C-n>" : "\<Down>"
+inoremap <expr> <C-k> pumvisible() ? "\<C-p>" : "\<Up>"
+j
