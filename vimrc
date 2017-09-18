@@ -81,6 +81,11 @@ Plugin 'tomtom/tcomment_vim'
 " Ctags
 Plugin 'ludovicchabant/vim-gutentags'
 
+" Editor helper
+Plugin 'ervandew/supertab'
+Plugin 'gregsexton/matchtag'
+Plugin 'jiangmiao/auto-pairs'
+
 call vundle#end()            " required
 " Run this after adding to the lines above
 " vim +PluginInstall +qall
@@ -150,7 +155,6 @@ xnoremap <leader>c <esc>:'<,'>:!bash<CR>
 " MISC
 nnoremap noh :nohlsearch<CR>
 nnoremap <Leader>w :w<CR>
-nnoremap <c-s> :w<CR>
 nnoremap <Leader>wa :wa<CR>
 nnoremap <Leader>wq :wq<space>
 
@@ -207,7 +211,6 @@ nnoremap <Leader>d "_d
 " vnoremap // y/\V<C-R>"<CR>
 vnoremap <expr> // 'y/\V'.escape(@",'\').'<CR>'
 
-
 """"""""""""""""""""
 " Plugin config
 """"""""""""""""""""
@@ -261,12 +264,9 @@ nnoremap <Leader>a :Ag<space>
 
 " plugin mappings
 let g:tmux_navigator_no_mappings = 1
-let g:C_Ctrl_k = 'off'
-let g:C_Ctrl_j = 'off'
 nnoremap <C-h> :TmuxNavigateLeft<CR>
 nnoremap <C-j> :TmuxNavigateDown<CR>
 nnoremap <C-k> :TmuxNavigateUp<CR>
-nnoremap <Leader>k :TmuxNavigateUp<CR>
 nnoremap <C-l> :TmuxNavigateRight<CR>
 
 nnoremap <Leader>hu :GitGutterUndoHunk<CR>
@@ -278,6 +278,11 @@ nnoremap <Leader>hk :GitGutterPrevHunk<CR>
 let g:javascript_plugin_jsdoc = 1
 let g:javascript_plugin_flow = 1
 let g:jsx_ext_required = 0
+
+" Auto Pairs
+let g:AutoPairsFlyMode = 1
+
+
 """"""""""""""""""""
 " Special functions
 """"""""""""""""""""
@@ -325,9 +330,6 @@ command! Gbranch call fzf#run(
 " Auto complete
 """"""""""""""""""""
 set completeopt=longest,menuone
-inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
-inoremap <expr> <TAB> pumvisible() ? "\<C-y>" : "\<CR>"
-inoremap <expr> <Esc> pumvisible() ? "\<C-e>" : "\<Esc>"
-inoremap <expr> <C-j> pumvisible() ? "\<C-n>" : "\<Down>"
-inoremap <expr> <C-k> pumvisible() ? "\<C-p>" : "\<Up>"
-j
+inoremap <expr> <C-j> ((pumvisible())?("\<C-n>"):("j"))
+inoremap <expr> <C-k> ((pumvisible())?("\<C-p>"):("k"))
+
