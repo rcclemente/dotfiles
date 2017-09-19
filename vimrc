@@ -41,6 +41,7 @@ Plugin 'tpope/vim-fugitive'
 " Language plugins
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-endwise'
+Plugin 'tpope/vim-surround'
 Bundle 'vim-ruby/vim-ruby'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
@@ -139,6 +140,9 @@ autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
 autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
 autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
 
+" Html
+autocmd FileType html,javascript.jsx set omnifunc=htmlcomplete#CompleteTags
+
 """"""""""""""""""""
 " KEYBOARD MAPPINGS
 """"""""""""""""""""
@@ -207,9 +211,6 @@ vmap < <gv
 vnoremap <Leader>d "_d
 nnoremap <Leader>d "_d
 
-" Search visually selected text
-" vnoremap // y/\V<C-R>"<CR>
-vnoremap <expr> // 'y/\V'.escape(@",'\').'<CR>'
 
 """"""""""""""""""""
 " Plugin config
@@ -264,10 +265,10 @@ nnoremap <Leader>a :Ag<space>
 
 " plugin mappings
 let g:tmux_navigator_no_mappings = 1
-nnoremap <C-h> :TmuxNavigateLeft<CR>
-nnoremap <C-j> :TmuxNavigateDown<CR>
-nnoremap <C-k> :TmuxNavigateUp<CR>
-nnoremap <C-l> :TmuxNavigateRight<CR>
+nnoremap <silent> <C-h> :TmuxNavigateLeft<CR>
+nnoremap <silent> <C-j> :TmuxNavigateDown<CR>
+nnoremap <silent> <C-k> :TmuxNavigateUp<CR>
+nnoremap <silent> <C-l> :TmuxNavigateRight<CR>
 
 nnoremap <Leader>hu :GitGutterUndoHunk<CR>
 nnoremap <Leader>hr :GitGutterRevertHunk<CR>
@@ -282,6 +283,8 @@ let g:jsx_ext_required = 0
 " Auto Pairs
 let g:AutoPairsFlyMode = 1
 
+" Gutentags
+set statusline+=%{gutentags#statusline()}
 
 """"""""""""""""""""
 " Special functions
