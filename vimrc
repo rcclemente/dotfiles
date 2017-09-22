@@ -7,8 +7,8 @@ vmap jk <ESC>
 " remap leader key
 let mapleader=" "
 
-set nocompatible              " be iMproved, required
-filetype off                  " required
+set nocompatible
+filetype off
 
 """"""""""""""""""""
 " Plugins
