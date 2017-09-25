@@ -80,7 +80,7 @@ Plugin 'wincent/scalpel'
 Plugin 'tomtom/tcomment_vim'
 
 " Ctags
-Plugin 'ludovicchabant/vim-gutentags'
+" Plugin 'ludovicchabant/vim-gutentags'
 
 " Editor helper
 Plugin 'ervandew/supertab'
