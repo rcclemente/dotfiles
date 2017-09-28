@@ -284,7 +284,7 @@ let g:jsx_ext_required = 0
 let g:AutoPairsFlyMode = 1
 
 " Gutentags
-set statusline+=%{gutentags#statusline()}
+" set statusline+=%{gutentags#statusline()}
 
 """"""""""""""""""""
 " Special functions
