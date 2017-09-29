@@ -3,7 +3,6 @@
 Collection my configurations
 
 Some features:
-- Iterm configuration
 - Git vim integration
 - vim and tmux navigation using h/j/k/l
 - Code searching with ctags including your rails project's gems
@@ -22,6 +21,7 @@ Some features:
 
     brew install macvim --env-std --with-override-system-vim
     git config --global core.editor "/usr/local/bin/vim"
+
 #### Fonts
 
     git clone https://github.com/powerline/fonts.git
@@ -29,6 +29,9 @@ Some features:
     ./install.sh
     cd ..
     rm -rf fonts
+
+    git clone https://github.com/abertsch/Menlo-for-Powerline.git
+    install fonts in directory
 
 #### Install Vundle
 
@@ -52,12 +55,19 @@ Some features:
 
   - In vim to search for a definition of a tag press `<C-]>`
 
+#### Karabiner Elements
+
+Import Change caps_lock key
+
+https://pqrs.org/osx/karabiner/complex_modifications/
+
 ## Vim plugins
 
 #### Search for text in file
 
-    brew install ack
-    brew install the_silver_searcher
+    brew install fzf
+    # To install useful key bindings and fuzzy completion:
+    $(brew --prefix)/opt/fzf/install
 
 #### Installing/Updating Vim
 
