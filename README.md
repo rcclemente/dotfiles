@@ -17,6 +17,11 @@ Some features:
     ln -s dotfiles/vimrc ~/.vimrc
     ln -s dotfiles/tmux.conf ~/.tmux.conf
 
+#### Vim 8
+    
+    brew install vim --with-override-system-vi
+    git config --global core.editor "/usr/local/bin/vim"
+
 #### MacVim (optional)
 
     brew install macvim --env-std --with-override-system-vim
@@ -57,9 +62,8 @@ Some features:
 
 #### Karabiner Elements
 
-Import Change caps_lock key
-
-https://pqrs.org/osx/karabiner/complex_modifications/
+    Import Change caps_lock key
+    https://pqrs.org/osx/karabiner/complex_modifications/
 
 ## Vim plugins
 
