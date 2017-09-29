@@ -73,6 +73,13 @@ https://pqrs.org/osx/karabiner/complex_modifications/
 
     vim +PluginInstall +qall
 
+#### Keep vim colors consistent in bashrc
+
+    if [ -n $TMUX  ]; then
+      alias vim="TERM=screen-256color vim"
+      alias vi="TERM=screen-256color vim"
+    fi
+
 ## Raw links
 
 https://raw.githubusercontent.com/rcclemente/dotfiles/master/tmux.conf
