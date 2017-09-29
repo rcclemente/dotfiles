@@ -69,9 +69,15 @@ Some features:
 
 #### Search for text in file
 
-    brew install fzf
-    # To install useful key bindings and fuzzy completion:
-    $(brew --prefix)/opt/fzf/install
+  - FZF
+  
+    `brew install fzf`
+    
+    `$(brew --prefix)/opt/fzf/install`
+  
+  - AG
+  
+    `brew install the_silver_searcher`
 
 #### Installing/Updating Vim
 
