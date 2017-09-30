@@ -143,6 +143,9 @@ autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
 " Html
 autocmd FileType html,javascript.jsx set omnifunc=htmlcomplete#CompleteTags
 
+" allow to be modifiable in fugitive
+set modifiable
+
 """"""""""""""""""""
 " KEYBOARD MAPPINGS
 """"""""""""""""""""
