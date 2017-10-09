@@ -134,6 +134,9 @@ autocmd FileType html,javascript.jsx set omnifunc=htmlcomplete#CompleteTags
 " allow to be modifiable in fugitive
 set modifiable
 
+" dictionary completion c-x c-k
+set dictionary+=/usr/share/dict/words
+
 """"""""""""""""""""
 " KEYBOARD MAPPINGS
 """"""""""""""""""""
