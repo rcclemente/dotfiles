@@ -3,7 +3,6 @@
 Collection my configurations
 
 Some features:
-- Iterm configuration
 - Git vim integration
 - vim and tmux navigation using h/j/k/l
 - Code searching with ctags including your rails project's gems
@@ -18,10 +17,16 @@ Some features:
     ln -s dotfiles/vimrc ~/.vimrc
     ln -s dotfiles/tmux.conf ~/.tmux.conf
 
+#### Vim 8
+    
+    brew install vim --with-override-system-vi
+    git config --global core.editor "/usr/local/bin/vim"
+
 #### MacVim (optional)
 
     brew install macvim --env-std --with-override-system-vim
     git config --global core.editor "/usr/local/bin/vim"
+
 #### Fonts
 
     git clone https://github.com/powerline/fonts.git
@@ -29,6 +34,9 @@ Some features:
     ./install.sh
     cd ..
     rm -rf fonts
+
+    git clone https://github.com/abertsch/Menlo-for-Powerline.git
+    install fonts in directory
 
 #### Install Vundle
 
@@ -52,16 +60,35 @@ Some features:
 
   - In vim to search for a definition of a tag press `<C-]>`
 
+#### Karabiner Elements
+
+    Import Change caps_lock key
+    https://pqrs.org/osx/karabiner/complex_modifications/
+
 ## Vim plugins
 
 #### Search for text in file
 
-    brew install ack
-    brew install the_silver_searcher
+  - FZF
+  
+    `brew install fzf`
+    
+    `$(brew --prefix)/opt/fzf/install`
+  
+  - AG
+  
+    `brew install the_silver_searcher`
 
 #### Installing/Updating Vim
 
     vim +PluginInstall +qall
+
+#### Keep vim colors consistent in bashrc
+
+    if [ -n $TMUX  ]; then
+      alias vim="TERM=screen-256color vim"
+      alias vi="TERM=screen-256color vim"
+    fi
 
 ## Raw links
 
