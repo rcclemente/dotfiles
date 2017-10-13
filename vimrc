@@ -73,6 +73,7 @@ Plugin 'tomtom/tcomment_vim'
 Plugin 'ervandew/supertab'
 Plugin 'gregsexton/matchtag'
 Plugin 'jiangmiao/auto-pairs'
+Plugin 'tpope/vim-ragtag'
 
 call vundle#end()            " required
 " Run this after adding to the lines above
