@@ -1,3 +1,6 @@
+# my prompt
+export PS1='\n\[\e[34m\][= \[\e[m\]\u@mbp \[\e[32m\]<\w> \[\e[m\]\[\e[30;43m\]$(__git_ps1)\[\e[m\]\[\e[34m\] =\[\e[m\]\[\e[34m\]]\[\e[m\]\[\e[31m\]\n\\$\[\e[m\]\[\e[31m\]>\[\e[m\] '
+
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 alias docker-cleanup='docker rm -v $(docker ps -a -q -f status=exited)'
