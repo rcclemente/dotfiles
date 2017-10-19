@@ -111,7 +111,7 @@ set splitright
 set pastetoggle=<F3>
 
 set swapfile
-set dir=~/tmp//
+set directory^=~/tmp//
 set hidden
 set showmatch
 set matchtime=3
