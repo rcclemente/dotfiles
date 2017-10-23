@@ -150,6 +150,9 @@ nnoremap <Leader>sa ggvG$
 " run selection in commandline
 xnoremap <leader>c <esc>:'<,'>:!bash<CR>
 
+" Run last colon command
+nnoremap `` @:
+
 " MISC
 nnoremap noh :nohlsearch<CR>
 nnoremap <Leader>w :w<CR>
