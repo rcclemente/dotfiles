@@ -264,10 +264,12 @@ nnoremap <silent> <C-j> :TmuxNavigateDown<CR>
 nnoremap <silent> <C-k> :TmuxNavigateUp<CR>
 nnoremap <silent> <C-l> :TmuxNavigateRight<CR>
 
+" fugitive mappings
 nnoremap <Leader>hu :GitGutterUndoHunk<CR>
 nnoremap <Leader>hr :GitGutterRevertHunk<CR>
 nnoremap <Leader>hj :GitGutterNextHunk<CR>
 nnoremap <Leader>hk :GitGutterPrevHunk<CR>
+nnoremap <Leader>gr :Gread
 
 " Javascript plugins
 let g:javascript_plugin_jsdoc = 1
