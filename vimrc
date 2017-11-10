@@ -150,6 +150,9 @@ nnoremap <Leader>sa ggvG$
 " run selection in commandline
 xnoremap <leader>c <esc>:'<,'>:!bash<CR>
 
+" Run last colon command
+nnoremap `` @:
+
 " MISC
 nnoremap noh :nohlsearch<CR>
 nnoremap <Leader>w :w<CR>
@@ -269,7 +272,7 @@ nnoremap <Leader>hu :GitGutterUndoHunk<CR>
 nnoremap <Leader>hr :GitGutterRevertHunk<CR>
 nnoremap <Leader>hj :GitGutterNextHunk<CR>
 nnoremap <Leader>hk :GitGutterPrevHunk<CR>
-nnoremap <Leader>gr :Gread
+nnoremap <Leader>gr :Gread<CR>
 
 " Javascript plugins
 let g:javascript_plugin_jsdoc = 1
