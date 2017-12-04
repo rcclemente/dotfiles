@@ -140,7 +140,9 @@ set dictionary+=/usr/share/dict/words
 """"""""""""""""""""
 " KEYBOARD MAPPINGS
 """"""""""""""""""""
-
+" Up and down thru linewrap
+nnoremap j gj
+nnoremap k gk
 " Toggle wrapping
 nnoremap <F4> :set wrap!<CR>
 " Enter key to move line down
