@@ -45,6 +45,7 @@ Plugin 'tpope/vim-surround'
 Bundle 'vim-ruby/vim-ruby'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
+Plugin 'fatih/vim-go'
 
 " Tmux
 Plugin 'christoomey/vim-tmux-navigator'
