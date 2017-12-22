@@ -138,6 +138,8 @@ set modifiable
 " dictionary completion c-x c-k
 set dictionary+=/usr/share/dict/words
 
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/bower_components/*,*/node_modules/*,*/npm-debug.log,*/vendor/*,*/Packages/*
+
 """"""""""""""""""""
 " KEYBOARD MAPPINGS
 """"""""""""""""""""
