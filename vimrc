@@ -45,6 +45,7 @@ Plugin 'tpope/vim-surround'
 Bundle 'vim-ruby/vim-ruby'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
+Plugin 'fatih/vim-go'
 
 " Tmux
 Plugin 'christoomey/vim-tmux-navigator'
@@ -140,10 +141,14 @@ set modifiable
 " dictionary completion c-x c-k
 set dictionary+=/usr/share/dict/words
 
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/bower_components/*,*/node_modules/*,*/npm-debug.log,*/vendor/*,*/Packages/*
+
 """"""""""""""""""""
 " KEYBOARD MAPPINGS
 """"""""""""""""""""
-
+" Up and down thru linewrap
+nnoremap j gj
+nnoremap k gk
 " Toggle wrapping
 nnoremap <F4> :set wrap!<CR>
 " Enter key to move line down
