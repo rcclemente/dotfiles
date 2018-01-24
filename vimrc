@@ -265,11 +265,11 @@ nnoremap <Leader>b :Buffers<CR>
 nnoremap <Leader>f :Files<CR>
 nnoremap <Leader>g :GFiles<CR>
 nnoremap <Leader>i :History<CR>
-" nnoremap K :Ag <C-R><C-W><CR>
-nnoremap K :Ack <C-R><C-W><CR>
-let g:ackprg = 'ag --nogroup --nocolor --column'
-map <Leader>a :Ack<Space>
-" nnoremap <Leader>a :Ag<space>
+nnoremap K :Ag <C-R><C-W><CR>
+" nnoremap K :Ack <C-R><C-W><CR>
+" let g:ackprg = 'ag --nogroup --nocolor --column'
+" map <Leader>a :Ack<Space>
+nnoremap <Leader>a :Ag<space>
 
 " plugin mappings
 let g:tmux_navigator_no_mappings = 1
