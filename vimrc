@@ -202,7 +202,7 @@ nnoremap tj :bnext!<CR>
 nnoremap tk :bprev!<CR>
 nnoremap th :bfirst!<CR>
 nnoremap tl :blast!<CR>
-nnoremap td :bd!<CR>
+" nnoremap td :bd!<CR>
 nnoremap tq <C-w>c
 
 " Visual block tabbing
