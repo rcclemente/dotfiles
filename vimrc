@@ -129,6 +129,9 @@ autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
 autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
 autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
 
+" Phython
+autocmd Filetype python setlocal ts=2 sts=2 sw=2 expandtab
+
 " Html
 autocmd FileType html,javascript.jsx set omnifunc=htmlcomplete#CompleteTags
 
@@ -262,8 +265,11 @@ nnoremap <Leader>b :Buffers<CR>
 nnoremap <Leader>f :Files<CR>
 nnoremap <Leader>g :GFiles<CR>
 nnoremap <Leader>i :History<CR>
-nnoremap K :Ag <C-R><C-W><CR>
-nnoremap <Leader>a :Ag<space>
+" nnoremap K :Ag <C-R><C-W><CR>
+nnoremap K :Ack <C-R><C-W><CR>
+let g:ackprg = 'ag --nogroup --nocolor --column'
+map <Leader>a :Ack<Space>
+" nnoremap <Leader>a :Ag<space>
 
 " plugin mappings
 let g:tmux_navigator_no_mappings = 1
@@ -289,6 +295,7 @@ let g:AutoPairsFlyMode = 1
 
 " Gutentags
 " set statusline+=%{gutentags#statusline()}
+
 
 """"""""""""""""""""
 " Special functions
