@@ -295,8 +295,10 @@ let g:AutoPairsFlyMode = 1
 
 " Gutentags
 " set statusline+=%{gutentags#statusline()}
-iabbrev </ <C-X><C-O>
-imap <C-Space> <C-X><C-O>
+
+" iabbrev </ <C-X><C-O>
+" iabbrev C-X><C-O>
+" imap <C-Space> <C-X><C-O>
 
 """"""""""""""""""""
 " Special functions
