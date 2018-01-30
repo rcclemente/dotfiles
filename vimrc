@@ -350,3 +350,8 @@ set completeopt=longest,menuone
 inoremap <expr> <C-j> ((pumvisible())?("\<C-n>"):("j"))
 inoremap <expr> <C-k> ((pumvisible())?("\<C-p>"):("k"))
 
+
+autocmd FileType html inoremap ;b<Space> <b></b><Esc>FbT>i
+autocmd FileType html inoremap ;p<Space> <p></p><Esc>FpT>i
+autocmd FileType html inoremap ;div<Space> <div></div><Esc>FdT>i
+autocmd FileType html inoremap ;body<Space> <body></body><Esc>FbT>i
