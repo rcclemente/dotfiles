@@ -216,6 +216,9 @@ vmap < <gv
 vnoremap <Leader>d "_d
 nnoremap <Leader>d "_d
 
+" insert new line but remain in normal mode
+nnoremap <Leader>o o<Esc>
+nnoremap <Leader>O O<Esc>
 
 """"""""""""""""""""
 " Plugin config
