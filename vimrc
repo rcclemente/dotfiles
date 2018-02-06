@@ -47,6 +47,9 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 Plugin 'fatih/vim-go'
 
+" Editor plugin
+Plugin 'tpope/vim-repeat'
+
 " Tmux
 Plugin 'christoomey/vim-tmux-navigator'
 
@@ -67,14 +70,10 @@ Plugin 'wincent/scalpel'
 " Commenter
 Plugin 'tomtom/tcomment_vim'
 
-" Ctags
-" Plugin 'ludovicchabant/vim-gutentags'
-
 " Editor helper
 Plugin 'ervandew/supertab'
 Plugin 'gregsexton/matchtag'
 Plugin 'jiangmiao/auto-pairs'
-Plugin 'tpope/vim-ragtag'
 
 call vundle#end()            " required
 " Run this after adding to the lines above
@@ -358,3 +357,4 @@ autocmd FileType html inoremap ;b<Space> <b></b><Esc>FbT>i
 autocmd FileType html inoremap ;p<Space> <p></p><Esc>FpT>i
 autocmd FileType html inoremap ;div<Space> <div></div><Esc>FdT>i
 autocmd FileType html inoremap ;body<Space> <body></body><Esc>FbT>i
+autocmd FileType html,javascript.jsx inoremap ;span<Space> <span></span><Esc>FbT>i
