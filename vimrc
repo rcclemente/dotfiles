@@ -1,9 +1,5 @@
 syntax on
 
-" remap ESC
-imap jk <ESC>
-vmap jk <ESC>
-
 " remap leader key
 let mapleader=" "
 
