@@ -144,6 +144,10 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/bower_components/*,*/node_modules/*,*
 " Up and down thru linewrap
 nnoremap j gj
 nnoremap k gk
+
+" Toggle relative number
+nnoremap nn :set relativenumber!<CR>
+
 " Toggle wrapping
 nnoremap <F4> :set wrap!<CR>
 " Enter key to move line down
