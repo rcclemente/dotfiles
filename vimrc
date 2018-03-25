@@ -266,6 +266,7 @@ inoremap <expr> <c-x><c-k> fzf#vim#complete#word({'left': '15%'})
 nnoremap <Leader>b :Buffers<CR>
 nnoremap <Leader>f :Files<CR>
 nnoremap <Leader>g :GFiles<CR>
+nnoremap <Leader>bl :BLines<CR>
 nnoremap <Leader>i :History<CR>
 nnoremap K :Ag <C-R><C-W><CR>
 " nnoremap K :Ack <C-R><C-W><CR>
