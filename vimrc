@@ -146,7 +146,7 @@ nnoremap j gj
 nnoremap k gk
 
 " Toggle relative number
-nnoremap nn :set relativenumber!<CR>
+nnoremap no :set relativenumber!<CR>
 
 " Toggle wrapping
 nnoremap <F4> :set wrap!<CR>
