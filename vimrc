@@ -114,6 +114,8 @@ set matchtime=3
 set scrolloff=3
 " strip spaces when saving
 autocmd BufWritePre * %s/\s\+$//e
+" change tabs to spaces
+autocmd BufWritePre * :%retab!
 
 set ignorecase
 set smartcase
