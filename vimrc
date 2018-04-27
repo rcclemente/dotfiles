@@ -77,19 +77,20 @@ call vundle#end()            " required
 """"""""""""""""""""
 
 filetype plugin indent on    " required
+set path+=**
 set backspace=indent,eol,start
-set nobackup		                " do not keep a backup file, use versions instead
-set history=1000		            " keep 50 lines of command line history
+set nobackup                    " do not keep a backup file, use versions instead
+set history=1000                " keep 50 lines of command line history
 set encoding=utf-8
-set ruler		                    " show the cursor position all the time
-set showcmd		                  " display incomplete commands
+set ruler                       " show the cursor position all the time
+set showcmd                     " display incomplete commands
 set showmode
-set incsearch		                " do incremental searching
+set incsearch                   " do incremental searching
 set ruler
 set relativenumber
 set number
 set mouse=a
-set autoindent		              " always set autoindenting on
+set autoindent                  " always set autoindenting on
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
@@ -119,6 +120,9 @@ autocmd BufWritePre * :%retab!
 
 set ignorecase
 set smartcase
+
+" Ctags
+command! Mtags !ctags --languages=ruby,javascript --exclude=.git --exclude=log --recurse . `bundle show --paths`
 
 " Ruby
 autocmd FileType ruby compiler ruby
@@ -256,10 +260,10 @@ xmap <leader><tab> <plug>(fzf-maps-x)
 omap <leader><tab> <plug>(fzf-maps-o)
 
 " Insert mode completion
-imap <c-x><c-k> <plug>(fzf-complete-word)
-imap <c-x><c-f> <plug>(fzf-complete-path)
-imap <c-x><c-j> <plug>(fzf-complete-file-ag)
-imap <c-x><c-l> <plug>(fzf-complete-line)
+" imap <c-x><c-k> <plug>(fzf-complete-word)
+" imap <c-x><c-f> <plug>(fzf-complete-path)
+" imap <c-x><c-j> <plug>(fzf-complete-file-ag)
+" imap <c-x><c-l> <plug>(fzf-complete-line)
 
 " Advanced customization using autoload functions
 inoremap <expr> <c-x><c-k> fzf#vim#complete#word({'left': '15%'})
