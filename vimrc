@@ -77,7 +77,7 @@ call vundle#end()            " required
 """"""""""""""""""""
 
 filetype plugin indent on    " required
-set path+=**
+" set path+=**
 set backspace=indent,eol,start
 set nobackup                    " do not keep a backup file, use versions instead
 set history=1000                " keep 50 lines of command line history
@@ -260,10 +260,10 @@ xmap <leader><tab> <plug>(fzf-maps-x)
 omap <leader><tab> <plug>(fzf-maps-o)
 
 " Insert mode completion
-" imap <c-x><c-k> <plug>(fzf-complete-word)
+imap <c-x><c-k> <plug>(fzf-complete-word)
 " imap <c-x><c-f> <plug>(fzf-complete-path)
 " imap <c-x><c-j> <plug>(fzf-complete-file-ag)
-" imap <c-x><c-l> <plug>(fzf-complete-line)
+imap <c-x><c-l> <plug>(fzf-complete-line)
 
 " Advanced customization using autoload functions
 inoremap <expr> <c-x><c-k> fzf#vim#complete#word({'left': '15%'})
