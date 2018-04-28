@@ -77,7 +77,7 @@ call vundle#end()            " required
 """"""""""""""""""""
 
 filetype plugin indent on    " required
-set path+=**
+" set path+=**
 set backspace=indent,eol,start
 set nobackup                    " do not keep a backup file, use versions instead
 set history=1000                " keep 50 lines of command line history
