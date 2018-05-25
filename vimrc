@@ -147,9 +147,6 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/bower_components/*,*/node_modules/*,*
 """"""""""""""""""""
 " KEYBOARD MAPPINGS
 """"""""""""""""""""
-" Up and down thru linewrap
-nnoremap j gj
-nnoremap k gk
 
 " Toggle relative number
 nnoremap no :set relativenumber!<CR>
