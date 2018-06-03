@@ -77,7 +77,6 @@ call vundle#end()            " required
 """"""""""""""""""""
 
 filetype plugin indent on    " required
-" set path+=**
 set backspace=indent,eol,start
 set nobackup                    " do not keep a backup file, use versions instead
 set history=1000                " keep 50 lines of command line history
@@ -130,7 +129,7 @@ autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
 autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
 autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
 
-" Phython
+" Python
 autocmd Filetype python setlocal ts=2 sts=2 sw=2 expandtab
 
 " Html
@@ -156,7 +155,7 @@ nnoremap <F4> :set wrap!<CR>
 " Enter key to move line down
 nnoremap <Enter> O<ESC>j
 " select all copy
-nnoremap <Leader>sa ggvG$
+nnoremap <Leader>sa :%y+<CR>
 " run selection in commandline
 xnoremap <leader>c <esc>:'<,'>:!bash<CR>
 
@@ -302,10 +301,6 @@ let g:AutoPairsFlyMode = 1
 " Gutentags
 " set statusline+=%{gutentags#statusline()}
 
-" iabbrev </ <C-X><C-O>
-" iabbrev C-X><C-O>
-" imap <C-Space> <C-X><C-O>
-
 """"""""""""""""""""
 " Special functions
 """"""""""""""""""""
@@ -355,10 +350,3 @@ command! Gbranch call fzf#run(
 set completeopt=longest,menuone
 inoremap <expr> <C-j> ((pumvisible())?("\<C-n>"):("j"))
 inoremap <expr> <C-k> ((pumvisible())?("\<C-p>"):("k"))
-
-
-autocmd FileType html inoremap ;b<Space> <b></b><Esc>FbT>i
-autocmd FileType html inoremap ;p<Space> <p></p><Esc>FpT>i
-autocmd FileType html inoremap ;div<Space> <div></div><Esc>FdT>i
-autocmd FileType html inoremap ;body<Space> <body></body><Esc>FbT>i
-autocmd FileType html,javascript.jsx inoremap ;span<Space> <span></span><Esc>FbT>i
