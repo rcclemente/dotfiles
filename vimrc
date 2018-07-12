@@ -156,8 +156,6 @@ nnoremap <F4> :set wrap!<CR>
 nnoremap <Enter> O<ESC>j
 " select all copy
 nnoremap <Leader>sa :%y+<CR>
-" run selection in commandline
-xnoremap <leader>c <esc>:'<,'>:!bash<CR>
 
 " Run last colon command
 nnoremap `` @:
@@ -192,13 +190,6 @@ nnoremap <Leader>bk :bp<CR>
 " nnoremap <Leader>bb :buffers<CR>
 " nnoremap <Leader>ba :e<space>
 nnoremap <Leader>bd :bd!<CR>
-
-" Tabs
-" nnoremap tn :tabnew<space>
-" nnoremap tk :tabnext<CR>
-" nnoremap tj :tabprev<CR>
-" nnoremap th :tabfirst<CR>
-" nnoremap tl :tablast<CR>
 
 " Use buffers instead of tabs
 " nnoremap tn :e<space>
@@ -298,8 +289,6 @@ let g:jsx_ext_required = 0
 " Auto Pairs
 let g:AutoPairsFlyMode = 1
 
-" Gutentags
-" set statusline+=%{gutentags#statusline()}
 
 """"""""""""""""""""
 " Special functions
