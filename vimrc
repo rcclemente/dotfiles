@@ -172,6 +172,8 @@ nmap <Leader>fr :let @*=expand("%")<CR>
 nmap <Leader>fp :let @*=expand("%:p")<CR>
 " Copy filename with path to clipboard
 nmap <Leader>ff :let @*=expand("%:t")<CR>
+" Copy filename only to clipboard
+nmap <Leader>fo :let @"=expand("%")<CR>
 
 " reload vimrc
 nnoremap <Leader>r :so $MYVIMRC<CR>:nohlsearch<CR>
