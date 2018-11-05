@@ -135,6 +135,9 @@ autocmd Filetype python setlocal ts=2 sts=2 sw=2 expandtab
 " Html
 autocmd FileType html,javascript.jsx set omnifunc=htmlcomplete#CompleteTags
 
+" Go
+autocmd Filetype go setlocal ts=4 sts=4 sw=4 expandtab
+
 " allow to be modifiable in fugitive
 set modifiable
 
