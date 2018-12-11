@@ -189,13 +189,6 @@ inoremap <C-U> <C-G>u<C-U>
 nnoremap vv :vsplit<space>
 nnoremap vs :split<space>
 
-" Buffers
-nnoremap <Leader>bj :bnext<CR>
-nnoremap <Leader>bk :bp<CR>
-" nnoremap <Leader>bb :buffers<CR>
-" nnoremap <Leader>ba :e<space>
-nnoremap <Leader>bd :bd!<CR>
-
 " Use buffers instead of tabs
 " nnoremap tn :e<space>
 nnoremap tj :bnext!<CR>
