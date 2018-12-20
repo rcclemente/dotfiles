@@ -210,6 +210,7 @@ nnoremap <Leader>d "_d
 nnoremap <Leader>o o<Esc>
 nnoremap <Leader>O O<Esc>
 
+nnoremap Y y$
 """"""""""""""""""""
 " Plugin config
 """"""""""""""""""""
