@@ -211,6 +211,19 @@ nnoremap <Leader>o o<Esc>
 nnoremap <Leader>O O<Esc>
 
 nnoremap Y y$
+
+" Performance improvments
+if has("mac")
+  set nocursorline
+
+  " if exists("+relativenumber")
+  "   set norelativenumber
+  " endif
+
+  set foldlevel=0
+  set foldmethod=syntax
+endif
+
 """"""""""""""""""""
 " Plugin config
 """"""""""""""""""""
