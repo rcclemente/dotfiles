@@ -216,10 +216,6 @@ nnoremap Y y$
 if has("mac")
   set nocursorline
 
-  " if exists("+relativenumber")
-  "   set norelativenumber
-  " endif
-
   set foldlevel=0
   set foldmethod=syntax
 endif
