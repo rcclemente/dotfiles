@@ -347,3 +347,5 @@ command! Gbranch call fzf#run(
 set completeopt=longest,menuone
 inoremap <expr> <C-j> ((pumvisible())?("\<C-n>"):("j"))
 inoremap <expr> <C-k> ((pumvisible())?("\<C-p>"):("k"))
+
+abbr wtf require "byebug"<esc>obyebug if defined?(byebug)<esc>

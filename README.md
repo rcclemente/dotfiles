@@ -18,7 +18,7 @@ Some features:
     ln -s dotfiles/tmux.conf ~/.tmux.conf
 
 #### Vim 8
-    
+
     brew install vim --with-override-system-vi
     git config --global core.editor "/usr/local/bin/vim"
 
@@ -70,13 +70,13 @@ Some features:
 #### Search for text in file
 
   - FZF
-  
+
     `brew install fzf`
-    
+
     `$(brew --prefix)/opt/fzf/install`
-  
+
   - AG
-  
+
     `brew install the_silver_searcher`
 
 #### Installing/Updating Vim
@@ -89,6 +89,10 @@ Some features:
       alias vim="TERM=screen-256color vim"
       alias vi="TERM=screen-256color vim"
     fi
+
+#### Iterm
+
+![Iterm update](images/iterm_slow_vim_tmux_screen.png)
 
 ## Raw links
 
