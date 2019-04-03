@@ -213,3 +213,8 @@ nnoremap <Leader>hj :GitGutterNextHunk<CR>
 nnoremap <Leader>hk :GitGutterPrevHunk<CR>
 nnoremap <Leader>gr :Gread<CR>
 
+" custom commands
+" Ctags
+command! Mtags !ctags --languages=ruby,javascript --exclude=.git --exclude=log --recurse . `bundle show --paths`
+
+
