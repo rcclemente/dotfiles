@@ -18,7 +18,7 @@ Plugin 'VundleVim/Vundle.vim'
 
 " Coloscheme First!!
 Plugin 'flazz/vim-colorschemes'
-colorscheme wombat256
+colorscheme Tomorrow-Night-Eighties
 
 " Git fugitive
 Plugin 'tpope/vim-fugitive'
