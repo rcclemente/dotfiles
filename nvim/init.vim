@@ -1,9 +1,5 @@
 syntax on
 
-" remap ESC
-imap jk <ESC>
-vmap jk <ESC>
-
 " remap leader key
 let mapleader=" "
 set nocompatible              " be iMproved, required
@@ -48,18 +44,18 @@ call vundle#end()            " required
 
 filetype plugin indent on    " required
 set backspace=indent,eol,start
-set nobackup		                " do not keep a backup file, use versions instead
-set history=1000		            " keep 50 lines of command line history
+set nobackup                    " do not keep a backup file, use versions instead
+set history=1000                " keep 50 lines of command line history
 set encoding=utf-8
-set ruler		                    " show the cursor position all the time
-set showcmd		                  " display incomplete commands
+set ruler                       " show the cursor position all the time
+set showcmd                     " display incomplete commands
 set showmode
-set incsearch		                " do incremental searching
+set incsearch                   " do incremental searching
 set ruler
 set relativenumber
 set number
 set mouse=a
-set autoindent		              " always set autoindenting on
+set autoindent                  " always set autoindenting on
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
@@ -82,9 +78,15 @@ set hidden
 set showmatch
 set matchtime=3
 set scrolloff=3
+
 " strip spaces when saving
 autocmd BufWritePre * %s/\s\+$//e
-set termguicolors
+" change tabs to spaces
+autocmd BufWritePre * :%retab!
+
+if $TERM =~ '^\(tmux\|iterm\|vte\|gnome\)\(-.*\)\?$'
+  set termguicolors
+endif
 
 """"""""""""""""""""
 " KEYBOARD MAPPINGS
@@ -96,14 +98,9 @@ nnoremap <F4> :set wrap!<CR>
 nnoremap <Enter> O<ESC>j
 " select all copy
 nnoremap <Leader>sa ggvG$
-" run selection in commandline
-xnoremap <leader>c <esc>:'<,'>:!bash<CR>
 
 " MISC
 nnoremap noh :nohlsearch<CR>
-nnoremap <Leader>w :w<CR>
-nnoremap <Leader>wq :wq<space>
-nnoremap <Leader>qq :q!<CR>
 
 " Copy relative filename to clipboard
 nmap <Leader>fr :let @*=expand("%")<CR>
@@ -118,14 +115,6 @@ nnoremap <Leader>r :so ~/.config/nvim/init.vim<CR>:nohlsearch<CR>
 " Splits
 nnoremap vv :vsplit \| b
 nnoremap vs :split \| b
-
-" Use buffers instead of tabs
-nnoremap tj :bnext!<CR>
-nnoremap tk :bprev!<CR>
-nnoremap th :bfirst!<CR>
-nnoremap tl :blast!<CR>
-nnoremap td :bd!<CR>
-nnoremap tq <C-w>c
 
 """"""""""""""""
 " Plugins
