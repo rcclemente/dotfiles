@@ -32,6 +32,7 @@ Plugin 'wincent/scalpel'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-endwise'
+Plugin 'tpope/vim-surround'
 Bundle 'vim-ruby/vim-ruby'
 
 " NerdTree
@@ -44,6 +45,12 @@ Plugin 'mileszs/ack.vim'
 " FZF
 Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
+
+" close surround
+Plugin 'jiangmiao/auto-pairs'
+
+" Commenter
+Plugin 'tomtom/tcomment_vim'
 
 call vundle#end()            " required
 " Run this after adding to the lines above
@@ -217,4 +224,6 @@ nnoremap <Leader>gr :Gread<CR>
 " Ctags
 command! Mtags !ctags --languages=ruby,javascript --exclude=.git --exclude=log --recurse . `bundle show --paths`
 
-
+""""""""""""""
+" Auto complete
+"""""""""""""
