@@ -35,6 +35,9 @@ Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-surround'
 Bundle 'vim-ruby/vim-ruby'
 
+" Git
+Plugin 'airblade/vim-gitgutter'
+
 " NerdTree
 Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
@@ -178,6 +181,7 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
 
 nmap <silent> <leader>t :NERDTreeTabsToggle<CR>
+nmap <silent> <leader>c :NERDTreeFind<CR>
 let g:nerdtree_tabs_open_on_console_startup = 0
 
 nmap <Leader>s <Plug>(Scalpel)
