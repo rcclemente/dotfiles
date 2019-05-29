@@ -131,6 +131,7 @@ endif
 """"""""""""""""""""
 " KEYBOARD MAPPINGS
 """"""""""""""""""""
+" Copy line
 nnoremap Y y$
 
 " Run last colon command
