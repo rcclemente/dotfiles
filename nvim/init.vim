@@ -122,9 +122,9 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/bower_components/*,*/node_modules/*,*
 
 " Performance improvments
 if has("mac")
-  set nocursorline
+  " set nocursorline
 
-  set foldlevel=0
+  " set foldlevel=0
   set foldmethod=syntax
 endif
 
