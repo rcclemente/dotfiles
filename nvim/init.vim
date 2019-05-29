@@ -2,6 +2,9 @@ syntax on
 
 " remap leader key
 let mapleader=" "
+" leader timeout
+set timeoutlen=300
+
 set nocompatible
 
 """"""""""""""""""""
