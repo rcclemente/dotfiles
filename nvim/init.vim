@@ -58,6 +58,10 @@ Plugin 'jiangmiao/auto-pairs'
 " Commenter
 Plugin 'tomtom/tcomment_vim'
 
+" Plugin 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
+" Plugin 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
+" Plugin 'neoclide/coc.nvim', {'do': './install.sh nightly'}
+
 call vundle#end()            " required
 " Run this after adding to the lines above
 " vim +PluginInstall +qall
