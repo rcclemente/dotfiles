@@ -168,9 +168,6 @@ nnoremap vs :split \| b
 """"""""""""""""
 " Plugins
 """"""""""""""""
-autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
-autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
-autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
 
 " Airline
 let g:airline_theme='base16_eighties'
@@ -180,8 +177,13 @@ let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline#extensions#tmuxline#enabled = 0
 let g:tmuxline_theme = 'airline'
+
 " Set the linenumber background color to black
 highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=Black gui=NONE guifg=DarkGrey guibg=Black
+
+autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
+autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
+autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
 
 " Enable the list of buffers
 let g:airline#extensions#tabline#enabled = 1
