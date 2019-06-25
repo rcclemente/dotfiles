@@ -3,6 +3,7 @@
 Collection my configurations
 
 Some features:
+- Iterm configuration
 - Git vim integration
 - vim and tmux navigation using h/j/k/l
 - Code searching with ctags including your rails project's gems
@@ -17,10 +18,18 @@ Some features:
     ln -s dotfiles/vimrc ~/.vimrc
     ln -s dotfiles/tmux.conf ~/.tmux.conf
 
-#### Vim 8
+#### Iterm
 
-    brew install vim --with-override-system-vi
-    git config --global core.editor "/usr/local/bin/vim"
+- go to Preferences > Keys in iTerm2
+- click the plus button at the bottom to new Global Shortcut Keys for each mapping
+- Enter the keyboard shortcuts you'd like to use, such as control+h and so on
+- Set the Action to Send Escape Sequence and set the Esc+ field to one of the following for each arrow key:
+
+      Up: [A
+      Down: [B
+      Right: [C
+      Left: [D
+      ]]]]
 
 #### MacVim (optional)
 
@@ -34,9 +43,6 @@ Some features:
     ./install.sh
     cd ..
     rm -rf fonts
-
-    git clone https://github.com/abertsch/Menlo-for-Powerline.git
-    install fonts in directory
 
 #### Install Vundle
 
@@ -60,39 +66,16 @@ Some features:
 
   - In vim to search for a definition of a tag press `<C-]>`
 
-#### Karabiner Elements
-
-    Import Change caps_lock key
-    https://pqrs.org/osx/karabiner/complex_modifications/
-
 ## Vim plugins
 
 #### Search for text in file
 
-  - FZF
-
-    `brew install fzf`
-
-    `$(brew --prefix)/opt/fzf/install`
-
-  - AG
-
-    `brew install the_silver_searcher`
+    brew install ack
+    brew install the_silver_searcher
 
 #### Installing/Updating Vim
 
     vim +PluginInstall +qall
-
-#### Keep vim colors consistent in bashrc
-
-    if [ -n $TMUX  ]; then
-      alias vim="TERM=screen-256color vim"
-      alias vi="TERM=screen-256color vim"
-    fi
-
-#### Iterm
-
-![Iterm update](images/iterm_slow_vim_tmux_screen.png)
 
 ## Raw links
 
