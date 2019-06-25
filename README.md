@@ -17,6 +17,7 @@ Some features:
     git clone git@github.com:rcclemente/dotfiles.git dotfiles
     ln -s dotfiles/vimrc ~/.vimrc
     ln -s dotfiles/tmux.conf ~/.tmux.conf
+    ln -s dotfiles/nvim ~/config/
 
 #### Iterm
 
