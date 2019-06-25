@@ -30,7 +30,6 @@ Some features:
       Down: [B
       Right: [C
       Left: [D
-      ]]]]
 
 #### MacVim (optional)
 
