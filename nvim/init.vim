@@ -113,11 +113,14 @@ if $TERM =~ '^\(tmux\|iterm\|vte\|gnome\)\(-.*\)\?$'
   set termguicolors
 endif
 
+" Tabulations
 " Python
-autocmd Filetype python setlocal ts=2 sts=2 sw=2 expandtab
-
+autocmd Filetype python     setlocal ts=4 sts=4 sw=4 expandtab
 " Go
-autocmd Filetype go setlocal ts=4 sts=4 sw=4 expandtab
+autocmd Filetype go         setlocal ts=4 sts=4 sw=4 expandtab
+" Javascript
+autocmd Filetype javascript setlocal ts=4 sts=4 sw=4 expandtab
+
 
 " dictionary completion c-x c-k
 set dictionary+=/usr/share/dict/words
