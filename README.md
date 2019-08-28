@@ -31,6 +31,15 @@ Some features:
       Right: [C
       Left: [D
 
+git clone https://github.com/dracula/iterm.git
+Install manually
+Download using the GitHub .zip download option and unzip them.
+- iTerm2 > Preferences > Profiles > Colors Tab
+- Open the Color Presets... drop-down in the bottom right corner
+- Select Import... from the list
+- Select the Dracula.itermcolors file
+- Select the Dracula from Color Presets...
+
 #### MacVim (optional)
 
     brew install macvim --env-std --with-override-system-vim
