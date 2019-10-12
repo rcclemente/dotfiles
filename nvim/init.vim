@@ -9,7 +9,7 @@ set nocompatible
 
 """"""""""""""""""""
 " Plugins
-""""""""""""""""""""
+"""""""""""""""""request loop review
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.config/nvim/bundle/Vundle.vim
 call vundle#begin('~/.config/nvim/bundle')
@@ -244,3 +244,6 @@ command! Mtags !ctags --languages=ruby,javascript --exclude=.git --exclude=log -
 """"""""""""""
 " Auto complete
 """""""""""""
+
+" ctrl-x + ctrl-o
+set omnifunc=htmlcomplete#CompleteTags
