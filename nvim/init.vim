@@ -247,3 +247,9 @@ command! Mtags !ctags --languages=ruby,javascript --exclude=.git --exclude=log -
 
 " ctrl-x + ctrl-o
 set omnifunc=htmlcomplete#CompleteTags
+
+""""""""""""""""""""
+" Abbreviation
+""""""""""""""""""""
+abbr wtf require "byebug"<esc>obyebug<esc>
+
