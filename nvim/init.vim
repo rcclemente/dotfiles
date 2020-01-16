@@ -104,6 +104,8 @@ set showmatch
 set matchtime=3
 set scrolloff=3
 
+set complete=.,w,b,u,t,i,kspell
+
 " strip spaces when saving
 autocmd BufWritePre * %s/\s\+$//e
 " change tabs to spaces
