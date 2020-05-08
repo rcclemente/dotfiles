@@ -24,12 +24,6 @@ Some features:
 - go to Preferences > Keys in iTerm2
 - click the plus button at the bottom to new Global Shortcut Keys for each mapping
 - Enter the keyboard shortcuts you'd like to use, such as control+h and so on
-- Set the Action to Send Escape Sequence and set the Esc+ field to one of the following for each arrow key:
-
-      Up: [A
-      Down: [B
-      Right: [C
-      Left: [D
 
 git clone https://github.com/dracula/iterm.git
 Install manually
@@ -39,6 +33,19 @@ Download using the GitHub .zip download option and unzip them.
 - Select Import... from the list
 - Select the Dracula.itermcolors file
 - Select the Dracula from Color Presets...
+
+#### Terminal
+
+Dracula - https://draculatheme.com/terminal/
+
+
+
+#### Oh My Zsh
+https://github.com/ohmyzsh/ohmyzsh#getting-started
+
+    brew install wget
+    sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
 
 #### MacVim (optional)
 
@@ -55,8 +62,8 @@ Download using the GitHub .zip download option and unzip them.
 
 #### Install Vundle
 
- git clone https://github.com/VundleVim/Vundle.vim.git ~/.config/nvim/bundle/Vundle.vim
- git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+    git clone https://github.com/VundleVim/Vundle.vim.git ~/.config/nvim/bundle/Vundle.vim
+    git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 #### Install Dracula for vim
 
