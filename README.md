@@ -39,19 +39,13 @@ Download using the GitHub .zip download option and unzip them.
 Dracula - https://draculatheme.com/terminal/
 load theme from $HOME/dotfiles/terminal-app/Dracula.terminal
 
-
-
 #### Oh My Zsh
 https://github.com/ohmyzsh/ohmyzsh#getting-started
 
     brew install wget
     sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-
-#### MacVim (optional)
-
-    brew install macvim --env-std --with-override-system-vim
-    git config --global core.editor "/usr/local/bin/vim"
+    ln -s dotfiles/zshrc .zshrc
 
 #### Fonts
 
