@@ -37,6 +37,7 @@ Download using the GitHub .zip download option and unzip them.
 #### Terminal
 
 Dracula - https://draculatheme.com/terminal/
+load theme from $HOME/dotfiles/terminal-app/Dracula.terminal
 
 
 
