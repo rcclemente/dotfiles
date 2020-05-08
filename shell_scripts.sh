@@ -21,11 +21,11 @@ alias gcoammend='git commit --amend'
 alias gcob='git checkout  $(git branch  | fzf)'
 alias gcobr='git checkout --track $(git branch -r | fzf)'
 
-gresethard {
+function gresethard {
   git reset --hard origin/`git branch | grep \* | cut -d ' ' -f2`
 }
 
-git-rebase-i(){
+function git-rebase-i {
   count=$1
   if [ -z "$count" ]; then
     count=1
