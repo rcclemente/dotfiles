@@ -201,9 +201,6 @@ let g:nerdtree_tabs_open_on_console_startup = 0
 
 nmap <Leader>s <Plug>(Scalpel)
 
-" FZF
-let g:fzf_layout = { 'down': '~30%' }
-
 " Mapping selecting mappings
 nmap <leader><tab> <plug>(fzf-maps-n)
 xmap <leader><tab> <plug>(fzf-maps-x)
@@ -216,7 +213,9 @@ imap <c-x><c-l> <plug>(fzf-complete-line)
 " Advanced customization using autoload functions
 inoremap <expr> <c-x><c-k> fzf#vim#complete#word({'left': '15%'})
 
-" Custom fzf mappings
+" FZF
+let g:fzf_layout = { 'down': '~30%' }
+
 nnoremap <Leader>b :Buffers<CR>
 nnoremap <Leader>f :Files<CR>
 nnoremap <Leader>g :GFiles<CR>
