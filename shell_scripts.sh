@@ -14,7 +14,7 @@ alias ctags-cwd='ctags --languages=ruby,javascript --exclude=.git --exclude=log 
 alias vnotes='cd ~/vnotes && nvim '
 
 alias fzd='cd $(ls -d ~/code/zendesk/*/ | fzf)'
-alias git-show-latesttag='git log --pretty=format:"%d" | grep "tag:" | head -n 1'
+alias gshowlatesttag='git log --pretty=format:"%d" | grep "tag:" | head -n 1'
 
 # Git
 alias gcoammend='git commit --amend'
@@ -25,7 +25,7 @@ function gresethard {
   git reset --hard origin/`git branch | grep \* | cut -d ' ' -f2`
 }
 
-function git-rebase-i {
+function grebasei {
   count=$1
   if [ -z "$count" ]; then
     count=1
