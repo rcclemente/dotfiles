@@ -25,7 +25,8 @@ Some features:
 - click the plus button at the bottom to new Global Shortcut Keys for each mapping
 - Enter the keyboard shortcuts you'd like to use, such as control+h and so on
 
-git clone https://github.com/dracula/iterm.git
+    git clone https://github.com/dracula/iterm.git
+
 Install manually
 Download using the GitHub .zip download option and unzip them.
 - iTerm2 > Preferences > Profiles > Colors Tab
@@ -34,18 +35,19 @@ Download using the GitHub .zip download option and unzip them.
 - Select the Dracula.itermcolors file
 - Select the Dracula from Color Presets...
 
-### Terminal
-
-Dracula - https://draculatheme.com/terminal/
-load theme from $HOME/dotfiles/terminal-app/Dracula.terminal
-
 ### Oh My Zsh
+
 https://github.com/ohmyzsh/ohmyzsh#getting-started
 
     brew install wget
     sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
     ln -s dotfiles/zshrc .zshrc
+
+### Terminal
+
+Dracula - https://draculatheme.com/terminal/
+load theme from $HOME/dotfiles/terminal-app/Dracula.terminal
 
 #### Install Theme - https://github.com/romkatv/powerlevel10k#manual
 
