@@ -19,7 +19,7 @@ Some features:
     ln -s dotfiles/tmux.conf ~/.tmux.conf
     ln -s dotfiles/nvim ~/config/
 
-#### Iterm
+### Iterm
 
 - go to Preferences > Keys in iTerm2
 - click the plus button at the bottom to new Global Shortcut Keys for each mapping
@@ -34,12 +34,12 @@ Download using the GitHub .zip download option and unzip them.
 - Select the Dracula.itermcolors file
 - Select the Dracula from Color Presets...
 
-#### Terminal
+### Terminal
 
 Dracula - https://draculatheme.com/terminal/
 load theme from $HOME/dotfiles/terminal-app/Dracula.terminal
 
-#### Oh My Zsh
+### Oh My Zsh
 https://github.com/ohmyzsh/ohmyzsh#getting-started
 
     brew install wget
@@ -47,7 +47,13 @@ https://github.com/ohmyzsh/ohmyzsh#getting-started
 
     ln -s dotfiles/zshrc .zshrc
 
-#### Fonts
+#### Install Theme - https://github.com/romkatv/powerlevel10k#manual
+
+    git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k
+
+  Set ZSH_THEME="powerlevel10k/powerlevel10k"
+
+### Fonts
 
     git clone https://github.com/powerline/fonts.git
     cd fonts
@@ -55,18 +61,18 @@ https://github.com/ohmyzsh/ohmyzsh#getting-started
     cd ..
     rm -rf fonts
 
-#### Install Vundle
+### Install Vundle
 
     git clone https://github.com/VundleVim/Vundle.vim.git ~/.config/nvim/bundle/Vundle.vim
     git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
-#### Install Dracula for vim
+### Install Dracula for vim
 
     mkdir -p ~/.vim/colors
     wget https://raw.githubusercontent.com/dracula/vim/master/colors/dracula.vim
     mv dracula.vim ~/.vim/colors/
 
-#### Ctags
+### Ctags
 
   - Install
 
@@ -78,7 +84,7 @@ https://github.com/ohmyzsh/ohmyzsh#getting-started
 
   - In vim to search for a definition of a tag press `<C-]>`
 
-## Vim plugins
+### Vim plugins
 
 #### Search for text in file
 
