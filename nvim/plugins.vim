@@ -31,6 +31,8 @@ Plug 'junegunn/vim-easy-align'
 " Vim airline theme
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+
+" Tmux plugins
 Plug 'edkolev/tmuxline.vim'
 Plug 'christoomey/vim-tmux-navigator'
 
