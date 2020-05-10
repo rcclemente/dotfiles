@@ -14,6 +14,7 @@ Some features:
     rm .vimrc
     rm .tmux.conf
 
+    brew install neovim
     git clone git@github.com:rcclemente/dotfiles.git dotfiles
     ln -s dotfiles/vimrc ~/.vimrc
     ln -s dotfiles/tmux.conf ~/.tmux.conf
@@ -43,6 +44,11 @@ https://github.com/ohmyzsh/ohmyzsh#getting-started
     sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
     ln -s dotfiles/zshrc .zshrc
+
+### Neovim
+- Download plugin manager
+
+    curl -fLo $HOME/.config/nvim/plug.vim https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 ### Terminal
 

@@ -24,3 +24,4 @@ tags
 nvim/plugged/*
 nvim/colors/*
 nvim/bundle/*
+nvim/autoload/*

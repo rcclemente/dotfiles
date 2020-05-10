@@ -1,14 +1,18 @@
-syntax on
-
 """""""""""""""""
 " Defaults go here
 """""""""""""""""
+" syntax highlighting
+syntax on
 " better safe than sorry
 set nocompatible
 
 " Allows loading of file, detection and indention to on
 filetype plugin indent on    " required
 
+"""""""""""""""""
+
+"""""""""""""""""
+" Load everything per file
 """""""""""""""""
 
 " All plugin loading goes here plus the selected Theme
