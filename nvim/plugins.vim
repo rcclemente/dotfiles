@@ -36,13 +36,13 @@ Plug 'christoomey/vim-tmux-navigator'
 
 " Git fugitive
 Plug 'tpope/vim-fugitive'
+" Git line marker
+Plug 'airblade/vim-gitgutter'
+
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-surround'
 Plug 'vim-ruby/vim-ruby'
-
-" Git
-Plug 'airblade/vim-gitgutter'
 
 " NerdTree
 Plug 'scrooloose/nerdtree'
