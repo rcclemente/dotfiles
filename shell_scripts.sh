@@ -2,9 +2,6 @@ export PATH="$HOME/.yarn/bin:$PATH"
 export TERM=screen-256color
 export ACKRC=".ackrc"
 
-# the fuck
-eval $(thefuck --alias)
-
 # zdi
 alias zdi-all-restart='zdi services restart && zdi apps restart'
 
@@ -14,7 +11,7 @@ alias ctags-cwd='ctags --languages=ruby,javascript --exclude=.git --exclude=log 
 alias vnotes='cd ~/vnotes && nvim '
 
 alias fzd='cd $(ls -d ~/code/zendesk/*/ | fzf)'
-alias gshowlatesttag='git log --pretty=format:"%d" | grep "tag:" | head -n 1'
+alias git-show-latesttag='git log --pretty=format:"%d" | grep "tag:" | head -n 1'
 
 # Git
 alias gcoammend='git commit --amend'
@@ -25,7 +22,7 @@ function gresethard {
   git reset --hard origin/`git branch | grep \* | cut -d ' ' -f2`
 }
 
-function grebasei {
+function git-rebase-i {
   count=$1
   if [ -z "$count" ]; then
     count=1
