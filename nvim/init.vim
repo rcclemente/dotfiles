@@ -21,8 +21,9 @@ source $HOME/.config/nvim/plugins.vim
 " General settings native to vim
 source $HOME/.config/nvim/general_settings.vim
 
-" Filetype tabulation
+" Filetype and tab settings
 source $HOME/.config/nvim/filetype_tab.vim
+
 
 """"""""""""""""""""
 " KEYBOARD MAPPINGS
