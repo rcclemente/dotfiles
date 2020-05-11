@@ -1,0 +1,30 @@
+{
+  "languageserver": {
+    "dockerfile": {
+      "command": "docker-langserver",
+      "filetypes": [
+        "dockerfile"
+      ],
+      "args": [
+        "--stdio"
+      ]
+    },
+    "golang": {
+      "command": "gopls",
+      "rootPatterns": [
+        "go.mod"
+      ],
+      "disableWorkspaceFolders": true,
+      "filetypes": [
+        "go"
+      ]
+    }
+  },
+  "diagnostic.errorSign": "?",
+  "diagnostic.warningSign": "?",
+  "suggest.echodocSupport": true,
+  "suggest.maxCompleteItemCount": 20,
+  "prettier.requireConfig": true,
+  "python.venvPath": "~/.virtualenvs",
+  "python.jediEnabled": false
+}
