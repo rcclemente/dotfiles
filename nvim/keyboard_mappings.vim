@@ -33,3 +33,14 @@ nnoremap <Leader>r :so ~/.config/nvim/init.vim<CR>:nohlsearch<CR>
 nnoremap vv :vsplit \| b
 nnoremap vs :split \| b
 
+" Ctags
+command! Mtags !ctags --languages=ruby,javascript --exclude=.git --exclude=log --recurse . `bundle show --paths`
+
+""""""""""""""
+" Auto complete
+"""""""""""""
+
+""""""""""""""""""""
+" Abbreviation
+""""""""""""""""""""
+abbr wtf require "byebug"<esc>obyebug<esc>
