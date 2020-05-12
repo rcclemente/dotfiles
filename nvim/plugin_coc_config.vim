@@ -10,6 +10,6 @@ function! s:check_back_space() abort
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 
-"CocInstall coc-tsserver@1.4.9
+"CocInstall coc-tsserver@1.4.11
 nmap <Leader>gd <Plug>(coc-definition)
 nmap <Leader>gr <Plug>(coc-references)
