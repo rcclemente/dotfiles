@@ -76,3 +76,8 @@ nnoremap <Leader>hj :GitGutterNextHunk<CR>
 nnoremap <Leader>hk :GitGutterPrevHunk<CR>
 nnoremap <Leader>gr :Gread<CR>
 
+""""""""""""""""
+" coc solargraph http://blog.jamesnewton.com/setting-up-coc-nvim-for-ruby-development
+""""""""""""""""
+let g:coc_global_extensions = ['coc-solargraph']
+
