@@ -103,16 +103,23 @@ load theme from $HOME/dotfiles/terminal-app/Dracula.terminal
 
   - Swith to the righ commandline tools(should have been downloaded in the apple developer site)
 
+    ```
     sudo xcode-select --switch /Library/Developer/CommandLineTools
     sudo gem install solargraph
+    ```
 
   - And then restore afterwards with
 
+    ```
     sudo xcode-select --switch /Applications/Xcode.app
+
+    ```
 
   - Inside nvim
 
+    ```
     CocInstall coc-solargraph coc-css coc-html coc-json coc-tsserver
+    ```
 
 #### Installing/Updating Vim
 
