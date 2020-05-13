@@ -11,5 +11,6 @@ function! s:check_back_space() abort
 endfunction
 
 "CocInstall coc-tsserver@1.4.11
+" CocInstall coc-solargraph
 nmap <Leader>gd <Plug>(coc-definition)
 nmap <Leader>gr <Plug>(coc-references)

@@ -101,9 +101,24 @@ load theme from $HOME/dotfiles/terminal-app/Dracula.terminal
 
 #### Installing/Updating Vim
 
-    vim +PluginInstall +qall
+    nvim +PlugInstall +qall
 
-## Raw links
+### Solargraph for ruby coc
+
+  - Swith to the righ commandline tools(should have been downloaded in the apple developer site)
+
+    sudo xcode-select --switch /Library/Developer/CommandLineTools
+    sudo gem install solargraph
+
+  - And then restore afterwards with
+
+    sudo xcode-select --switch /Applications/Xcode.app
+
+  - Inside nvim
+
+    CocInstall coc-solargraph
+
+### Raw links
 
 https://raw.githubusercontent.com/rcclemente/dotfiles/master/tmux.conf
 
