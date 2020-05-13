@@ -69,12 +69,12 @@ load theme from $HOME/dotfiles/terminal-app/Dracula.terminal
     cd ..
     rm -rf fonts
 
-### Install Vundle
+### Vim plug
 
-    git clone https://github.com/VundleVim/Vundle.vim.git ~/.config/nvim/bundle/Vundle.vim
-    git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+    sh -c 'curl -fLo  ~/.config/nvim/autoload/plug.vim --create-dirs \
+         https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
-### Install Dracula for vim
+## Install Dracula for vim
 
     mkdir -p ~/.vim/colors
     wget https://raw.githubusercontent.com/dracula/vim/master/colors/dracula.vim
@@ -99,10 +99,6 @@ load theme from $HOME/dotfiles/terminal-app/Dracula.terminal
     brew install ack
     brew install the_silver_searcher
 
-#### Installing/Updating Vim
-
-    nvim +PlugInstall +qall
-
 ### Solargraph for ruby coc
 
   - Swith to the righ commandline tools(should have been downloaded in the apple developer site)
@@ -116,7 +112,12 @@ load theme from $HOME/dotfiles/terminal-app/Dracula.terminal
 
   - Inside nvim
 
-    CocInstall coc-solargraph
+    CocInstall coc-solargraph coc-css coc-html coc-json coc-tsserver
+
+#### Installing/Updating Vim
+
+    nvim +PlugInstall +qall
+
 
 ### Raw links
 
