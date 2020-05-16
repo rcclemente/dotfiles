@@ -45,8 +45,12 @@ Plug 'christoomey/vim-tmux-navigator'
 
 " Git fugitive
 Plug 'tpope/vim-fugitive'
+
 " Git line marker
 Plug 'airblade/vim-gitgutter'
+
+" Search and replace tool
+Plug 'wincent/scalpel'
 
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-endwise'
