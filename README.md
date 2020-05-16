@@ -2,8 +2,10 @@
 
 - [Intro](#intro)
 - [Installation](#installation)
-- [Tmux](#tmux)
+- [Iterm](#iterm)
 - [Zsh](#zsh)
+- [Tmux](#tmux)
+- [Neovim](#neovim)
 
 
 ## Intro
@@ -19,48 +21,58 @@ Collection for configurations for the following
 ```
 git clone git@github.com:rcclemente/dotfiles.git ~/dotfiles
 ```
-    rm .tmux.conf
 
-    brew install neovim
-    git clone git@github.com:rcclemente/dotfiles.git dotfiles
-    ln -s dotfiles/vimrc ~/.vimrc
-    ln -s dotfiles/tmux.conf ~/.tmux.conf
-    ln -s dotfiles/nvim ~/config/
+## Iterm
 
-### Iterm
+#### Installation
 
-- go to Preferences > Keys in iTerm2
-- click the plus button at the bottom to new Global Shortcut Keys for each mapping
-- Enter the keyboard shortcuts you'd like to use, such as control+h and so on
+- Download at https://www.iterm2.com/downloads.html
 
-    git clone https://github.com/dracula/iterm.git
+#### Install Dracula theme
 
-Install manually
-Download using the GitHub .zip download option and unzip them.
-- iTerm2 > Preferences > Profiles > Colors Tab
-- Open the Color Presets... drop-down in the bottom right corner
-- Select Import... from the list
-- Select the Dracula.itermcolors file
-- Select the Dracula from Color Presets...
+- Download the theme
 
-### Oh My Zsh
+```
+  git clone https://github.com/dracula/iterm.git ~/iterm_dracula
+```
 
-https://github.com/ohmyzsh/ohmyzsh#getting-started
+- Configure iterm
 
-    brew install wget
-    sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+1. iTerm2 > Preferences > Profiles > Colors Tab
+1. Open the Color Presets... drop-down in the bottom right corner
+1. Select Import... from the list
+1. Select the Dracula.itermcolors file
+1. Select the Dracula from Color Presets...
 
-    ln -s dotfiles/zshrc .zshrc
+- Delete
+```
+  rm -rf ~/iterm_dracula
+```
 
-### Neovim
-- Download plugin manager
+## Zsh
+
+#### Oh My Zsh
+
+- Download (https://github.com/ohmyzsh/ohmyzsh#getting-started)
+
+```
+  brew install wget
+  sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+  ln -s dotfiles/zshrc .zshrc
+```
+
+## Neovim
+
+#### Install
 
     curl -fLo $HOME/.config/nvim/plug.vim https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-### Terminal
+#### Vim plug
 
-Dracula - https://draculatheme.com/terminal/
-load theme from $HOME/dotfiles/terminal-app/Dracula.terminal
+    sh -c 'curl -fLo  ~/.config/nvim/autoload/plug.vim --create-dirs \
+         https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+
 
 #### Install Theme - https://github.com/romkatv/powerlevel10k#manual
 
@@ -75,11 +87,6 @@ load theme from $HOME/dotfiles/terminal-app/Dracula.terminal
     ./install.sh
     cd ..
     rm -rf fonts
-
-### Vim plug
-
-    sh -c 'curl -fLo  ~/.config/nvim/autoload/plug.vim --create-dirs \
-         https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
 ## Install Dracula for vim
 
