@@ -86,8 +86,14 @@ ln -s dotfiles/zshrc .zshrc
 - Install Theme - https://github.com/romkatv/powerlevel10k#manual
 
 ```
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k
+
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.oh-my-zsh/themes/${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k
 cp ~/dotfiles/zshrc ~/.zshrc
+```
+
+Set `ZSH_THEME="powerlevel10k/powerlevel10k"` in `~/.zshrc`.
+
+```
 src
 ```
 
