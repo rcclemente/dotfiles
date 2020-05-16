@@ -20,6 +20,7 @@ Collection for configurations for the following
 
 ```
 git clone git@github.com:rcclemente/dotfiles.git ~/dotfiles
+mkdir ~/config
 ```
 
 ## Iterm
@@ -62,7 +63,21 @@ git clone git@github.com:rcclemente/dotfiles.git ~/dotfiles
   ln -s dotfiles/zshrc .zshrc
 ```
 
+## Tmux
+
+```
+  brew install tmux
+  rm ~/.tmux.conf
+  ln -s dotfiles/tmux.conf ~/.tmux.conf
+```
+
 ## Neovim
+
+```
+  brew install neovim
+  mkdir ~/config
+  ln -s dotfiles/nvim ~/config/
+```
 
 #### Install
 
