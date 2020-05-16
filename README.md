@@ -1,12 +1,11 @@
 # Dotfiles
 
 - [Intro](#intro)
-- [Installation](#installation)
+- [Prequisites](#prequisites)
 - [Iterm](#iterm)
 - [Zsh](#zsh)
 - [Tmux](#tmux)
 - [Neovim](#neovim)
-
 
 ## Intro
 Collection for configurations for the following
@@ -16,11 +15,16 @@ Collection for configurations for the following
 * Nvim
 * Code searching with ctags
 
-## Installation
+## Prequisites
 
 ```
 git clone git@github.com:rcclemente/dotfiles.git ~/dotfiles
 mkdir ~/config
+
+brew install fzf
+brew install ack
+brew install the_silver_searcher
+
 ```
 
 ## Iterm
@@ -29,12 +33,12 @@ mkdir ~/config
 
 - Download at https://www.iterm2.com/downloads.html
 
-#### Install Dracula theme
+#### Dracula theme
 
 - Download the theme
 
 ```
-  git clone https://github.com/dracula/iterm.git ~/iterm_dracula
+git clone https://github.com/dracula/iterm.git ~/iterm_dracula
 ```
 
 - Configure iterm
@@ -47,113 +51,106 @@ mkdir ~/config
 
 - Delete
 ```
-  rm -rf ~/iterm_dracula
+rm -rf ~/iterm_dracula
 ```
 
-## Zsh
+- Fonts
+
+```
+git clone https://github.com/powerline/fonts.git
+cd fonts
+./install.sh
+cd ..
+rm -rf fonts
+```
+
+# Zsh
+
+- Switch to zsh
+
+```
+chsh -s /bin/zsh
+```
 
 #### Oh My Zsh
 
 - Download (https://github.com/ohmyzsh/ohmyzsh#getting-started)
 
 ```
-  brew install wget
-  sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+brew install wget
+sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-  ln -s dotfiles/zshrc .zshrc
+ln -s dotfiles/zshrc .zshrc
 ```
 
-## Tmux
+- Install Theme - https://github.com/romkatv/powerlevel10k#manual
 
 ```
-  brew install tmux
-  rm ~/.tmux.conf
-  ln -s dotfiles/tmux.conf ~/.tmux.conf
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k
+cp ~/dotfiles/zshrc ~/.zshrc
+src
 ```
 
-## Neovim
+# Tmux
 
 ```
-  brew install neovim
-  mkdir ~/config
-  ln -s dotfiles/nvim ~/config/
+brew install tmux
+rm ~/.tmux.conf
+ln -s dotfiles/tmux.conf ~/.tmux.conf
 ```
 
-#### Install
+# Neovim
 
-    curl -fLo $HOME/.config/nvim/plug.vim https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+```
+brew install neovim
+mkdir ~/config
+ln -s dotfiles/nvim ~/config/
+```
 
-#### Vim plug
+#### Vim Plug
 
-    sh -c 'curl -fLo  ~/.config/nvim/autoload/plug.vim --create-dirs \
-         https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+```
+curl -fLo $HOME/.config/nvim/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+```
 
+#### Ctags
 
-#### Install Theme - https://github.com/romkatv/powerlevel10k#manual
+- Install
 
-    git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k
+```
+brew install ctags
+```
 
-  Set ZSH_THEME="powerlevel10k/powerlevel10k"
+- Create the tags for your local ruby/rails project
 
-### Fonts
+```
+ctags --exclude=log --exclude=.git --recurse . `bundle show --paths` ``
+```
 
-    git clone https://github.com/powerline/fonts.git
-    cd fonts
-    ./install.sh
-    cd ..
-    rm -rf fonts
-
-## Install Dracula for vim
-
-    mkdir -p ~/.vim/colors
-    wget https://raw.githubusercontent.com/dracula/vim/master/colors/dracula.vim
-    mv dracula.vim ~/.vim/colors/
-
-### Ctags
-
-  - Install
-
-    `brew install ctags`
-
-  - Create the tags for your local ruby/rails project
-
-    ``ctags --exclude=log --exclude=.git --recurse . `bundle show --paths` ``
-
-  - In vim to search for a definition of a tag press `<C-]>`
-
-### Vim plugins
-
-#### Search for text in file
-
-    brew install ack
-    brew install the_silver_searcher
 
 ### Solargraph for ruby coc
 
-  - Swith to the righ commandline tools(should have been downloaded in the apple developer site)
+- Download command line tools https://developer.apple.com/download/more/
 
-    ```
-    sudo xcode-select --switch /Library/Developer/CommandLineTools
-    sudo gem install solargraph
-    ```
+- Switch to the right commandline tools(should have been downloaded in the apple developer site)
 
-  - And then restore afterwards with
+```
+sudo xcode-select --switch /Library/Developer/CommandLineTools
+sudo gem install solargraph
+```
 
-    ```
-    sudo xcode-select --switch /Applications/Xcode.app
+- And then restore afterwards with
 
-    ```
+```
+sudo xcode-select --switch /Applications/Xcode.app
 
-  - Inside nvim
+```
 
-    ```
-    CocInstall coc-solargraph coc-css coc-html coc-json coc-tsserver
-    ```
+- Inside nvim
 
-#### Installing/Updating Vim
-
-    nvim +PlugInstall +qall
-
+```
+CocInstall coc-solargraph coc-css coc-html coc-json coc-tsserver
+```
 
 ### Raw links
 
