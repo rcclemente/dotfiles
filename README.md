@@ -1,17 +1,24 @@
 # Dotfiles
 
-Collection my configurations
+- [Intro](#intro)
+- [Installation](#installation)
+- [Tmux](#tmux)
+- [Zsh](#zsh)
 
-Some features:
-- Iterm configuration
-- Git vim integration
-- vim and tmux navigation using h/j/k/l
-- Code searching with ctags including your rails project's gems
+
+## Intro
+Collection for configurations for the following
+
+* Iterm
+* ZSH
+* Nvim
+* Code searching with ctags
 
 ## Installation
 
-    rm -rf .vim
-    rm .vimrc
+```
+git clone git@github.com:rcclemente/dotfiles.git ~/dotfiles
+```
     rm .tmux.conf
 
     brew install neovim
