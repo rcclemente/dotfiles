@@ -54,7 +54,7 @@ git clone https://github.com/dracula/iterm.git ~/iterm_dracula
 rm -rf ~/iterm_dracula
 ```
 
-- Fonts
+#### Fonts
 
 ```
 git clone https://github.com/powerline/fonts.git
