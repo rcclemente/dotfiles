@@ -1,11 +1,12 @@
 # Dotfiles
 
 - [Intro](#intro)
-- [Prequisites](#prequisites)
-- [Iterm](#iterm)
-- [Zsh](#zsh)
-- [Tmux](#tmux)
-- [Neovim](#neovim)
+- [Installation](#installation)
+  - [Prequisites](#prequisites)
+  - [Iterm](#iterm)
+  - [Zsh](#zsh)
+  - [Tmux](#tmux)
+  - [Neovim](#neovim)
 
 ## Intro
 Collection for configurations for the following
@@ -15,21 +16,20 @@ Collection for configurations for the following
 * Nvim
 * Code searching with ctags
 
-## Prequisites
+## Installation
+
+### Prequisites
 
 ```
 git clone git@github.com:rcclemente/dotfiles.git ~/dotfiles
 mkdir ~/config
 
-brew install fzf
-brew install ack
-brew install the_silver_searcher
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+brew install wget fzf ack the_silver_searcher
 
 ```
 
-## Iterm
-
-#### Installation
+### Iterm
 
 - Download at https://www.iterm2.com/downloads.html
 
@@ -64,7 +64,7 @@ cd ..
 rm -rf fonts
 ```
 
-# Zsh
+## Zsh
 
 - Switch to zsh
 
@@ -77,7 +77,6 @@ chsh -s /bin/zsh
 - Download (https://github.com/ohmyzsh/ohmyzsh#getting-started)
 
 ```
-brew install wget
 sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 ln -s dotfiles/zshrc .zshrc
@@ -86,7 +85,6 @@ ln -s dotfiles/zshrc .zshrc
 - Install Theme - https://github.com/romkatv/powerlevel10k#manual
 
 ```
-
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.oh-my-zsh/themes/${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k
 cp ~/dotfiles/zshrc ~/.zshrc
 ```
@@ -97,7 +95,7 @@ Set `ZSH_THEME="powerlevel10k/powerlevel10k"` in `~/.zshrc`.
 src
 ```
 
-# Tmux
+## Tmux
 
 ```
 brew install tmux
@@ -105,7 +103,7 @@ rm ~/.tmux.conf
 ln -s dotfiles/tmux.conf ~/.tmux.conf
 ```
 
-# Neovim
+## Neovim
 
 ```
 brew install neovim
@@ -133,7 +131,6 @@ brew install ctags
 ctags --exclude=log --exclude=.git --recurse . `bundle show --paths` ``
 ```
 
-
 ### Solargraph for ruby coc
 
 - Download command line tools https://developer.apple.com/download/more/
@@ -155,10 +152,11 @@ sudo xcode-select --switch /Applications/Xcode.app
 - Inside nvim
 
 ```
-CocInstall coc-solargraph coc-css coc-html coc-json coc-tsserver
+:PlugInstall
+:CocInstall coc-solargraph coc-css coc-html coc-json coc-tsserver
 ```
 
-### Raw links
+## Raw links
 
 https://raw.githubusercontent.com/rcclemente/dotfiles/master/tmux.conf
 
