@@ -7,6 +7,7 @@
   - [Zsh](#zsh)
   - [Tmux](#tmux)
   - [Neovim](#neovim)
+- [Raw Links](#rawlinks)
 
 ## Intro
 Collection for configurations for the following
@@ -57,6 +58,7 @@ rm -rf ~/iterm_dracula
 #### Fonts
 
 ```
+cd ~
 git clone https://github.com/powerline/fonts.git
 cd fonts
 ./install.sh
