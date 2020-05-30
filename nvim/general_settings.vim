@@ -5,7 +5,7 @@ set timeoutlen=300
 
 set backspace=indent,eol,start
 set nobackup                    " do not keep a backup file, use versions instead
-set history=1000                " keep 50 lines of command line history
+set history=1000                " keep 1000 lines of command line history
 set encoding=utf-8
 set ruler                       " show the cursor position all the time
 set showcmd                     " display incomplete commands
@@ -25,7 +25,7 @@ set hlsearch
 set clipboard=unnamed
 set cmdheight=2
 set laststatus=2
-set cursorline
+set cursorline                  " highlight the current line"
 
 " Split settings
 set splitbelow
