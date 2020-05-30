@@ -162,4 +162,9 @@ sudo xcode-select --switch /Applications/Xcode.app
 
 https://raw.githubusercontent.com/rcclemente/dotfiles/master/tmux.conf
 
+## Additional Apps
+
+#### Sleep, Lock... etc
+https://github.com/siong1987/shortcuts
+
 
