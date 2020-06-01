@@ -31,3 +31,6 @@ source $HOME/.config/nvim/plugin_general_config.vim
 
 " Coc specific plugin configuration
 source $HOME/.config/nvim/plugin_coc_config.vim
+
+" Custom plugins
+source $HOME/.config/nvim/plugins/BufOnly.vim
