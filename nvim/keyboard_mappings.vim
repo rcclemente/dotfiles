@@ -36,6 +36,9 @@ nnoremap vs :split \| b
 " Ctags
 command! Mtags !ctags --languages=ruby,javascript --exclude=.git --exclude=log --recurse . `bundle show --paths`
 
+" Copy filename with path to clipboard
+nmap <Leader>bo :BufOnly<CR>
+
 """"""""""""""
 " Auto complete
 """""""""""""
