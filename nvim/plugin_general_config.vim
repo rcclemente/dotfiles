@@ -76,6 +76,8 @@ nnoremap <Leader>hj :GitGutterNextHunk<CR>
 nnoremap <Leader>hk :GitGutterPrevHunk<CR>
 nnoremap <Leader>gr :Gread<CR>
 
+set diffopt+=vertical
+
 """"""""""""""""
 " coc solargraph http://blog.jamesnewton.com/setting-up-coc-nvim-for-ruby-development
 """"""""""""""""
