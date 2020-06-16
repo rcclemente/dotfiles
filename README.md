@@ -22,12 +22,11 @@ Collection for configurations for the following
 ### Prequisites
 
 ```
-git clone git@github.com:rcclemente/dotfiles.git ~/dotfiles
-mkdir ~/config
-
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-brew install wget fzf ack the_silver_searcher
+brew install wget fzf ack the_silver_searcher git thefuck
 
+git clone git@github.com:rcclemente/dotfiles.git ~/dotfiles
+mkdir ~/.config
 ```
 
 ### Iterm
