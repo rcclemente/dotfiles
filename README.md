@@ -107,8 +107,8 @@ ln -s dotfiles/tmux.conf ~/.tmux.conf
 
 ```
 brew install neovim
-mkdir ~/config
-ln -s dotfiles/nvim ~/config/
+mkdir ~/.config
+ln -s dotfiles/nvim ~/.config/
 ```
 
 #### Vim Plug
