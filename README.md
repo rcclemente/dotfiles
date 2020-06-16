@@ -23,7 +23,7 @@ Collection for configurations for the following
 
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-brew install wget fzf ack the_silver_searcher git
+brew install wget fzf ack the_silver_searcher git thefuck
 
 git clone git@github.com:rcclemente/dotfiles.git ~/dotfiles
 mkdir ~/.config
@@ -80,14 +80,13 @@ chsh -s /bin/zsh
 ```
 sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-ln -s dotfiles/zshrc .zshrc
 ```
 
 - Install Theme - https://github.com/romkatv/powerlevel10k#manual
 
 ```
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.oh-my-zsh/themes/${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k
-cp ~/dotfiles/zshrc ~/.zshrc
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k
+ln -s ~/dotfiles/zshrc .zshrc
 ```
 
 Set `ZSH_THEME="powerlevel10k/powerlevel10k"` in `~/.zshrc`.
