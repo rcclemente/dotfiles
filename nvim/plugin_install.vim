@@ -18,7 +18,7 @@ endif
 call plug#begin('~/.config/nvim/plugged')
 
 " Coloscheme First!!
-" Manually download these and add to ~/.vim/colors/
+" Manually download these and add to ~/.config/nvim/colors/
 Plug 'flazz/vim-colorschemes'
 colorscheme Tomorrow-Night-Eighties
 
