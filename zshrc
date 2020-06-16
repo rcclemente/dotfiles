@@ -116,3 +116,4 @@ eval $(thefuck --alias)
 
 source /Users/rclemente/Code/zendesk/zdi/dockmaster/zdi.sh
 
+eval "$(rbenv init - zsh)"
