@@ -23,7 +23,7 @@ Collection for configurations for the following
 
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-brew install wget fzf ack the_silver_searcher git
+brew install wget fzf ack the_silver_searcher git thefuck
 
 git clone git@github.com:rcclemente/dotfiles.git ~/dotfiles
 mkdir ~/.config
