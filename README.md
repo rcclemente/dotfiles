@@ -165,4 +165,7 @@ https://raw.githubusercontent.com/rcclemente/dotfiles/master/tmux.conf
 #### Sleep, Lock... etc
 https://github.com/siong1987/shortcuts
 
+#### Window app manger
+https://rectangleapp.com/
+
 
