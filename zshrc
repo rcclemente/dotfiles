@@ -116,3 +116,13 @@ eval $(thefuck --alias)
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # eval "$(rbenv init - zsh)"
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+export HOMEBREW_GITHUB_API_TOKEN=98fa288d8be1b580b0cc13f8beb81d391c854ad7
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/kojie/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/kojie/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/kojie/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/kojie/google-cloud-sdk/completion.zsh.inc'; fi
