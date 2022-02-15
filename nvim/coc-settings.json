@@ -26,5 +26,8 @@
   "suggest.maxCompleteItemCount": 20,
   "prettier.requireConfig": true,
   "python.venvPath": "~/.virtualenvs",
-  "python.jediEnabled": false
+  "python.jediEnabled": false,
+  "yaml.schemas": {
+      "kubernetes": "/*.yaml"
+  }
 }

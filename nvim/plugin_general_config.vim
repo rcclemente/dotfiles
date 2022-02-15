@@ -21,7 +21,7 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 " Nerdtree
 """""""""""""""""
 nmap <silent> <leader>t :NERDTreeTabsToggle<CR>
-nmap <silent> <leader>c :NERDTreeFind<CR>
+nmap <silent> <leader>e :NERDTreeFind<CR>
 let g:nerdtree_tabs_open_on_console_startup = 0
 
 """"""""""""""""
@@ -82,4 +82,19 @@ set diffopt+=vertical
 " coc solargraph http://blog.jamesnewton.com/setting-up-coc-nvim-for-ruby-development
 """"""""""""""""
 let g:coc_global_extensions = ['coc-solargraph']
+
+nnoremap <Leader>c gggcG
+
+"" Markdown
+" remove highlighting of underscore `_`
+syn match markdownError "\w\@<=\w\@="
+
+""""""""""""""""
+" COC
+"""""""""""""""""
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gs :call CocAction('jumpDefinition', 'split')<CR>
+" nmap <silent> gd :call CocAction('jumpDefinition', 'vsplit')<CR>
+" nmap <silent> gt :call CocAction('jumpDefinition', 'tabe')<CR>
+
 

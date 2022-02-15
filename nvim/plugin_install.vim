@@ -70,6 +70,9 @@ Plug 'jiangmiao/auto-pairs'
 " Commenter
 Plug 'tomtom/tcomment_vim'
 
+" Tab line formatting
+Plug 'godlygeek/tabular'
+
 " coc autocomplete
 " make sure to install node > v8
 Plug 'neoclide/coc.nvim', {'branch': 'release'}

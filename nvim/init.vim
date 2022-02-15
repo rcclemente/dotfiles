@@ -21,7 +21,7 @@ source $HOME/.config/nvim/plugin_install.vim
 source $HOME/.config/nvim/general_settings.vim
 
 " Filetype and tab settings
-source $HOME/.config/nvim/file_settings.vim
+" source $HOME/.config/nvim/file_settings.vim
 
 " Keyboard mappings
 source $HOME/.config/nvim/keyboard_mappings.vim
