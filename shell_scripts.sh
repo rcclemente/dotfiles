@@ -18,6 +18,9 @@ alias git-prunedry='git remote prune origin --dry-run'
 alias git-prune='git remote prune origin '
 alias git-resethard="git reset --hard origin/\`git branch | grep \* | cut -d ' ' -f2\`"
 
+#
+# git fetch -p && for branch in $(git branch -vv | grep ': gone]' | awk '{print $1}'); do git branch -D $branch; done
+
 # Git with FZF
 alias gcob='git checkout  $(git branch  | fzf)'
 alias gcobr='git checkout --track $(git branch -r | fzf)'
@@ -26,6 +29,11 @@ alias gcobr='git checkout --track $(git branch -r | fzf)'
 #   git reset --hard origin/`git branch | grep \* | cut -d ' ' -f2`
 # }
 #
+
+function git-deletegone {
+  git fetch -p && for branch in $(git branch -vv | grep ': gone]' | awk '{print $1}'); do git branch -D $branch; done
+}
+
 function git-rebase-i {
   count=$1
   if [ -z "$count" ]; then
