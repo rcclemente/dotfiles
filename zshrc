@@ -113,8 +113,6 @@ source ~/.oh-my-zsh/oh-my-zsh.sh
 
 eval $(thefuck --alias)
 
-source <(kubectl completion zsh)  # setup autocomplete in zsh into the current shell
-echo "[[ $commands[kubectl] ]] && source <(kubectl completion zsh)" >> ~/.zshrc # add autocomplete permanently to your zsh shell
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -131,4 +129,5 @@ if [ -f '/Users/kojie/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/kojie/goo
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/kojie/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/kojie/google-cloud-sdk/completion.zsh.inc'; fi
 source $HOME/.rvm/scripts/rvm
+source <(kubectl completion zsh)  # setup autocomplete in zsh into the current shell
 [[ /usr/local/bin/kubectl ]] && source <(kubectl completion zsh)
