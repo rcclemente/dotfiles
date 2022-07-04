@@ -80,8 +80,8 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-#plugins=(docker git npm nvm python ruby rails vi-mode)
-plugins=()
+plugins=(docker git npm nvm python ruby rails vi-mode)
+# plugins=()
 
 source ~/.oh-my-zsh/oh-my-zsh.sh
 
@@ -130,4 +130,4 @@ if [ -f '/Users/kojie/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/kojie/goo
 if [ -f '/Users/kojie/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/kojie/google-cloud-sdk/completion.zsh.inc'; fi
 source $HOME/.rvm/scripts/rvm
 source <(kubectl completion zsh)  # setup autocomplete in zsh into the current shell
-[[ /usr/local/bin/kubectl ]] && source <(kubectl completion zsh)
+# [[ /usr/local/bin/kubectl ]] && source <(kubectl completion zsh)
