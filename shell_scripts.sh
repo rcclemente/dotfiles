@@ -17,6 +17,13 @@ alias git-commitammend='git commit --amend'
 alias git-prunedry='git remote prune origin --dry-run'
 alias git-prune='git remote prune origin '
 alias git-resethard="git reset --hard origin/\`git branch | grep \* | cut -d ' ' -f2\`"
+alias git-deletemainmerged="git branch --merged main | grep -v '^[ *]*main$' | xargs git branch -D"
+alias git-deletemastermerged="git branch --merged master | grep -v '^[ *]*master$' | xargs git branch -D"
+# alias git-cleanlocal="git fetch -p ; git branch -r | awk '{print $1}' | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk '{print $1}' | xargs git branch -D"
+
+
+# Terraform
+alias terraform-fmt="terraform fmt --recursive"
 
 #
 # git fetch -p && for branch in $(git branch -vv | grep ': gone]' | awk '{print $1}'); do git branch -D $branch; done
