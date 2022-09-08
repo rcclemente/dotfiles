@@ -12,6 +12,7 @@ alias vnotes='cd ~/vnotes && nvim '
 alias fzd='cd $(ls -d ~/Code/*/*/ | fzf)'
 
 # Git
+alias git-add='git add -A'
 alias git-showlatesttag='git log --pretty=format:"%d" | grep "tag:" | head -n 1'
 alias git-commitammend='git commit --amend'
 alias git-prunedry='git remote prune origin --dry-run'

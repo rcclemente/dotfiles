@@ -131,3 +131,5 @@ if [ -f '/Users/kojie/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/koj
 source $HOME/.rvm/scripts/rvm
 source <(kubectl completion zsh)  # setup autocomplete in zsh into the current shell
 # [[ /usr/local/bin/kubectl ]] && source <(kubectl completion zsh)
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
