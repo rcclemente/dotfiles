@@ -23,7 +23,7 @@ Collection for configurations for the following
 
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-brew install wget fzf ack the_silver_searcher git thefuck reattach-to-user-namespace
+brew install wget fzf ack the_silver_searcher git thefuck reattach-to-user-namespace node
 
 git clone git@github.com:rcclemente/dotfiles.git ~/dotfiles
 mkdir ~/.config
@@ -46,7 +46,7 @@ git clone https://github.com/dracula/iterm.git ~/iterm_dracula
 1. iTerm2 > Preferences > Profiles > Colors Tab
 1. Open the Color Presets... drop-down in the bottom right corner
 1. Select Import... from the list
-1. Select the Dracula.itermcolors file
+1. Select the Dracula.itermcolors file from ~/iterm_dracula
 1. Select the Dracula from Color Presets...
 
 - Delete
@@ -109,6 +109,15 @@ ln -s dotfiles/tmux.conf ~/.tmux.conf
 brew install neovim
 mkdir ~/.config
 ln -s dotfiles/nvim ~/.config/
+```
+
+#### Colors
+
+```
+cd ~
+git clone https://github.com/flazz/vim-colorschemes.git
+cp -R vim-colorschemes/colors dotfiles/nvim/
+rm -rf vim-colorschemes
 ```
 
 #### Vim Plug
