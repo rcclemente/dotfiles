@@ -23,7 +23,7 @@ Collection for configurations for the following
 
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-brew install wget fzf ack the_silver_searcher git thefuck reattach-to-user-namespace node
+brew install wget fzf ack the_silver_searcher git thefuck reattach-to-user-namespace node kubectl java
 
 git clone git@github.com:rcclemente/dotfiles.git ~/dotfiles
 mkdir ~/.config
@@ -32,6 +32,14 @@ mkdir ~/.config
 ### Iterm
 
 - Download at https://www.iterm2.com/downloads.html
+
+### Fzf
+
+```
+cd ~
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
+```
 
 #### Dracula theme
 
