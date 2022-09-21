@@ -1,4 +1,6 @@
 --ignore-dir=log/
+--ignore-dir=nvim/plugins/
+--ignore-dir=nvim/plugged/
 --ignore-dir=public/assets
 --ignore-file=tags
 --ignore-file=is:TAGS

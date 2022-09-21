@@ -87,7 +87,7 @@ nnoremap <Leader>c gggcG
 
 "" Markdown
 " remove highlighting of underscore `_`
-syn match markdownError "\w\@<=\w\@="
+" syn match markdownError "\w\@<=\w\@="
 
 """"""""""""""""
 " COC

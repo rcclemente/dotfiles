@@ -28,6 +28,9 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'edkolev/tmuxline.vim'
 Plug 'christoomey/vim-tmux-navigator'
 
+" Syntax
+Plug 'sheerun/vim-polyglot'
+
 " FZF
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
