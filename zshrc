@@ -117,19 +117,30 @@ eval $(thefuck --alias)
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-# eval "$(rbenv init - zsh)"
+eval "$(rbenv init - zsh)"
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
-export HOMEBREW_GITHUB_API_TOKEN=98fa288d8be1b580b0cc13f8beb81d391c854ad7
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/kojie/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/kojie/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/kojie/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/kojie/google-cloud-sdk/completion.zsh.inc'; fi
+export HOMEBREW_GITHUB_API_TOKEN=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
 # source $HOME/.rvm/scripts/rvm
 source <(kubectl completion zsh)  # setup autocomplete in zsh into the current shell
 # [[ /usr/local/bin/kubectl ]] && source <(kubectl completion zsh)
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/ryanclemente/Downloads/gcp/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/ryanclemente/Downloads/gcp/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/ryanclemente/Downloads/gcp/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/ryanclemente/Downloads/gcp/google-cloud-sdk/completion.zsh.inc'; fi
+export PATH="/opt/homebrew/opt/openssl@3/bin:$PATH"
+
+load-tfswitch() {
+  local tfswitchrc_path=".tfswitchrc"
+
+  if [ -f "$tfswitchrc_path" ]; then
+    tfswitch
+  fi
+}
+add-zsh-hook chpwd load-tfswitch
+load-tfswitch
