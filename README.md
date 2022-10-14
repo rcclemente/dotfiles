@@ -181,6 +181,16 @@ sudo xcode-select --switch /Applications/Xcode.app
 :CocInstall coc-solargraph coc-css coc-html coc-json coc-tsserver
 ```
 
+### MarkDown Preview
+
+- After install inside nvim
+
+```
+:source %
+:PluginInstall
+:call mkdp#util#install()
+```
+
 ## Raw links
 
 https://raw.githubusercontent.com/rcclemente/dotfiles/master/tmux.conf
