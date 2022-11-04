@@ -191,6 +191,12 @@ sudo xcode-select --switch /Applications/Xcode.app
 :call mkdp#util#install()
 ```
 
+### Set as git editor
+
+```
+git config --global core. editor "nvim"
+```
+
 ## Raw links
 
 https://raw.githubusercontent.com/rcclemente/dotfiles/master/tmux.conf
