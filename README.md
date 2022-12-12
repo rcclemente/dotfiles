@@ -194,7 +194,7 @@ sudo xcode-select --switch /Applications/Xcode.app
 ### Set as git editor
 
 ```
-git config --global core. editor "nvim"
+git config --global core.editor "nvim"
 ```
 
 ## Raw links
