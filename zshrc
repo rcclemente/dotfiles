@@ -133,7 +133,7 @@ if [ -f '/Users/ryanclemente/Downloads/gcp/google-cloud-sdk/path.zsh.inc' ]; the
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/ryanclemente/Downloads/gcp/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/ryanclemente/Downloads/gcp/google-cloud-sdk/completion.zsh.inc'; fi
-export PATH="/opt/homebrew/opt/openssl@3/bin:$PATH"
+export PATH="/opt/homebrew/opt/openssl@3/bin:$HOME/.cargo/bin:$HOME/.local/bin/:$PATH"
 
 load-tfswitch() {
   local tfswitchrc_path=".tfswitchrc"

@@ -3,29 +3,29 @@ let mapleader=" "
 " leader timeout
 set timeoutlen=300
 
-set backspace=indent,eol,start
-set nobackup                    " do not keep a backup file, use versions instead
-set history=1000                " keep 1000 lines of command line history
-set encoding=utf-8
-set ruler                       " show the cursor position all the time
-set showcmd                     " display incomplete commands
-set showmode
-set incsearch                   " do incremental searching
-set ruler
-set relativenumber
-set number
-set mouse=a
 set autoindent                  " always set autoindenting on
-set tabstop=2
-set shiftwidth=2
-set softtabstop=2
-set smarttab
-set expandtab
-set hlsearch
+set backspace=indent,eol,start
 set clipboard=unnamed
 set cmdheight=2
-set laststatus=2
 set cursorline                  " highlight the current line"
+set encoding=utf-8
+set expandtab
+set history=1000                " keep 1000 lines of command line history
+set hlsearch
+set incsearch                   " do incremental searching
+set laststatus=2
+set mouse=a
+set nobackup                    " do not keep a backup file, use versions instead
+set number
+set relativenumber
+set ruler
+set ruler                       " show the cursor position all the time
+set shiftwidth=2
+set showcmd                     " display incomplete commands
+set showmode
+set smarttab
+set softtabstop=2
+set tabstop=2
 
 " Split settings
 set splitbelow
@@ -60,7 +60,10 @@ if has("mac")
   " set nocursorline
 
   " set foldlevel=0
-  set foldmethod=syntax
+  " set foldmethod=syntax
+  set foldmethod=indent
+  set foldlevel=1
+  set foldclose=all
 endif
 
 set listchars+=space:␣
