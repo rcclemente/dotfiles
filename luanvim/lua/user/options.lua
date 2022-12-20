@@ -8,7 +8,6 @@ local options = {
   conceallevel = 0,                        -- so that `` is visible in markdown files
   cursorline = true,                       -- highlight the current line
   expandtab = true,                        -- convert tabs to spaces
-  encoding = "utf-8",                      -- the encoding written to a file
   fileencoding = "utf-8",                  -- the encoding written to a file
   guifont = "monospace:h17",               -- the font used in graphical neovim applications
   hidden = true,                           -- required to keep multiple buffers and open multiple buffers
@@ -50,7 +49,4 @@ end
 
 vim.cmd "set whichwrap+=<,>,[,],h,l"
 vim.cmd "set listchars+=space:␣"
-vim.cmd "syntax on"
-vim.cmd "set nocompatible"
-vim.cmd "filetype plugin indent on"
 

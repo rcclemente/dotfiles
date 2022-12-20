@@ -64,6 +64,7 @@ Plug 'vim-ruby/vim-ruby'
 " NerdTree
 Plug 'scrooloose/nerdtree'
 Plug 'jistr/vim-nerdtree-tabs'
+Plug 'ryanoasis/vim-devicons'
 
 " Find text in file
 Plug 'mileszs/ack.vim'

@@ -53,6 +53,7 @@ return packer.startup(function(use)
   } -- buffer list with icons
 
   use "flazz/vim-colorschemes" -- themes
+
   use "christoomey/vim-tmux-navigator" -- navigate between tmux and nvim
 
   -- lualine

@@ -23,9 +23,12 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 nmap <silent> <leader>t :NERDTreeTabsToggle<CR>
 nmap <silent> <leader>e :NERDTreeFind<CR>
 let g:nerdtree_tabs_open_on_console_startup = 0
+let g:webdevicons_enable_nerdtree = 1
+let g:webdevicons_conceal_nerdtree_brackets = 1
+
 
 """"""""""""""""
-" Nerdtree
+" Scalpel
 """""""""""""""""
 nmap <Leader>s <Plug>(Scalpel)
 
@@ -43,7 +46,6 @@ imap <c-x><c-l> <plug>(fzf-complete-line)
 
 " Advanced customization using autoload functions
 inoremap <expr> <c-x><c-k> fzf#vim#complete#word({'left': '15%'})
-
 """"""""""""""""
 " FZF
 """""""""""""""""

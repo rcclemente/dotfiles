@@ -86,4 +86,4 @@ export JAVA_11_HOME=$(/usr/libexec/java_home -v11)
 alias java8='export JAVA_HOME=$JAVA_8_HOME'
 alias java11='export JAVA_HOME=$JAVA_11_HOME'
 
-alias lvi='nvim -u $HOME/dotfiles/nvim/new_init.lua'
+alias lvi='nvim -u $HOME/dotfiles/luanvim/init.lua'

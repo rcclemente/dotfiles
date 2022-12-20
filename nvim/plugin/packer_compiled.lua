@@ -79,6 +79,11 @@ _G.packer_plugins = {
     path = "/Users/ryanclemente/.local/share/nvim/site/pack/packer/start/bufferline.nvim",
     url = "https://github.com/akinsho/bufferline.nvim"
   },
+  ["lualine.nvim"] = {
+    loaded = true,
+    path = "/Users/ryanclemente/.local/share/nvim/site/pack/packer/start/lualine.nvim",
+    url = "https://github.com/nvim-lualine/lualine.nvim"
+  },
   ["nvim-web-devicons"] = {
     loaded = true,
     path = "/Users/ryanclemente/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
@@ -98,6 +103,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/ryanclemente/.local/share/nvim/site/pack/packer/start/popup.nvim",
     url = "https://github.com/nvim-lua/popup.nvim"
+  },
+  ["vim-colorschemes"] = {
+    loaded = true,
+    path = "/Users/ryanclemente/.local/share/nvim/site/pack/packer/start/vim-colorschemes",
+    url = "https://github.com/flazz/vim-colorschemes"
   },
   ["vim-tmux-navigator"] = {
     loaded = true,
