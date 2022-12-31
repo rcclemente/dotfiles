@@ -20,7 +20,12 @@ call plug#begin('~/.config/nvim/plugged')
 " Coloscheme First!!
 " Manually download these and add to ~/.config/nvim/colors/
 Plug 'flazz/vim-colorschemes'
+Plug 'EdenEast/nightfox.nvim'
 colorscheme Tomorrow-Night-Eighties
+" colorscheme nightfox
+" Set the linenumber background color to black
+highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=Black gui=NONE guifg=DarkGrey guibg=Black
+" highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=Black gui=NONE guifg=DarkGrey guibg=NONE
 
 " Themes
 Plug 'vim-airline/vim-airline'

@@ -9,9 +9,6 @@ let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline#extensions#tmuxline#enabled = 0
 let g:tmuxline_theme = 'airline'
 
-" Set the linenumber background color to black
-highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=Black gui=NONE guifg=DarkGrey guibg=Black
-
 " Enable the list of buffers
 let g:airline#extensions#tabline#enabled = 1
 " Show just the filename
@@ -25,7 +22,6 @@ nmap <silent> <leader>e :NERDTreeFind<CR>
 let g:nerdtree_tabs_open_on_console_startup = 0
 let g:webdevicons_enable_nerdtree = 1
 let g:webdevicons_conceal_nerdtree_brackets = 1
-
 
 """"""""""""""""
 " Scalpel

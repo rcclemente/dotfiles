@@ -18,6 +18,9 @@ vim.g.maplocalleader = " "
 --   command_mode = "c",
 
 -- Normal --
+keymap("n", "<Enter>", "O<Esc>j", opts)
+keymap("n", "Y", "y$", opts)
+
 -- Better window navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
 keymap("n", "<C-j>", "<C-w>j", opts)
@@ -38,11 +41,13 @@ keymap("n", "<S-h>", ":bprevious<CR>", opts)
 keymap("n", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
 keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
 
+keymap("v", "p", '"_dP', opts) -- Paste and overwrite in visual mode
+
 keymap("n", "Y", "y$", opts) -- Copy line
 keymap("n", "``", "@:", opts) -- run last colon command
-keymap("n", "noh", ":nohlsearch<CR>", opts) -- remove highlight from searches
+keymap("n", "<Leader>q", ":nohlsearch<CR>", opts) -- remove highlight from searches
 keymap("n", "<Leader>sa", "ggvG$", opts) -- run last colon command
-keymap("n", "<Leader>", ":so ~/.config/nvim/init.vim<CR>:nohlsearch<CR>", opts) -- reload
+keymap("n", "<Leader>r", ":so ~/.config/nvim/init.lua<CR>:nohlsearch<CR>", opts) -- reload
 keymap("n", "vv", ":vsplit | b", opts) -- open vsplit
 keymap("n", "vs", ":split | b", opts) -- open split
 
@@ -75,5 +80,15 @@ keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
 -- Command --
 -- Menu navigation
-keymap("c", "<C-j>",  'pumvisible() ? "\\<C-n>" : "\\<C-j>"', { expr = true, noremap = true } )
-keymap("c", "<C-k>",  'pumvisible() ? "\\<C-p>" : "\\<C-k>"', { expr = true, noremap = true } )
+keymap("c", "<C-n>",  'pumvisible() ? "\\<C-n>" : "\\<C-j>"', { expr = true, noremap = true } )
+keymap("c", "<C-p>",  'pumvisible() ? "\\<C-p>" : "\\<C-k>"', { expr = true, noremap = true } )
+
+-- nvim-tree
+keymap("n", "<Leader>t", ":NvimTreeToggle<CR>", opts)
+keymap("n", "<Leader>e", ":NvimTreeFindFile<CR>", opts)
+-- fzf
+vim.cmd "let g:fzf_layout = { 'down': '~30%' }"
+keymap("n", "<Leader>f", ":Files<CR>", opts)
+keymap("n", "<Leader>g", ":GitFiles<CR>", opts)
+keymap("n", "<Leader>b", ":Buffers<CR>", opts)
+keymap("n", "<Leader>a", ":Ag<space>", opts)

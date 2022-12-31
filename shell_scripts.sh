@@ -23,6 +23,8 @@ alias git-deletemainmerged="git branch --merged main | grep -v '^[ *]*main$' | x
 alias git-deletemastermerged="git branch --merged master | grep -v '^[ *]*master$' | xargs git branch -D"
 # alias git-cleanlocal="git fetch -p ; git branch -r | awk '{print $1}' | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk '{print $1}' | xargs git branch -D"
 
+# DNS
+alias dnsflush='sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder'
 
 # Terraform
 alias terraform-fmt="terraform fmt --recursive"
@@ -86,4 +88,4 @@ export JAVA_11_HOME=$(/usr/libexec/java_home -v11)
 alias java8='export JAVA_HOME=$JAVA_8_HOME'
 alias java11='export JAVA_HOME=$JAVA_11_HOME'
 
-alias lvi='nvim -u $HOME/dotfiles/luanvim/init.lua'
+alias lvi='nvim -u $HOME/dotfiles/nvim/new_init.lua'

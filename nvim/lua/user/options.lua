@@ -3,7 +3,7 @@ local options = {
   backspace = "indent,eol,start",
   backup = false,                          -- creates a backup file
   clipboard = "unnamedplus",               -- allows neovim to access the system clipboard
-  cmdheight = 2,                           -- more space in the neovim command line for displaying messages
+  cmdheight = 1,                           -- more space in the neovim command line for displaying messages
   completeopt = { "menuone", "noselect" }, -- mostly just for cmp
   conceallevel = 0,                        -- so that `` is visible in markdown files
   cursorline = true,                       -- highlight the current line
@@ -48,9 +48,12 @@ for k, v in pairs(options) do
   vim.opt[k] = v
 end
 
+vim.cmd "syntax on"
 vim.cmd "set whichwrap+=<,>,[,],h,l"
 vim.cmd "set listchars+=space:␣"
-vim.cmd "syntax on"
+vim.cmd "set iskeyword+=-"
 vim.cmd "set nocompatible"
 vim.cmd "filetype plugin indent on"
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
 
