@@ -1,6 +1,6 @@
 -- local colorscheme = "default"
-local colorscheme = "Tomorrow-Night-Eighties"
--- local colorscheme = "tokyonight-moon"
+-- local colorscheme = "Tomorrow-Night-Eighties"
+local colorscheme = "terafox"
 
 local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
 if not status_ok then
@@ -11,6 +11,7 @@ end
 local cmd = vim.cmd
 
 -- cmd([[highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=Grey gui=NONE guifg=DarkGrey guibg=DarkGre]])
-cmd([[highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=Black gui=NONE guifg=DarkGrey guibg=Black]])
+-- cmd([[highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=Black gui=NONE guifg=DarkGrey guibg=Black]])
 -- highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=Black gui=NONE guifg=DarkGrey guibg=Black
+
 

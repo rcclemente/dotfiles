@@ -41,16 +41,23 @@ packer.init {
 -- Install your plugins here
 return packer.startup(function(use)
   -- My plugins here
-  use "wbthomason/packer.nvim" -- Have packer manage itself
   use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
+  use "wbthomason/packer.nvim" -- Have packer manage itself
   use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
 
-  use "flazz/vim-colorschemes" -- themes
+  -- themes
+  use "flazz/vim-colorschemes" 
+  use "folke/tokyonight.nvim"
+
   use "christoomey/vim-tmux-navigator" -- navigate between tmux and nvim
 
   use { "windwp/nvim-autopairs"} -- Autopairs, integrates with both cmp and treesitter
-  use { "numToStr/Comment.nvim"}
-
+  use {
+      'numToStr/Comment.nvim',
+      config = function()
+          require('Comment').setup()
+      end
+  }
   use({
     "kylechui/nvim-surround",
     tag = "*", -- Use for stability; omit to use `main` branch for the latest features
@@ -90,6 +97,8 @@ return packer.startup(function(use)
 	use { "jose-elias-alvarez/null-ls.nvim", commit = "c0c19f32b614b3921e17886c541c13a72748d450" } -- for formatters and linters
   use { "RRethy/vim-illuminate", commit = "a2e8476af3f3e993bb0d6477438aad3096512e42" }
 
+  use 'sheerun/vim-polyglot' -- syntax highlighting 
+
   -- Search
   use { 'junegunn/fzf', run = ":call fzf#install()" }
   use { 'junegunn/fzf.vim' }
@@ -102,12 +111,18 @@ return packer.startup(function(use)
     tag = "v3.*",
     requires = 'nvim-tree/nvim-web-devicons',
   } -- buffer list with icons
+  --
   -- lualine
   use {
     'nvim-lualine/lualine.nvim',
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
   }
-
+  --
+  -- Treesitter
+	use {
+		"nvim-treesitter/nvim-treesitter",
+		commit = "8e763332b7bf7b3a426fd8707b7f5aa85823a5ac",
+	}
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then

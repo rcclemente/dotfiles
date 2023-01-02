@@ -8,6 +8,10 @@ if not config_status_ok then
 	return
 end
 
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+vim.opt.termguicolors = true
+
 local tree_cb = nvim_tree_config.nvim_tree_callback
 
 nvim_tree.setup {
@@ -44,7 +48,7 @@ nvim_tree.setup {
 		},
 	},
 	diagnostics = {
-		enable = true,
+		enable = false,
 		show_on_dirs = true,
 		icons = {
 			hint = "",
