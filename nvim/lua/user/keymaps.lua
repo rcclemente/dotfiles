@@ -33,13 +33,13 @@ keymap("n", "<C-Down>", ":resize +2<CR>", opts)
 keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
 keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 
--- Naviagate buffers
+-- Navigate buffers
 keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
 
 -- Move text up and down
-keymap("n", "<M-j>", "<Esc>:m .+1<CR>==gi", opts)
-keymap("n", "<M-k>", "<Esc>:m .-2<CR>==gi", opts)
+-- keymap("n", "<M-j>", "<Esc>:m .+1<CR>==gi", opts)
+-- keymap("n", "<M-k>", "<Esc>:m .-2<CR>==gi", opts)
 
 keymap("v", "p", '"_dP', opts) -- Paste and overwrite in visual mode
 
@@ -59,10 +59,6 @@ keymap("n", "vs", ":split | b", opts) -- open split
 -- Stay in indent mode
 keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
-
--- Move text up and down
-keymap("v", "<A-j>", ":m .+1<CR>==", opts)
-keymap("v", "<A-k>", ":m .-2<CR>==", opts)
 
 -- Visual Block --
 -- Move text up and down

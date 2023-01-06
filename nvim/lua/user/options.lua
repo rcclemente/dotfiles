@@ -1,13 +1,6 @@
------------------------------------------------------------
--- General Neovim settings and configuration
------------------------------------------------------------
-
--- Default options are not included
--- See: https://neovim.io/doc/user/vim_diff.html
--- [2] Defaults - *nvim-defaults*
-
 local g = vim.g       -- Global variables
 local opt = vim.opt   -- Set options (global/buffer/windows-scoped)
+local cmd = vim.cmd   -- vim commands
 
 -----------------------------------------------------------
 -- General
@@ -24,7 +17,6 @@ opt.number = true           -- Show line number
 opt.relativenumber = true           -- Show line number
 opt.showmatch = true        -- Highlight matching parenthesis
 opt.foldmethod = 'marker'   -- Enable folding (default 'foldmarker')
--- opt.colorcolumn = '80'      -- Line lenght marker at 80 columns
 opt.cursorline = true       -- highlight the current line
 opt.splitright = true       -- Vertical split to the right
 opt.splitbelow = true       -- Horizontal split to the bottom
@@ -50,6 +42,11 @@ opt.history = 100           -- Remember N lines in history
 opt.lazyredraw = true       -- Faster scrolling
 opt.synmaxcol = 240         -- Max column for syntax highlight
 opt.updatetime = 250        -- ms to wait for trigger an event
+
+-----------------------------------------------------------
+-- Startup
+-----------------------------------------------------------
+vim.g.syntastic_auto_jump = 0
 
 -----------------------------------------------------------
 -- Startup

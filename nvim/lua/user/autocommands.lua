@@ -1,3 +1,4 @@
+-- Autoclose nvim-tree
 local function tab_win_closed(winnr)
   local api = require"nvim-tree.api"
   local tabnr = vim.api.nvim_win_get_tabpage(winnr)
@@ -32,4 +33,10 @@ vim.api.nvim_create_autocmd("WinClosed", {
     vim.schedule_wrap(tab_win_closed(winnr))
   end,
   nested = true
+})
+
+-- Trim trailing space
+vim.api.nvim_create_autocmd({ "BufWritePre" }, {
+  pattern = { "*" },
+  command = [[%s/\s\+$//e]],
 })

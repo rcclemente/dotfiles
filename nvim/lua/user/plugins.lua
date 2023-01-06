@@ -46,18 +46,22 @@ return packer.startup(function(use)
   use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
 
   -- themes
-  use "flazz/vim-colorschemes" 
+  use "flazz/vim-colorschemes"
   use "folke/tokyonight.nvim"
 
   use "christoomey/vim-tmux-navigator" -- navigate between tmux and nvim
 
   use { "windwp/nvim-autopairs"} -- Autopairs, integrates with both cmp and treesitter
+
+  -- commentor
   use {
       'numToStr/Comment.nvim',
       config = function()
           require('Comment').setup()
       end
   }
+
+  -- surround changer
   use({
     "kylechui/nvim-surround",
     tag = "*", -- Use for stability; omit to use `main` branch for the latest features
@@ -67,7 +71,7 @@ return packer.startup(function(use)
         })
     end
   })
-  --
+
   -- nvim-tree
   use 'nvim-tree/nvim-tree.lua'
   use 'nvim-tree/nvim-web-devicons'
@@ -97,7 +101,7 @@ return packer.startup(function(use)
 	use { "jose-elias-alvarez/null-ls.nvim", commit = "c0c19f32b614b3921e17886c541c13a72748d450" } -- for formatters and linters
   use { "RRethy/vim-illuminate", commit = "a2e8476af3f3e993bb0d6477438aad3096512e42" }
 
-  use 'sheerun/vim-polyglot' -- syntax highlighting 
+  -- use 'sheerun/vim-polyglot' -- syntax highlighting
 
   -- Search
   use { 'junegunn/fzf', run = ":call fzf#install()" }
@@ -110,19 +114,38 @@ return packer.startup(function(use)
     "akinsho/bufferline.nvim",
     tag = "v3.*",
     requires = 'nvim-tree/nvim-web-devicons',
-  } -- buffer list with icons
-  --
+  }
+
+  -- Filetype override
+  use {
+    "nathom/filetype.nvim",
+    config = function()
+      require("filetype").setup {
+        overrides = {
+          extensions = {
+              tf = "terraform",
+              tfvars = "terraform",
+              tfstate = "json",
+          },
+        },
+      }
+    end,
+  }
+
   -- lualine
   use {
     'nvim-lualine/lualine.nvim',
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
   }
-  --
+
   -- Treesitter
-	use {
-		"nvim-treesitter/nvim-treesitter",
-		commit = "8e763332b7bf7b3a426fd8707b7f5aa85823a5ac",
-	}
+  use {
+    "nvim-treesitter/nvim-treesitter",
+    requires = {
+      'mitchellh/tree-sitter-hcl',
+    },
+  }
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
