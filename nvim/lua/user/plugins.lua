@@ -47,10 +47,14 @@ return packer.startup(function(use)
 
   -- themes
   use "flazz/vim-colorschemes"
-  use "folke/tokyonight.nvim"
+  -- use "folke/tokyonight.nvim"
+  -- use "jacoborus/tender.vim"
+  -- use "olimorris/onedarkpro.nvim"
+  use "savq/melange"
 
   use "christoomey/vim-tmux-navigator" -- navigate between tmux and nvim
 
+  -- Editing plugins
   use { "windwp/nvim-autopairs"} -- Autopairs, integrates with both cmp and treesitter
 
   -- commentor
@@ -72,15 +76,17 @@ return packer.startup(function(use)
     end
   })
 
+  -- end Editor plugin
+
   -- nvim-tree
   use 'nvim-tree/nvim-tree.lua'
   use 'nvim-tree/nvim-web-devicons'
 
   -- Fuzzy Finder (files, lsp, etc)
-  use { 'nvim-telescope/telescope.nvim', branch = '0.1.x', requires = { 'nvim-lua/plenary.nvim' } }
-
-  -- Fuzzy Finder Algorithm which requires local dependencies to be built. Only load if `make` is available
-  use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make', cond = vim.fn.executable 'make' == 1 }
+  -- use { 'nvim-telescope/telescope.nvim', branch = '0.1.x', requires = { 'nvim-lua/plenary.nvim' } }
+  --
+  -- -- Fuzzy Finder Algorithm which requires local dependencies to be built. Only load if `make` is available
+  -- use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make', cond = vim.fn.executable 'make' == 1 }
 
   -- Completion
 	use { "hrsh7th/cmp-nvim-lua" }
@@ -145,6 +151,12 @@ return packer.startup(function(use)
       'mitchellh/tree-sitter-hcl',
     },
   }
+
+  -- Git
+  use "tpope/vim-fugitive"
+
+  -- Indent line
+  use 'lukas-reineke/indent-blankline.nvim'
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

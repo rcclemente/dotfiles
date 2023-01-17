@@ -4,7 +4,25 @@ if not status_ok then
 end
 
 treesitter.setup({
-  ensure_installed = { "bash", "c", "javascript", "json", "lua", "python", "typescript", "tsx", "css", "rust","ruby", "terraform", "java", "yaml", "markdown", "markdown_inline" }, -- one of "all" or a list of languages
+  ensure_installed = {
+		"bash",
+		"c",
+		"css",
+		"hcl",
+		"java",
+		"javascript",
+		"json",
+		"lua",
+		"markdown",
+		"markdown_inline",
+		"python",
+		"ruby",
+		"rust",
+		"terraform",
+		"tsx",
+		"typescript",
+		"yaml",
+	}, -- one of "all" or a list of languages
 	ignore_install = { "phpdoc" }, -- List of parsers to ignore installing
 	highlight = {
 		enable = true, -- false will disable the whole extension

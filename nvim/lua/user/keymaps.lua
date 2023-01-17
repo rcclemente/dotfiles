@@ -88,3 +88,6 @@ keymap("n", "<Leader>f", ":Files<CR>", opts)
 keymap("n", "<Leader>g", ":GitFiles<CR>", opts)
 keymap("n", "<Leader>b", ":Buffers<CR>", opts)
 keymap("n", "<Leader>a", ":Ag<space>", opts)
+
+-- Close all buffers
+keymap("n", "<Leader>bd", ":BufOnly<CR>", opts)
