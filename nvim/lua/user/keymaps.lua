@@ -6,7 +6,7 @@ local keymap = vim.api.nvim_set_keymap
 
 -- Remap space as leader key
 keymap("", "<Space>", "<Nop>", opts)
-vim.g.mapleader = ","
+vim.g.mapleader = " "
 -- vim.g.maplocalleader = " "
 
 -- Modes
@@ -82,12 +82,20 @@ keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 -- nvim-tree
 keymap("n", "<Leader>t", ":NvimTreeToggle<CR>", opts)
 keymap("n", "<Leader>e", ":NvimTreeFindFile<CR>", opts)
+
 -- fzf
 vim.cmd "let g:fzf_layout = { 'down': '~30%' }"
 keymap("n", "<Leader>f", ":Files<CR>", opts)
 keymap("n", "<Leader>g", ":GitFiles<CR>", opts)
 keymap("n", "<Leader>b", ":Buffers<CR>", opts)
-keymap("n", "<Leader>a", ":Ag<space>", opts)
+keymap("n", "<Leader>a", ":Ag<space>", {})
+keymap("n", "<C-p>", ":Ag <C-R><C-W><CR>", {})
+-- vim.cmd([[
+--   nnoremap <Leader>a :Ag<space>
+-- ]])
 
 -- Close all buffers
 keymap("n", "<Leader>bd", ":BufOnly<CR>", opts)
+
+-- Laygit
+keymap("n", "<Leader>gg", ":LazyGit<CR>", opts)

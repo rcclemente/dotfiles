@@ -52,6 +52,16 @@ return packer.startup(function(use)
   -- use "olimorris/onedarkpro.nvim"
   use "savq/melange"
 
+  -- startup screen
+  use {
+    'goolord/alpha-nvim',
+    requires = { 'nvim-tree/nvim-web-devicons' },
+    config = function ()
+        require'alpha'.setup(require'alpha.themes.startify'.config)
+    end
+  }
+
+  -- tmux/vim pane navigation
   use "christoomey/vim-tmux-navigator" -- navigate between tmux and nvim
 
   -- Editing plugins
@@ -123,20 +133,7 @@ return packer.startup(function(use)
   }
 
   -- Filetype override
-  use {
-    "nathom/filetype.nvim",
-    config = function()
-      require("filetype").setup {
-        overrides = {
-          extensions = {
-              tf = "terraform",
-              tfvars = "terraform",
-              tfstate = "json",
-          },
-        },
-      }
-    end,
-  }
+  use { "nathom/filetype.nvim", }
 
   -- lualine
   use {
@@ -154,6 +151,7 @@ return packer.startup(function(use)
 
   -- Git
   use "tpope/vim-fugitive"
+  use "kdheepak/lazygit.nvim"
 
   -- Indent line
   use 'lukas-reineke/indent-blankline.nvim'
