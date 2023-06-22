@@ -46,7 +46,7 @@ keymap("v", "p", '"_dP', opts) -- Paste and overwrite in visual mode
 keymap("n", "Y", "y$", opts) -- Copy line
 keymap("n", "``", "@:", opts) -- run last colon command
 keymap("n", "<Leader>q", ":nohlsearch<CR>", opts) -- remove highlight from searches
-keymap("n", "<Leader>sa", "ggvG$", opts) -- run last colon command
+keymap("n", "<Leader>sa", "gg^vG$", opts) -- run last colon command
 keymap("n", "<Leader>r", ":so ~/.config/nvim/init.lua<CR>:nohlsearch<CR>", opts) -- reload
 keymap("n", "vv", ":vsplit | b", opts) -- open vsplit
 keymap("n", "vs", ":split | b", opts) -- open split

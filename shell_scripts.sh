@@ -53,6 +53,10 @@ function git-rebase-i {
   git rebase -i HEAD~$count
 }
 
+function dos2unix_re {
+  find . -type f -print0 | xargs -0 dos2unix
+}
+
 #docker
 function dockerc-rm-stopped {
   docker container rm `docker ps -aq`

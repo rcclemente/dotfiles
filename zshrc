@@ -150,3 +150,19 @@ export FZF_DEFAULT_OPTS='--color=fg:#f8f8f2,bg:#282a36,hl:#bd93f9 --color=fg+:#f
 
 export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
 export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
+
+# https://github.com/romkatv/powerlevel10k/blob/master/README.md#how-do-i-configure-instant-prompt
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
+# nvm fix
+export NVM_DIR="$HOME/.nvm"
+# /opt/homebrew/Cellar/nvm/0.39.3/etc/bash_completion.d/nvm
+# /opt/homebrew/Cellar/nvm/0.39.3/libexec/ (2 files)
+# /opt/homebrew/Cellar/nvm/0.39.3/nvm-exec
+# /opt/homebrew/Cellar/nvm/0.39.3/nvm.sh
+
+[ -s "/opt/homebrew/Cellar/nvm/0.39.3/nvm.sh" ] && \. "/opt/homebrew/Cellar/nvm/0.39.3/nvm.sh"  # This loads nvm
+[ -s "/opt/homebrew/Cellar/nvm/0.39.3/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/Cellar/nvm/0.39.3/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
