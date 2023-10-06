@@ -11,7 +11,7 @@ end
 mason.setup()
 mason_lspconfig.setup({
 	ensure_installed = {
-		"sumneko_lua",
+		-- "sumneko_lua",
 		"solargraph",
 		"terraformls",
 		"tflint",

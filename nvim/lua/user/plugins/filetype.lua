@@ -9,7 +9,8 @@ filetype.setup {
         tf = "terraform",
         tfvars = "terraform",
         tfstate = "json",
-        conf = "nginx"
+        conf = "nginx",
+        sh = "bash"
     },
   },
 }
