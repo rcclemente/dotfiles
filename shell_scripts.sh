@@ -97,3 +97,6 @@ alias lvi='nvim -u $HOME/dotfiles/nvim/new_init.lua'
 # lazyvim
 alias lzvim="NVIM_APPNAME=lazyvim nvim"
 
+# kicknvim
+alias kicknvim="NVIM_APPNAME=kicknvim nvim"
+
