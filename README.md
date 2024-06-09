@@ -64,6 +64,22 @@ rm -rf ~/iterm_dracula
 
 #### Fonts
 
+- Use Nerdfonts
+
+```
+brew tap homebrew/cask-fonts
+brew install font-hasklug-nerd-font
+brew install font-jetbrains-mono-nerd-font
+brew install font-hack-nerd-font
+```
+
+-- download all 
+
+```
+https://gist.github.com/davidteren/898f2dcccd42d9f8680ec69a3a5d350e
+```
+
+- Powerline fonts 
 ```
 cd ~
 git clone https://github.com/powerline/fonts.git
