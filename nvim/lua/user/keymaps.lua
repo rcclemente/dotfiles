@@ -84,7 +84,8 @@ keymap("n", "<Leader>t", ":NvimTreeToggle<CR>", opts)
 keymap("n", "<Leader>e", ":NvimTreeFindFile<CR>", opts)
 
 -- fzf
-vim.cmd "let g:fzf_layout = { 'down': '~30%' }"
+-- vim.cmd "let g:fzf_layout = { 'down': '~30%' }"
+vim.cmd("let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.6 } }")
 keymap("n", "<Leader>f", ":Files<CR>", opts)
 keymap("n", "<Leader>g", ":GitFiles<CR>", opts)
 keymap("n", "<Leader>b", ":Buffers<CR>", opts)
@@ -99,3 +100,8 @@ keymap("n", "<Leader>bd", ":BufOnly<CR>", opts)
 
 -- Laygit
 keymap("n", "<Leader>gg", ":LazyGit<CR>", opts)
+
+vim.keymap.set("n", "<leader>cr", ':let @+=expand("%")<CR>', { desc = "[C]opy File [R]elative Path" })
+vim.keymap.set("n", "<leader>cf", ':let @+=expand("%:p")<CR>', { desc = "[C]opy [F]ile Full Path" })
+vim.keymap.set("n", "<leader>cd", ':let @+=expand("%:p:h")<CR>', { desc = "[C]opy File [D]irectory" })
+vim.keymap.set("n", "<leader>cn", ':let @+=expand("%:t")<CR>', { desc = "[C]opy File[n]ame" })

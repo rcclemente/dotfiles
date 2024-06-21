@@ -9,6 +9,7 @@ if not config_status_ok then
 end
 
 local tree_cb = nvim_tree_config.nvim_tree_callback
+
 --
 -- This function has been generated from your
 --   view.mappings.list
@@ -167,3 +168,7 @@ nvim_tree.setup {
 	-- 	},
 	-- },
 }
+
+
+require'nvim-tree'.setup {}
+

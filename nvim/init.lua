@@ -16,3 +16,5 @@ require "user.plugins.completions" -- completions options
 require "user.plugins.lsp" -- completions options
 require "user.plugins.treesitter" -- completions options
 require "user.plugins.vim-illuminate" -- illuminate same word
+
+require'nvim-tree'.setup {}
