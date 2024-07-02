@@ -9,7 +9,6 @@ alias tmux-new='tmux new -s '
 alias ctags="`brew --prefix`/bin/ctags"
 alias ctags-cwd='ctags --languages=ruby,javascript --exclude=.git --exclude=log --recurse . `bundle show --paths`'
 alias vnotes='cd ~/vnotes && nvim '
-alias fzd='cd $(ls -d ~/Code/*/*/ | fzf)'
 
 # Git
 alias git-add='git add -A'
@@ -35,6 +34,8 @@ alias terraform-fmt="terraform fmt --recursive"
 # Git with FZF
 alias gcob='git checkout  $(git branch  | fzf)'
 alias gcobr='git checkout --track $(git branch -r | fzf)'
+alias fzd='cd $(ls -d ~/Code/*/*/ | fzf)'
+alias zzd='cd $(find . -type d -print | fzf)' 
 
 # function gresethard {
 #   git reset --hard origin/`git branch | grep \* | cut -d ' ' -f2`
@@ -100,3 +101,6 @@ alias lzvim="NVIM_APPNAME=lazyvim nvim"
 # kicknvim
 alias kicknvim="NVIM_APPNAME=kicknvim nvim"
 
+# mge
+eval "$(~/.local/bin/mise activate zsh)"
+alias tf='aws-vault exec entry-point -- terraform'
