@@ -166,3 +166,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "/opt/homebrew/Cellar/nvm/0.39.3/nvm.sh" ] && \. "/opt/homebrew/Cellar/nvm/0.39.3/nvm.sh"  # This loads nvm
 [ -s "/opt/homebrew/Cellar/nvm/0.39.3/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/Cellar/nvm/0.39.3/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
+# zsh autocomplete
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+eval "$(~/.local/bin/mise activate zsh)"
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"

@@ -102,5 +102,4 @@ alias lzvim="NVIM_APPNAME=lazyvim nvim"
 alias kicknvim="NVIM_APPNAME=kicknvim nvim"
 
 # mge
-eval "$(~/.local/bin/mise activate zsh)"
 alias tf='aws-vault exec entry-point -- terraform'
