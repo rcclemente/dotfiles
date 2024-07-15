@@ -80,7 +80,6 @@ alias kns=kubens
 # refresh shell
 alias resh='source ~/.zshrc'
 
-
 function kdevictedpod {
   kubectl get pods | grep Evicted | awk '{print $1}' | xargs kubectl delete pod
 }
@@ -101,5 +100,5 @@ alias lzvim="NVIM_APPNAME=lazyvim nvim"
 # kicknvim
 alias kicknvim="NVIM_APPNAME=kicknvim nvim"
 
-# mge
+# mrge
 alias tf='aws-vault exec entry-point -- terraform'

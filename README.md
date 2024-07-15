@@ -29,6 +29,11 @@ git clone git@github.com:rcclemente/dotfiles.git ~/dotfiles
 mkdir ~/.config
 ```
 
+Bartender alternative 
+```
+brew install --cask dozer
+```
+
 ### Iterm
 
 - Download at https://www.iterm2.com/downloads.html
