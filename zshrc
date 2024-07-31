@@ -170,3 +170,4 @@ export NVM_DIR="$HOME/.nvm"
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 eval "$(~/.local/bin/mise activate zsh)"
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
