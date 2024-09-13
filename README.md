@@ -7,40 +7,47 @@
   - [Zsh](#zsh)
   - [Tmux](#tmux)
   - [Neovim](#neovim)
-- [Raw Links](#rawlinks)
 
 ## Intro
+
 Collection for configurations for the following
 
-* Iterm
-* ZSH
-* Nvim
-* Code searching with ctags
+- Iterm
+- ZSH
+- Nvim
+- Code searching with ctags
 
 ## Installation
 
 ### Prequisites
 
-```
+```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-brew install wget fzf ack the_silver_searcher git thefuck reattach-to-user-namespace node java ripgrep fd
+
+brew install wget fzf ack the_silver_searcher git \
+      thefuck reattach-to-user-namespace node java \
+      ripgrep fd zsh-autosuggestions rbenv lazygit luarocks \
+      mise
+
+mise install aws-vault
 
 git clone git@github.com:rcclemente/dotfiles.git ~/dotfiles
 mkdir ~/.config
 ```
 
-Bartender alternative 
-```
+Bartender alternative
+
+```bash
 brew install --cask dozer
 ```
 
 ### Iterm
 
-- Download at https://www.iterm2.com/downloads.html
+- Download at [Context: "https://www.iterm2.com/downloads.html"]
 
 ### Fzf
 
-```
+```bash
 cd ~
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
@@ -50,7 +57,7 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 
 - Download the theme
 
-```
+```bash
 git clone https://github.com/dracula/iterm.git ~/iterm_dracula
 ```
 
@@ -63,7 +70,8 @@ git clone https://github.com/dracula/iterm.git ~/iterm_dracula
 1. Select the Dracula from Color Presets...
 
 - Delete
-```
+
+```bash
 rm -rf ~/iterm_dracula
 ```
 
@@ -71,21 +79,22 @@ rm -rf ~/iterm_dracula
 
 - Use Nerdfonts
 
-```
+```sh
 brew tap homebrew/cask-fonts
 brew install font-hasklug-nerd-font
 brew install font-jetbrains-mono-nerd-font
 brew install font-hack-nerd-font
 ```
 
--- download all 
+-- download all
 
-```
+```sh
 https://gist.github.com/davidteren/898f2dcccd42d9f8680ec69a3a5d350e
 ```
 
-- Powerline fonts 
-```
+- Powerline fonts
+
+```sh
 cd ~
 git clone https://github.com/powerline/fonts.git
 cd fonts
@@ -98,15 +107,15 @@ rm -rf fonts
 
 - Switch to zsh
 
-```
+```sh
 chsh -s /bin/zsh
 ```
 
-#### Oh My Zsh
+### Oh My Zsh
 
-- Download (https://github.com/ohmyzsh/ohmyzsh#getting-started)
+- Download [Context: "https://github.com/ohmyzsh/ohmyzsh#getting-started"]
 
-```
+```sh
 sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 ```
@@ -197,7 +206,7 @@ sudo xcode-select --switch /Applications/Xcode.app
 
 - Inside nvim
 
-```
+```lua
 :PlugInstall
 :CocInstall coc-solargraph coc-css coc-html coc-json coc-tsserver
 ```
@@ -217,6 +226,10 @@ sudo xcode-select --switch /Applications/Xcode.app
 ```
 git config --global core.editor "nvim"
 ```
+
+### aws-vault
+
+https://github.com/99designs/aws-vault/issues/444
 
 ## Raw links
 

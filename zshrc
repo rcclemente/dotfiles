@@ -123,7 +123,9 @@ eval "$(rbenv init - zsh)"
 export PATH="$PATH:$HOME/.rvm/bin"
 export HOMEBREW_GITHUB_API_TOKEN=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
 # source $HOME/.rvm/scripts/rvm
-source <(kubectl completion zsh)  # setup autocomplete in zsh into the current shell
+
+export KUBECTL=/Users/rclmente/.local/share/mise/installs/kubectl/latest/bin/kubectl
+source <($KUBECTL completion zsh)  # setup autocomplete in zsh into the current shell
 # [[ /usr/local/bin/kubectl ]] && source <(kubectl completion zsh)
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
@@ -148,7 +150,6 @@ load-tfswitch
 # Dracula
 export FZF_DEFAULT_OPTS='--color=fg:#f8f8f2,bg:#282a36,hl:#bd93f9 --color=fg+:#f8f8f2,bg+:#44475a,hl+:#bd93f9 --color=info:#ffb86c,prompt:#50fa7b,pointer:#ff79c6 --color=marker:#ff79c6,spinner:#ffb86c,header:#6272a4'
 
-export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
 export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
 
 # https://github.com/romkatv/powerlevel10k/blob/master/README.md#how-do-i-configure-instant-prompt
