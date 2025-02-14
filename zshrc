@@ -172,3 +172,9 @@ source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 eval "$(~/.local/bin/mise activate zsh)"
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
+
+. /opt/homebrew/etc/profile.d/z.sh
+
+[ -s "$(brew --prefix)/etc/profile.d/z.sh" ] && source "$(brew --prefix)/etc/profile.d/z.sh"
+
+

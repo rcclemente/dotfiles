@@ -59,7 +59,7 @@ function dos2unix_re {
 }
 
 #docker
-function dockerc-rm-stopped {
+function docker-rm-stopped {
   docker container rm `docker ps -aq`
 }
 function docker-stop-all {
@@ -71,7 +71,8 @@ function docker-remove-all-containers {
 
 alias docker-show-fusage='docker system df'
 alias docker-reclaim='docker system prune -a'
-
+alias docker-dedockify="docker run -v /var/run/docker.sock:/var/run/docker.sock --rm mrhavens/dedockify"
+#
 # kubernetes
 alias k=kubectl
 alias kls=kubectx
