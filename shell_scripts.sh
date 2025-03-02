@@ -5,7 +5,12 @@ export ACKRC=".ackrc"
 # zdi
 alias zdi-all-restart='zdi services restart && zdi apps restart'
 
-alias tmux-new='tmux new -s '
+# alias tmux-new='tmux new -s '
+function tmux-new {
+  tmux new -s $1 -n $1
+  command ...
+}
+
 alias ctags="`brew --prefix`/bin/ctags"
 alias ctags-cwd='ctags --languages=ruby,javascript --exclude=.git --exclude=log --recurse . `bundle show --paths`'
 alias vnotes='cd ~/vnotes && nvim '
