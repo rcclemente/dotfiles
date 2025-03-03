@@ -1,0 +1,13 @@
+20250303
+
+  - Create logins 
+  - add slack accounts
+  - create github and ssh keys
+  - datadog login
+  - linear login
+  - notion
+  - meeting with geoff 
+    - how to whitelist in cloudflare 
+    - onboarding with current tools
+
+
