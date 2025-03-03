@@ -124,10 +124,6 @@ export PATH="$PATH:$HOME/.rvm/bin"
 export HOMEBREW_GITHUB_API_TOKEN=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
 # source $HOME/.rvm/scripts/rvm
 
-export KUBECTL=/Users/rclmente/.local/share/mise/installs/kubectl/latest/bin/kubectl
-source <($KUBECTL completion zsh)  # setup autocomplete in zsh into the current shell
-# [[ /usr/local/bin/kubectl ]] && source <(kubectl completion zsh)
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # The next line updates PATH for the Google Cloud SDK.
@@ -159,22 +155,23 @@ fi
 
 # nvm fix
 export NVM_DIR="$HOME/.nvm"
-# /opt/homebrew/Cellar/nvm/0.39.3/etc/bash_completion.d/nvm
-# /opt/homebrew/Cellar/nvm/0.39.3/libexec/ (2 files)
-# /opt/homebrew/Cellar/nvm/0.39.3/nvm-exec
-# /opt/homebrew/Cellar/nvm/0.39.3/nvm.sh
 
 [ -s "/opt/homebrew/Cellar/nvm/0.39.3/nvm.sh" ] && \. "/opt/homebrew/Cellar/nvm/0.39.3/nvm.sh"  # This loads nvm
 [ -s "/opt/homebrew/Cellar/nvm/0.39.3/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/Cellar/nvm/0.39.3/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
 # zsh autocomplete
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-eval "$(~/.local/bin/mise activate zsh)"
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
 
-. /opt/homebrew/etc/profile.d/z.sh
+# . /opt/homebrew/etc/profile.d/z.sh
 
 [ -s "$(brew --prefix)/etc/profile.d/z.sh" ] && source "$(brew --prefix)/etc/profile.d/z.sh"
+typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 
+eval "$(~/.local/bin/mise activate zsh)"
+# export KUBECTL=/Users/rclmente/.local/share/mise/installs/kubectl/latest/bin/kubectl
+KUBECTL=`which kubectl`
+source <($KUBECTL completion zsh)  # setup autocomplete in zsh into the current shell
+# [[ /usr/local/bin/kubectl ]] && source <(kubectl completion zsh)
 

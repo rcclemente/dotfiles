@@ -27,9 +27,11 @@ Collection for configurations for the following
 brew install wget fzf ack the_silver_searcher git \
       thefuck reattach-to-user-namespace node java \
       ripgrep fd zsh-autosuggestions rbenv lazygit luarocks \
-      mise
+      mise genact
 
 mise install aws-vault
+mise install kubectl
+mise install kubectx
 
 git clone git@github.com:rcclemente/dotfiles.git ~/dotfiles
 mkdir ~/.config
