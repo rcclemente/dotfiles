@@ -31,7 +31,8 @@ alias git-deletemastermerged="git branch --merged master | grep -v '^[ *]*master
 alias dnsflush='sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder'
 
 # Terraform
-alias terraform-fmt="terraform fmt --recursive"
+alias tf-fmt="terraform fmt --recursive"
+alias tf="terraform "
 
 #
 # git fetch -p && for branch in $(git branch -vv | grep ': gone]' | awk '{print $1}'); do git branch -D $branch; done
@@ -106,5 +107,4 @@ alias lzvim="NVIM_APPNAME=lazyvim nvim"
 # kicknvim
 alias kicknvim="NVIM_APPNAME=kicknvim nvim"
 
-# mrge
-alias tf='aws-vault exec entry-point -- terraform'
+# alias tf='aws-vault exec entry-point -- terraform'

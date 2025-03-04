@@ -121,7 +121,7 @@ eval "$(rbenv init - zsh)"
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
-export HOMEBREW_GITHUB_API_TOKEN=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
+# export HOMEBREW_GITHUB_API_TOKEN=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
 # source $HOME/.rvm/scripts/rvm
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
@@ -155,9 +155,8 @@ fi
 
 # nvm fix
 export NVM_DIR="$HOME/.nvm"
-
-[ -s "/opt/homebrew/Cellar/nvm/0.39.3/nvm.sh" ] && \. "/opt/homebrew/Cellar/nvm/0.39.3/nvm.sh"  # This loads nvm
-[ -s "/opt/homebrew/Cellar/nvm/0.39.3/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/Cellar/nvm/0.39.3/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completio
 
 # zsh autocomplete
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
@@ -175,3 +174,11 @@ KUBECTL=`which kubectl`
 source <($KUBECTL completion zsh)  # setup autocomplete in zsh into the current shell
 # [[ /usr/local/bin/kubectl ]] && source <(kubectl completion zsh)
 
+
+# pnpm
+export PNPM_HOME="/Users/ryan-cloudemployee/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
