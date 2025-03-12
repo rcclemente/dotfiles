@@ -33,9 +33,9 @@ brew install wget fzf ack the_silver_searcher git \
 brew install brew install jwbargsten/misc/defbro
 
 
-mise use@aws-vault
-mise use@kubectl
-mise use@kubectx
+mise use aws-vault@latest
+mise use kubectl@latest
+mise use kubectx@latest
 
 git clone git@github.com:rcclemente/dotfiles.git ~/dotfiles
 mkdir ~/.config
