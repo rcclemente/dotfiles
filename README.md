@@ -42,10 +42,8 @@ mkdir ~/.config
 ```
 
 Bartender alternative
+- Use `Hidden Bar` in App Store
 
-```bash
-brew install --cask dozer
-```
 
 ### Iterm
 
