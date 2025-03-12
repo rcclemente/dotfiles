@@ -29,6 +29,10 @@ brew install wget fzf ack the_silver_searcher git \
       ripgrep fd zsh-autosuggestions rbenv lazygit luarocks \
       mise genact
 
+# set the default browser in the command line
+brew install brew install jwbargsten/misc/defbro
+
+
 mise install aws-vault
 mise install kubectl
 mise install kubectx
