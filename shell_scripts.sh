@@ -11,6 +11,10 @@ function tmux-new {
   command ...
 }
 
+# ls
+lof="ls -p | grep -v /"
+
+
 alias ctags="`brew --prefix`/bin/ctags"
 alias ctags-cwd='ctags --languages=ruby,javascript --exclude=.git --exclude=log --recurse . `bundle show --paths`'
 alias vnotes='cd ~/vnotes && nvim '
@@ -25,7 +29,7 @@ alias git-prune='git remote prune origin '
 alias git-resethard="git reset --hard origin/\`git branch | grep \* | cut -d ' ' -f2\`"
 alias git-deletemainmerged="git branch --merged main | grep -v '^[ *]*main$' | xargs git branch -D"
 alias git-deletemastermerged="git branch --merged master | grep -v '^[ *]*master$' | xargs git branch -D"
-# alias git-cleanlocal="git fetch -p ; git branch -r | awk '{print $1}' | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk '{print $1}' | xargs git branch -D"
+alias git-deletegone="git branch -vv | grep ': gone]' | awk '{print $1}' | xargs -r git branch -d"
 
 # DNS
 alias dnsflush='sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder'
@@ -33,9 +37,6 @@ alias dnsflush='sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder'
 # Terraform
 alias tf-fmt="terraform fmt --recursive"
 alias tf="terraform "
-
-#
-# git fetch -p && for branch in $(git branch -vv | grep ': gone]' | awk '{print $1}'); do git branch -D $branch; done
 
 # Git with FZF
 alias gcob='git checkout  $(git branch  | fzf)'
@@ -78,7 +79,7 @@ function docker-remove-all-containers {
 alias docker-show-fusage='docker system df'
 alias docker-reclaim='docker system prune -a'
 alias docker-dedockify="docker run -v /var/run/docker.sock:/var/run/docker.sock --rm mrhavens/dedockify"
-#
+
 # kubernetes
 alias k=kubectl
 alias kls=kubectx
