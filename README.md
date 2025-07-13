@@ -32,7 +32,6 @@ brew install wget fzf ack the_silver_searcher git \
 # set the default browser in the command line
 brew install brew install jwbargsten/misc/defbro
 
-
 mise use aws-vault@latest
 mise use kubectl@latest
 mise use kubectx@latest

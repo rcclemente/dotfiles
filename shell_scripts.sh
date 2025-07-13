@@ -107,4 +107,7 @@ alias lzvim="NVIM_APPNAME=lazyvim nvim"
 # kicknvim
 alias kicknvim="NVIM_APPNAME=kicknvim nvim"
 
-# alias tf='aws-vault exec entry-point -- terraform'
+# Source local configuration if it exists
+if [ -f ~/local.sh ]; then
+    source ~/local.sh
+fi
