@@ -23,7 +23,7 @@ alias vnotes='cd ~/vnotes && nvim '
 alias git-add='git add -A'
 alias git-difflast='git diff HEAD~1'
 alias git-showlatesttag='git log --pretty=format:"%d" | grep "tag:" | head -n 1'
-alias git-commitammend='git commit --amend'
+alias git-commitammend='git commit --amend --reset-author'
 alias git-prunedry='git remote prune origin --dry-run'
 alias git-prune='git remote prune origin '
 alias git-resethard="git reset --hard origin/\`git branch | grep \* | cut -d ' ' -f2\`"
@@ -42,7 +42,7 @@ alias tf="terraform "
 alias gcob='git checkout  $(git branch  | fzf)'
 alias gcobr='git checkout --track $(git branch -r | fzf)'
 alias fzd='cd $(ls -d ~/Code/*/*/ | fzf)'
-alias zzd='cd $(find . -type d -print | fzf)' 
+alias zzd='cd $(find . -type d -print | fzf)'
 
 # function gresethard {
 #   git reset --hard origin/`git branch | grep \* | cut -d ' ' -f2`
