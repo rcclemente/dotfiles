@@ -29,7 +29,7 @@ alias git-prune='git remote prune origin '
 alias git-resethard="git reset --hard origin/\`git branch | grep \* | cut -d ' ' -f2\`"
 alias git-deletemainmerged="git branch --merged main | grep -v '^[ *]*main$' | xargs git branch -D"
 alias git-deletemastermerged="git branch --merged master | grep -v '^[ *]*master$' | xargs git branch -D"
-alias git-deletegone="git branch -vv | grep ': gone]' | awk '{print $1}' | xargs -r git branch -d"
+alias git-deletegone="git branch -vv | grep ': gone]' | awk '{print \$1}' | xargs -r git branch -d"
 
 # DNS
 alias dnsflush='sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder'
