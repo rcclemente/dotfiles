@@ -111,6 +111,10 @@ source ~/.oh-my-zsh/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# WARP / Multipass toggle (can't run simultaneously - port 53 conflict)
+alias warp-mode='sudo launchctl unload /Library/LaunchDaemons/com.canonical.multipassd.plist && echo "Multipass stopped. WARP should connect now."'
+alias coolify-mode='sudo launchctl load /Library/LaunchDaemons/com.canonical.multipassd.plist && echo "Multipass started. Run: multipass start coolify-test"'
+
 eval $(thefuck --alias)
 
 
