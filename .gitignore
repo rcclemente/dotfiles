@@ -26,3 +26,4 @@ nvim/plugged/*
 nvim/bundle/*
 nvim/autoload/*
 n1.log
+*.DS_Store*
