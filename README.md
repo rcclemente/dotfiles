@@ -27,7 +27,7 @@ Collection for configurations for the following
 brew install wget fzf ack the_silver_searcher git \
       thefuck reattach-to-user-namespace node java \
       ripgrep fd zsh-autosuggestions rbenv lazygit luarocks \
-      mise genact mole mise z
+      mise genact mole z mic-drop
 
 # set the default browser in the command line
 brew install brew install jwbargsten/misc/defbro

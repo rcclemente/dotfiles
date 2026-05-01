@@ -37,6 +37,7 @@ alias dnsflush='sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder'
 # Terraform
 alias tf-fmt="terraform fmt --recursive"
 alias tf="terraform "
+alias tf-fu="terraform force-unlock"
 
 # Git with FZF
 alias gcob='git checkout  $(git branch  | fzf)'
