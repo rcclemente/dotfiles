@@ -241,7 +241,8 @@ write_if_missing "$HOME/claude-memory/.obsidian/app.json" <<'HEREDOC'
     "graphify-out"
   ],
   "alwaysUpdateLinks": true,
-  "newFileLocation": "current",
+  "newFileLocation": "folder",
+  "newFileFolderPath": "my_tickets",
   "useMarkdownLinks": false
 }
 HEREDOC
@@ -355,7 +356,8 @@ log "Setting up per-project config..."
 OBSIDIAN_APP='{
   "userIgnoreFilters": ["secret_*","**/secret_*",".obsidian/workspace*.json",".obsidian/cache","graphify-out"],
   "alwaysUpdateLinks": true,
-  "newFileLocation": "current",
+  "newFileLocation": "folder",
+  "newFileFolderPath": "my_tickets",
   "useMarkdownLinks": false
 }'
 
