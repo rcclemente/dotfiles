@@ -26,11 +26,25 @@ bash install.sh
 
 ## What gets installed
 
-- `~/claude-memory/` — global vault with seed files (Index, Identity, Conventions, Context/, Sessions/)
+`~/claude-memory/` — global vault with this structure:
+
+| Path | Purpose |
+|---|---|
+| `Index.md` | Vault entry point — table of contents |
+| `Identity.md` | Who you are, role, focus areas (loaded each session) |
+| `Conventions.md` | Coding / commit / git hygiene rules (loaded each session) |
+| `Patterns/` | Reusable solutions worth carrying across sessions |
+| `Mistakes/` | Things that broke + how they were fixed |
+| `Decisions/` | Architecture choices + rationale |
+| `Context/<repo>.md` | One-page summary per active repo |
+| `Sessions/` | Dated session stubs (auto-appended by Stop hook) |
+
+Other components:
+
 - `~/.claude/CLAUDE.md` — global memory pointer loaded by every Claude Code session
 - `~/.claude/hooks/append_daily_note.sh` — Stop hook that logs sessions automatically
 - Per-repo `CLAUDE.md` scaffolds with `my_tickets/` pointers
-- Per-repo `.obsidian/app.json` with `secret_*` excluded from graph and search
+- Per-repo `.obsidian/app.json` with `secret_*` + `graphify-out/` excluded from graph + search
 - Per-repo `.gitignore` block for Obsidian metadata
 - Obsidian plugins: Dataview, Templater, Obsidian Git, Natural Language Dates
 
@@ -39,6 +53,7 @@ bash install.sh
 - Files named `secret_*` are gitignored and excluded from Obsidian graph, MCP search, and graphify
 - Do **not** enable the Obsidian Local REST API on any repo vault that contains `my_tickets/` with credentials
 - `my_tickets/` should be gitignored in every repo — the script checks and warns if not
+- If a credential lands under `my_tickets/` (during rotation, etc.), rename it `secret_<name>` so the filters apply automatically
 
 ## Repo structure expected
 
@@ -58,6 +73,11 @@ my-repo/
 | **Templater** | Auto-populate frontmatter on new notes |
 | **Obsidian Git** | Auto-commit ~/claude-memory/ to a private backup repo |
 | **Natural Language Dates** | `@today` and `[[2026-05-27]]` resolve in Dataview queries |
+
+## Optional add-ons
+
+- **graphify** — code-graph generator. If present, repos get a `graphify-out/` dir (already excluded from Obsidian via `userIgnoreFilters`). Run `graphify update .` after edits to refresh the project graph.
+- **User-added vault folders** — once the seed is in place, add your own top-level folders as needed (e.g. `Conventions/` for split-out rule files, `Templates/` for shared frontmatter snippets). They're picked up automatically by Obsidian + Dataview.
 
 ## Upgrade path
 
